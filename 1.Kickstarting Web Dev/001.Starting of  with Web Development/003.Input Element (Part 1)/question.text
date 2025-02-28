@@ -1,0 +1,7 @@
+Deliverables:
+
+Create an input element of type "text".
+Create an input element of type "email".
+Create an input element of type "tel".
+Create an input element of type "password".
+you should use two <br> tags after each input element.
