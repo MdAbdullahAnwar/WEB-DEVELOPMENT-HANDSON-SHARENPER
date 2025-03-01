@@ -1,0 +1,21 @@
+Now, imagine there is a doctor in your locality who wants to have a website where his potential patients can schedule appointments with him. He hires you to create a registration form for his website. He wants the following details of the patient:
+
+1. Name
+
+2. Email
+
+3. Phone Number
+
+4. Date of appointment
+
+5. Time of appointment
+
+
+
+Deliverables:
+
+Use <h1> element with text "Book Appointment" to create a heading for the form.
+Now, create a form element with appropriate input elements to collect the details asked by doctor.
+Also, add two buttons inside the form - one for submitting the form, and other for resetting the form.
+
+[Note: You should use two <br> tags after each input element.]

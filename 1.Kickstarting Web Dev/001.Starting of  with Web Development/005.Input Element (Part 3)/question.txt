@@ -1,0 +1,10 @@
+Deliverables:
+
+Create an input element of type "date".
+Create an input element of type "time".
+Create an input element of type "datetime-local".
+Create an input element of type "week".
+Create an input element of type "month".
+
+
+[Note: You should use two <br> tags after each input element.]

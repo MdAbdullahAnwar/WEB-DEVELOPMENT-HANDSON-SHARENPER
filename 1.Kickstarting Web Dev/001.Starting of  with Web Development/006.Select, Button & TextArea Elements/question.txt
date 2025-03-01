@@ -1,0 +1,8 @@
+Deliverables:
+
+Create a select element with following options: Hindi, English, Spanish, French, German.
+Create three button elements - one of type "button", another of type "submit", and the last one of type "reset".
+Create a textarea element, 30 columns wide and 5 rows tall.
+
+
+[Note: You should use two <br> tags before the textarea element.]
