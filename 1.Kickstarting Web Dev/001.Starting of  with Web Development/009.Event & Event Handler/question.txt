@@ -1,0 +1,4 @@
+Deliverables:
+
+Create a button element of type "button" with text "Greet".
+On clicking of the button print "Hi there" to the console.
