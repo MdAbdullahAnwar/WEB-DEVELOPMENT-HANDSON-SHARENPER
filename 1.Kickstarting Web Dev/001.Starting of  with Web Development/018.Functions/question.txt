@@ -1,0 +1,53 @@
+Write a function to take temperature and conversion unit such that it converts the temperature to the respective conversion unit from either Celcius or Kelvin.
+
+Assume temperature is in Celcius if conversion unit is Kelvin.
+Assume temperature is in Kelvin if conversion unit is Celcius.
+
+
+SAMPLE INPUT OUTPUT 1
+
+Input
+
+35, K
+
+
+
+Output
+
+273+35 = 308
+
+
+
+Reason
+
+To convert from Celcius to Kelvin we add 273
+
+
+
+SAMPLE INPUT OUTPUT 2
+
+
+
+Input
+
+308, C
+
+
+
+Output
+
+308-273 = 35
+
+
+
+Reason
+
+To convert from Kelvin to Celcius we subtract 273
+
+
+
+[Bonus Task ]
+
+
+
+Use ternary operator instead of IF condition

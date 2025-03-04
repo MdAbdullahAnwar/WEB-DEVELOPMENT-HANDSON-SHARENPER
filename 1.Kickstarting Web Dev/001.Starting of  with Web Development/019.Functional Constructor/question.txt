@@ -1,0 +1,41 @@
+Deliverables
+
+
+
+Create a constructor function Person which takes in first name, last name , Sex and age of person
+Inside the constructor function , create a function called printFullName which prints full name (first name + last name) of the student
+Initialize 2 objects with the following values
+"yash", "prasad", 10, "M"
+"vaibhav", "prasad", 20, "M"
+Minimum age to be egligible for going to disco is 18. Write a function outside the constructor function by which it can be checked whether the given person is allowed to enter the disco or not.
+
+
+Complete the puzzle. Try it by yourself. It is very easy.
+
+If stuck for more than 1 hour check the hints
+
+
+
+Expected Output (case sensitive and space sensitive)
+
+Full name = yash prasad
+
+10
+
+yash not egligible
+
+Full name = vaibhav prasad
+
+20
+
+vaibhav egligible
+
+
+
+Small hack to get the correct output
+
+
+
+A lot of students get the right output but for some reason it doesnt match the expected output because of case sensitivity or format issues.
+
+A good way to check what is the difference between your output and expected output is through this tool.

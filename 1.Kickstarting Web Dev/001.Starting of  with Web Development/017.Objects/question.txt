@@ -1,0 +1,9 @@
+Implement the following:
+
+In the person object, print "movies" from the hobbies
+In the person object, print the "state" value from address key
+
+Destructuring the object
+
+Take out the age from the person object using destructuring and console log
+Take out state from the person object using destructuring and console log
