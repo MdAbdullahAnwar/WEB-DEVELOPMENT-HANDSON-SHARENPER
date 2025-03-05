@@ -1,0 +1,9 @@
+Deliverables
+
+Watch uptill the first 4:30 min - Implement the class User as per the youtuber.
+Every time a new user registers, keep a count of number of registered users.
+At any given point of time if we invoke printNumberOfUsers ,the number of users should get printed .
+Complete the coding puzzle. It is very easy.
+
+
+Hint - You just have to use static variables

@@ -1,0 +1,36 @@
+Convert all the features present in the functional contructor of Student into Student class . Best Design pattern to follow
+
+
+Complete the Puzzle
+
+
+
+Create a constructor function Student which takes in first name, last name , roll number and Student's age to initialize the object
+Complete the function printFullName() so that it prints the full name of the student object which invokes it.
+Complete the function minorOrmajor() so that it
+prints major if the student's age is above or equal to 18
+prints minor if the student's age is below 18
+Make 2 students objects.Ram and Yash to test everything
+Yash's details: ('yash', 'prasad', 12, 27)
+Ram's details: ('ram', 'prasad', 14, 15)
+Invoke prinFullName and minorOrmajor to print Yash's and Ram's details.
+
+
+If stuck for more than 1 hour check the hints.
+
+
+
+Output should look like the following.(Output is case sensitive )
+
+yashprasad
+
+Major
+
+ramprasad
+
+Minor
+
+Small hack to get the correct output
+
+
+A lot of students get the right output but for some reason it doesnt match the expected output because of case sensitivity or format issues.
