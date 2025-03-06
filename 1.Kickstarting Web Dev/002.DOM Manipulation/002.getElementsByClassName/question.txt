@@ -1,0 +1,5 @@
+Deliverable:
+
+1. Make the 3rd element in the list have yellow background color.
+
+2. Make all the elements in the list have bold font.

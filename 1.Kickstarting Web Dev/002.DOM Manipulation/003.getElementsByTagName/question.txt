@@ -1,0 +1,5 @@
+Deliverable:
+
+1. Change the color of 5th "li" tag (one with "Mango" written inside it) to blue.
+
+2. Make all the "li" tags italic.
