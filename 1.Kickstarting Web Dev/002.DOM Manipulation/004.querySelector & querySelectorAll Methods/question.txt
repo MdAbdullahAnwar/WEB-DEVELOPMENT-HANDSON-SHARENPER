@@ -1,0 +1,11 @@
+Deliverable:
+
+1. Implement the code as shown in the video.
+
+2. Use id as query to select the basket heading and set its color to brown.
+
+3. Change the background color of even fruit items to red and change their text color to white.
+
+
+
+Note: Use only querySelector and querySelectorAll to select DOM elements, and not use any other methods.
