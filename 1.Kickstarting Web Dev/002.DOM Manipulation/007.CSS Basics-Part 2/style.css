@@ -1,0 +1,18 @@
+form{
+    padding: 25px;
+    background-color: pink;
+    
+}
+
+#name,input{
+    height: 25px;
+}
+
+#name,label{
+    font-style: italic;
+}
+
+.btn{
+    margin-top: 25px;
+    padding: 10px;
+}
