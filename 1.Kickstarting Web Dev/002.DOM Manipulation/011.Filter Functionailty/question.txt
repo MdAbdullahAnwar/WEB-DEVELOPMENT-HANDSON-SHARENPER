@@ -7,5 +7,4 @@ Deliverables:
 3. Now, create a filter that shows only those fruits whose either name or description or both matches the entered text.
 
 
-
 Note: The input element that you will create using DOM manipulation to collect the description of fruit, must be given an id “description”.
