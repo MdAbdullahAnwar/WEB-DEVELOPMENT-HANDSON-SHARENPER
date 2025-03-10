@@ -1,0 +1,9 @@
+In this task you want to provide the user a facility that if he adds an item to the list by mistake, then he is able to remove it via a delete button.
+
+
+
+Deliverables:
+
+1. The 'li' that you are appending to the unordered list, make sure that it has a delete button.
+
+2. When you click on that delete button, then that particular user's details should be removed from the screen and from the local storage.
