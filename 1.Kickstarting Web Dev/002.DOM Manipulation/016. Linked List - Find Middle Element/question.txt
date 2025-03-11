@@ -1,0 +1,16 @@
+Example 1
+
+Input Link List = 1->2->3->4->5
+
+Function should return 3rd node
+
+
+
+Example 2
+
+Input Link List = 1->2->3->4->5->6
+
+Function should return the 4th node as it is the second middle node
+
+
+
