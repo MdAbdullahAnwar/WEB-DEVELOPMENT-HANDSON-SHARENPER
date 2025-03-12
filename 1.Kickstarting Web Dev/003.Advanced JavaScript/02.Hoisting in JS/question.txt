@@ -1,0 +1,82 @@
+QUESTION 1
+
+var a = 3;
+
+function printName(name){
+
+console.log(name)
+
+}
+
+printName("YAVTECH");
+
+console.log(a)
+
+
+// Output of QUESTION 1
+// YAVTECH(first line) 3(second line)
+
+
+
+
+QUESTION 2
+
+printName("YAVTECH");
+
+console.log(a);
+
+var a = 3;
+
+function printName(name){
+
+console.log(name)
+
+}
+
+
+// Output of QUESTION 2
+// YAVTECH(first line) undefined(second line)
+
+
+
+
+QUESTION 3
+
+console.log(printName);
+
+console.log(a);
+
+var a = 3;
+
+var printName = (name) => {
+
+console.log(name)
+
+}
+
+Watch this video to understand some tricky hoisting question answers
+
+
+// Output of QUESTION 3
+// undefined(first line) undefined(second line)
+
+
+
+
+QUESTION 4
+
+console.log(printName);
+
+console.log(a);
+
+var a = 3;
+
+var printName = function (name) {
+
+console.log(name)
+
+}
+
+
+// Output of QUESTION 4
+// function reference(first line) undefined(second line)
