@@ -1,0 +1,117 @@
+QUESTION 1
+
+console.log(a)
+
+console.log(b);
+
+let a =5;
+
+var b =6;
+
+console.log(b);
+
+
+Output of Question 1
+ReferenceError: a is not defined
+
+
+
+
+QUESTION 2
+
+What is the difference between type error vs syntax error vs reference error.
+
+Give Examples of when you can encounter each one of them.
+
+
+What is the difference between type error vs syntax error vs reference error.Give Examples of when you can encounter each one of them..
+
+
+A SyntaxError occurs when there is a mistake in the structure or syntax of the code. It happens when JavaScript cannot understand the code because it doesn't follow the correct syntax rules.
+console.log('Hello World'; // SyntaxError: Unexpected token ')'
+
+A TypeError occurs when a value is not of the expected type. This often happens when a function or operation is performed on a value of the wrong type.
+let person;
+console.log(person.name);  // TypeError: Cannot read property 'name' of undefined
+
+A ReferenceError occurs when JavaScript cannot find a variable or function that is referenced. This happens when you try to use a variable or function that has not been declared or is out of scope.
+function test() {
+    let b = 10;
+}
+console.log(b);  // ReferenceError: b is not defined
+
+
+
+
+
+QUESTION 3
+
+console.log(a);
+
+var a = 5;
+
+console.log(b) //we havent initialized b, Guess the output
+
+
+Output of Question 3
+undefinedError->b is not defined
+
+
+
+
+
+QUESTION 4
+
+let a = 5;
+
+var b = 6;
+
+console.log(this.b);
+
+console.log(window.b)
+
+console.log(window.a)
+
+console.log(this.a);
+
+
+
+Output of Question 4
+6 6 undefined undefined
+
+
+
+
+
+
+QUESTION 5
+
+let a =5;
+
+let a = 6;
+
+What will be the error
+
+
+
+Output of Question 5
+a has already been declared
+
+
+
+
+
+QUESSTION 6
+
+let a =6;
+
+const b
+
+b=100;
+
+What will be the error
+
+
+
+Output of Question 6
+const declaration should be initialised with a value
