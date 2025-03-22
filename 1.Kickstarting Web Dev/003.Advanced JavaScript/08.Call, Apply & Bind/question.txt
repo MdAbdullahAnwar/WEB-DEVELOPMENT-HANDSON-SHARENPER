@@ -1,0 +1,227 @@
+Guess the output
+
+1.
+var obj = {
+
+val: 100
+
+}
+
+function fun(){
+
+console.log(this.val)
+
+}
+
+fun()
+
+
+Output of Question 1
+undefined
+
+
+
+
+
+2.
+
+var obj = {
+
+val: 100
+
+}
+
+function fun(){
+
+console.log(this.val)
+
+}
+
+obj.fun()
+
+
+Output of Question 2
+Error
+
+
+
+
+
+3.
+
+var obj = {
+
+val: 100
+
+}
+
+function fun(){
+
+console.log(this.val)
+
+}
+
+fun.call(obj)
+
+
+Output of Question 3
+100
+
+
+
+
+
+4.
+
+var obj = {
+
+val: 100
+
+}
+
+function fun(a){
+
+console.log(this.val + a)
+
+}
+
+fun.call(obj)
+
+
+Output of Question 4
+NaN
+
+
+
+
+
+5.
+
+var obj = {
+
+val: 100
+
+}
+
+function fun(a){
+
+console.log(this.val + a)
+
+}
+
+fun.call(obj, 3)
+
+
+Output of Question 5
+103
+
+
+
+
+
+6.
+
+var obj = {
+
+val: 100
+
+}
+
+function fun(a, b , c){
+
+console.log(this.val + a + b + c)
+
+}
+
+fun.call(obj, 3, 4, 5)
+
+
+Output of Question 6
+112
+
+
+
+
+
+7.
+
+var obj = {
+
+val: 100
+
+}
+
+function fun(a, b , c){
+
+console.log(a)
+
+console.log(b)
+
+console.log(c)
+
+}
+
+fun.call(obj, [3, 4, 5])
+
+
+Output of Question 7
+3 4 5 undefined undefined
+
+
+
+
+
+8.
+
+var obj = {
+
+val: 100
+
+}
+
+function fun(a, b , c){
+
+console.log(this.val + a + b + c)
+
+}
+
+fun.apply(obj,[ 3, 4, 5])
+
+
+Output of Question 8
+112
+
+
+
+
+
+9.
+
+var obj = {
+
+val: 100
+
+}
+
+function fun(a, b , c){
+
+console.log(this.val + a + b + c)
+
+}
+
+const fun2 = fun.bind(obj)
+
+fun2(1, 2,3)
+
+
+Output of Question 9
+106
+
+
+
+
+
+Choose the correct statement that are applicable for call ,apply and bind ? (More than one answer can be correct)
+1. Bind returns a function with object attached to it.
+2. Call and Apply invokes the function with the object and arguments.
+3. In call we cannot pass arguments as an array
