@@ -1,0 +1,133 @@
+Questions
+
+1.
+
+function x(){
+
+let a = 10;
+
+function y(){
+
+console.log(a);
+
+}
+
+y()
+
+}
+
+x();
+
+
+Output of Question 1
+10
+
+
+
+
+
+2.
+
+function x(){
+
+let a = 10;
+
+function y(){
+
+return a;
+
+}
+
+console.log(y());
+
+}
+
+x();
+
+
+Output of Question 2
+10
+
+
+
+
+
+3. 
+
+function x(){
+
+let a = 10;
+
+function y(){
+
+console.log(a);
+
+}
+
+return y;
+
+}
+
+console.log( x());
+
+
+Output of Question 3
+Reference of function y
+
+
+
+
+
+4.
+
+function x(){
+
+let a = 10;
+
+function y(){
+
+console.log(a);
+
+}
+
+return y;
+
+}
+
+const z = x()
+
+console.log(z());
+
+
+Output of Question 4
+10 undefined
+
+
+
+
+
+5.
+
+function x(){
+
+let a = 10;
+
+function y(){
+
+console.log(a);
+
+}
+
+a= 50;
+
+return y;
+
+}
+
+const z = x()
+
+console.log(z());
+
+
+Output of Question 5
+50 undefined
