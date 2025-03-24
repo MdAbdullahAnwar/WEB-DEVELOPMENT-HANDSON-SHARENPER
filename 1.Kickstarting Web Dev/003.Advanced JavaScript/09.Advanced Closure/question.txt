@@ -1,0 +1,118 @@
+Questions
+
+1.
+
+function y(){
+
+setTimeout(() => console.log("a"), 1000)
+
+console.log('Done Coding')
+
+}
+
+y();
+
+Explain how you got the answer
+
+
+Output of Question 1 
+Done Coding a
+
+
+
+
+
+2.
+
+function y(){
+
+setTimeout(() => console.log("a"), 0)
+
+console.log('Done Coding')
+
+}
+
+y();
+
+Explain how you got the answer
+
+
+Output of Question 2 
+Done Coding a
+
+
+
+
+
+3.
+
+function y(){
+
+for(var i=1;i<6;i++){
+
+setTimeout(() => console.log(i ), i * 1000)
+
+}
+
+console.log('Done Coding')
+
+}
+
+y();
+
+Explain how you got the answer
+
+
+Output of Question 3 
+Done Coding 6 6 6 6 6
+
+
+
+
+
+4.
+
+function y(){
+
+for(let i=1;i<6;i++){
+
+setTimeout(() => console.log(i ), i * 1000)
+
+}
+
+console.log('Done Coding')
+
+}
+
+y();
+
+Explain how you got the answer
+
+
+Output of Question 4 
+None of the above
+
+
+
+
+
+5. Can you complete the following function "name" so that it prints as per the comments.
+
+Const name = (arr)=>{
+
+}
+
+let fun = name(["Ram","Shyam"]);
+
+fun()// Print Hello Ram
+
+fun()//print Hello Shyam
+
+
+
+
+
+Why is the output of questiion 3 and question 4 different. Explain in your own words
+
+Because in question 3, var keyword is used and it is function scoped and due to closure it will take its entire function as a single unit and sets the timer along with itself then after the timer gets over it will print the same values of i like 6 6 6 6 6 
+because it is storing the variables reference and in question 4 let keyword is used and it creates the variable copy everytime.
