@@ -1,0 +1,209 @@
+Guess the output
+
+1.
+
+a()
+
+b()
+
+function a(){
+
+console.log('inside a');
+
+}
+
+var b = function (){
+
+console.log('inside b');
+
+}
+
+
+Output of Question 1
+error
+
+
+
+
+
+2. Difference between function declaration and function expression
+
+Function expression is alloted memory when execution context reaches the expression line. Before that it is undefined.
+
+Function statement is alloted memory at the very beginning itself.
+
+
+
+
+
+3.
+
+function a(){
+
+console.log('inside a');
+
+}
+
+var b = function abc(){
+
+console.log('inside b');
+
+}
+
+a()
+
+abc()
+
+
+Output of Question 3
+error
+
+
+
+
+
+What are first class function
+
+Ability to pass function as arguments is called first class function
+
+Ability to return function from inside a function
+
+
+
+
+
+4.
+
+function fun(a){
+
+console.log(a)
+
+}
+
+var b = 10;
+
+fun(b)
+
+
+What are 'a' and 'b' called in question 4
+
+'b' is argument and 'a' is parameter
+
+
+
+
+
+5. Please go through this video and understand what is currying in javascript https://www.youtube.com/embed/qlOXWmv_srU.
+
+If you didnt understand this video , then i have tried again to explain .Watch this new video
+
+
+Guess the output
+
+5a.
+
+function fun1(){
+
+console.log('a')
+
+return () => {
+
+console.log('b')
+
+}}
+
+fun1()
+
+
+Output of question 5a
+a
+
+
+
+
+
+5b. 
+
+function fun1(){
+
+var a = 10
+
+return () => {
+
+a = 20;
+
+console.log(a)
+
+}}
+
+fun1()()
+
+
+Output of question 5b
+20
+
+
+
+
+
+5c.
+
+function fun1(a){
+
+return () => {
+
+a = a + 20;
+
+console.log(a)
+
+}}
+
+fun1(10)(20)
+
+
+Output of question 5c
+30
+
+
+
+
+
+5d.
+
+function fun1(a){
+
+return (b) => {
+
+a = a + b;
+
+console.log(a)
+
+}}
+
+fun1(10)(30)
+
+
+Output of question 5d
+40
+
+
+
+
+
+5e.
+
+function fun1(a){
+
+const fun2 = (b) => {
+
+a = a + b;
+
+console.log(a)
+
+}}
+
+fun1(10)(30)
+
+
+Output of question 5e
+error
