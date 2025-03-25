@@ -1,0 +1,13 @@
+UNDERSTAND THIS KEYWORD (Used every where)
+
+Watch this video to understand this keyword
+
+https://www.youtube.com/watch?v=NV9sHLX-jZU
+
+Deliverables
+
+Design pattern problem - How will you design a Student class which stores the name , age , phone number, board marks of each student. Complete the constructor to initialize the values.
+Complete the function eligible to check whether the student is eligible or not for college. If board marks > 40 -> eligible , if less than 40 -> not eligible.
+Complete the function increaseStudentCount which keep track of the number of students created. Have you heard of static variables. Leverage that now. Check Hints 1 if you are stuck.
+Complete the printStudentCount which prints the total count of students created till date.
+Please only fill in the blanks and do not modify anything else. Output should match and there should be no extra spaces.
