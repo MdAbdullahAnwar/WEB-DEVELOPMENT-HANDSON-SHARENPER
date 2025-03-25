@@ -1,0 +1,155 @@
+Is javascript single threaded or multithreaded?
+
+Watch this video to understand how callback functions work
+
+https://www.youtube.com/watch?v=btj35dh3_U8
+
+
+Questions
+
+What will be the output of the following
+
+
+
+Is javascript single threaded or multithreaded?
+
+Single Threaded
+Event Driven
+
+
+
+1.
+
+setTimeout(() => console.log('timer expired'), 1000)
+
+function x(y) {
+
+console.log('inside x');
+
+y();
+
+}
+
+x(function y(){
+
+console.log('inside y')
+
+})
+
+
+Output of Question 1
+
+inside x inside y timer expired
+
+
+
+2.
+
+setTimeout(() => console.log('timer1 expired'), 1000)
+
+setTimeout(() => console.log('timer2 expired'), 0)
+
+function x(y) {
+
+console.log('inside x');
+
+y();
+
+}
+
+x(function y(){
+
+console.log('inside y')
+
+})
+
+
+
+Output of Question 2
+
+inside x inside y timer2 expired timer1 expired
+
+
+
+3.
+
+setTimeout(() => console.log('timer1 expired'), 1000)
+
+setTimeout(() => console.log('timer2 expired'), 0)
+
+function x(y) {
+
+console.log('inside x');
+
+y();
+
+}
+
+x(function y(){
+
+setTimeout(() => console.log('inside y'), 0)
+
+})
+
+
+
+Output of Question 3
+
+inside x timer2 expired inside y timer1 expired
+
+
+
+4. How does the browser go about execution of the above program.Check the hint if you are not sure. The above questions are very important.
+Can you explain how does the above program work?
+
+First setTimeout
+
+setTimeout(() => console.log('timer1 expired'), 1000);
+This schedules "timer1 expired" to be logged after 1000ms (1 second).
+
+Second setTimeout
+
+setTimeout(() => console.log('timer2 expired'), 0);
+This schedules "timer2 expired" to be logged as soon as possible (after the current execution stack is empty).
+
+Function Call x(y)
+console.log('inside x'); → Logs "inside x" immediately.
+
+Event Loop Processes Timeout Callbacks
+
+Since the synchronous code has finished executing, the callback queue executes next.
+"timer2 expired" runs first because it has 0ms delay but still has to wait for the current execution stack to clear.
+"timer1 expired" runs after 1000ms.
+
+
+
+5.Add an event listener called DOMCONTENTLOADED , inside this add a call back function which consoles "DOM has loaded". More than one answer can be correct.
+
+window.addEventListener("DOMContentLoaded",()=>{console.log('DOM HAS LOADED')})
+document.addEventListener("DOMContentLoaded",()=>{console.log('DOM HAS LOADED')})
+
+
+
+
+What is garbage collection?Explain in your words only.
+
+Removing the extra space which can be due to event listeneres after the event occur garbage collector collects the garbage and frees up the memory because without garbage collection we will run out of memory eventually.
+
+
+
+6. What is garbage collection . Why do we need to free up memory , any idea
+Why do we need garbage collection
+
+Without Garbage Collection we will run out of memory eventually
+To release memory from variable which are out of scope now
+To avoid memory leakage
+
+
+
+
+
+
+
+
+
+
