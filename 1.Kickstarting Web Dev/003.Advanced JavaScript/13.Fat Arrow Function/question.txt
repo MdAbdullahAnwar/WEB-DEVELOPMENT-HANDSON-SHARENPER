@@ -8,6 +8,7 @@ https://www.youtube.com/watch?v=_pfXEv9cFGE
 
 Guess the output of the following
 
+
 1.
 
 var fun = a => a
