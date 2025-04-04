@@ -1,0 +1,182 @@
+FAT ARROW FUNCTIONS - [MOST WIDELY USED ]
+
+Go through this video to understand fat arrow functions in depth
+
+https://www.youtube.com/watch?v=_pfXEv9cFGE
+
+
+
+Guess the output of the following
+
+1.
+
+var fun = a => a
+
+var a =10;
+
+console.log(fun(a))
+
+
+
+Output of Question 1
+
+10
+
+
+
+2.
+
+var fun = a => a
+
+console.log(fun(a))
+
+var a =10;
+
+
+
+Output of Question 2
+
+undefined
+
+
+
+3.
+
+var fun = a =>{ a }
+
+var a =10;
+
+console.log(fun(a))
+
+
+
+Output of Question 3
+
+undefined
+
+
+
+4.
+
+var fun =( a, b) =>{
+
+var sum = a + b
+
+return sum
+
+}
+
+var a =10;
+
+var b = 20
+
+console.log(fun(a, b))
+
+
+
+Output of Question 4
+
+30
+
+
+
+5.
+
+var fun =( a, b) =>
+
+var sum = a + b
+
+return sum
+
+var a =10;
+
+var b = 20
+
+console.log(fun(a, b))
+
+
+
+Output of Question 5
+
+error
+
+
+
+6. Main problem solved by fat arrow function
+
+var student = function(name){
+
+  this.name = name;
+
+  function printName() {
+
+    console.log(this.name)
+
+  }
+
+   printName()
+
+}
+
+var yash = new student("yash")
+
+
+
+Output of Question 6
+
+yash
+undefined
+
+
+
+7. Beautifully solved by fat arrow function. Always remember this.[Favorite interview question]
+
+var student = function(name){
+
+  this.name = name;
+
+  var printName = () => {
+
+    console.log(this.name)
+
+  }
+
+   printName()
+
+}
+
+var yash = new student("yash")
+
+
+
+Output of Question 7
+
+yash
+
+
+
+Difference between fat arrow and normal function?
+
+1. this Binding:	
+fat arrow has Inherits this from surrounding lexical scope (context where it is defined).
+normal function has Has its own this, which depends on how the function is called.
+
+2. Usage in Methods	
+fat arrow is not suitable as object methods because this refers to outer scope, not the object.
+normal  function works well in object methods because this refers to the object itself.
+
+3. Constructor Usage
+fat arrow Cannot be used as a constructor (new ArrowFunction() will throw an error).
+normal function can be used as a constructor (new FunctionName() works).
+
+4. Implicit Return	
+fat arrow single-line functions can implicitly return values without using {} or return.	
+normal function requires return for returning values.
+
+5. Arguments Object	
+fat arrow does not have its own arguments object (use rest parameters instead).	
+normal function has its own arguments object.
+
+6. Hoisting	
+fat arrow not hoisted; must be defined before use.	
+normal function declarations are hoisted, meaning they can be called before they are defined.
