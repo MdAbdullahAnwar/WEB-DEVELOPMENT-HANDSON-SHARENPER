@@ -1,0 +1,101 @@
+Understand currying to solve the following problem.
+
+https://www.youtube.com/watch?v=vQcCNpuaJO8 (This video doesnt open on the iframe player we use .Please copy the link and paste on browser to open it)
+
+
+Deliverables
+
+Take the student class and write a function called setPlacementAge which basically takes the minimum board marks required by a candidate to sit for the company coming for placement and it returns a function.
+The function takes minAge as an argument and returns true if the given student has board marks greater than minimum board marks required by company and is above the required age set by the company.[If stuck check the hint 1]
+Run the code across all the students and print the names of egligible students.
+
+
+
+
+What is the major difference betweenn the fat arrow function and normal function ? Watch this video to understand. [FAVORITE INTERVIEW QUESTION]
+
+Major Difference Between Fat Arrow Function & Normal Function
+
+1. this Binding
+Concept	Normal Function	Arrow Function (=>)
+this behavior	Depends on how the function is called	Lexically binds this (inherits from parent)
+
+Example:
+
+function normalFunc() {
+  console.log(this);
+}
+
+const arrowFunc = () => {
+  console.log(this);
+};
+
+const obj = {
+  method: normalFunc,
+  arrow: arrowFunc,
+};
+
+obj.method(); // `this` refers to `obj`
+obj.arrow();  // `this` refers to outer/global scope
+Arrow functions do not create their own this context, they just use whatever this is in their surrounding code.
+
+
+2. Syntax Simplicity
+Arrow functions are shorter and cleaner to write, especially for simple expressions:
+
+
+// Normal
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow
+const add = (a, b) => a + b;
+
+
+3. No arguments Object
+Arrow functions don’t have their own arguments object, unlike normal functions.
+
+
+function test() {
+  console.log(arguments); // works
+}
+
+const testArrow = () => {
+  console.log(arguments); // ReferenceError
+}
+
+
+4. Cannot Be Used as Constructors
+You can’t use new with arrow functions — they aren’t meant to be constructor functions.
+
+
+const Person = (name) => {
+  this.name = name;
+};
+
+const p = new Person("Ali"); // TypeError
+
+
+
+
+
+Why was fat arrow introduced any idea ? - Watch this video. [FAVORITE INTERVIEW QUESTION]
+
+The main reason for introducing fat arrow functions was to:
+
+Simplify syntax for writing small functions.
+
+Fix common confusion with this binding (especially in callbacks, event handlers, etc.).
+
+Improve the readability and maintainability of functional-style code (e.g., in .map(), .filter(), .forEach()).
+
+Before arrow functions, developers used hacks like:
+
+
+const self = this;
+someCallback(function() {
+  console.log(self);
+});
+
+Arrow functions made this much cleaner and intuitive.
