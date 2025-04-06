@@ -1,0 +1,280 @@
+https://www.youtube.com/watch?v=8zKuNo4ay8E.Watch uptill the 27th min from the beging. Skip remaining for now.
+
+
+This is one of the most important topics for interview purpose.
+
+
+Deliverable
+
+
+1. Which function would get in the call stack first
+
+function fun1(){
+
+console.log(á
+
+}
+
+function fun2(){
+
+console.log(b)
+
+}
+
+fun2()
+
+fun1()
+
+
+Which function would get in the call stack first for Question 1?
+
+fun2
+
+
+
+
+
+2. Which function would be picked by the Global Execution Context first ?
+
+function fun1(){
+
+console.log(á
+
+}
+
+function fun2(){
+
+console.log(b)
+
+}
+
+fun2()
+
+fun1()
+
+
+
+Which function would be picked by the Global Execution Context first for Question 2 ?
+
+fun2
+
+
+
+
+
+3. What all things are not a part of javascript?
+   What all things are not a part of javascript? More than one correct answer
+
+fetch
+setTimeout
+LocalStorage
+document.getElementById
+
+
+
+
+
+4. If so many things are not a part of javacript then how do we get to access them in browser? Write in your own words.
+
+The Browser Creates a Special Environment:
+
+When a webpage loads, the browser sets up a runtime environment for JavaScript to run.
+This includes extra objects like document, window, and navigator.
+JavaScript Runs Inside This Environment:
+
+JavaScript itself only understands things like variables, functions, loops, and objects.
+But when it runs in a browser, it can access the Browser APIs that allow it to interact with the page.
+The Browser Gives Access to Web APIs:
+
+DOM API → Lets JavaScript modify the webpage (document.getElementById, querySelector, etc.).
+BOM (Browser Object Model) → Lets JavaScript interact with the browser (window, alert, history).
+Fetch API → Allows JavaScript to make network requests (fetch).
+Geolocation API → Lets JavaScript get the user’s location (navigator.geolocation).
+Console API → Provides debugging tools (console.log).
+
+
+
+
+
+5. If window object would not have been a global object which of the following statements would not work? More than one correct answer.
+
+setTimeout(() => {console.log("a")},1000)
+localStorage.setItem("name","yash")
+document.getElementById("someID")
+window.document.getElementById("someID")
+
+
+
+
+
+6.
+
+function fun1(){
+
+console.log("a")
+
+}
+
+function fun2(){
+
+console.log("b")
+
+}
+
+setTimeout(fun2, 1000)
+
+fun1()
+
+
+Which of the following is true for question 6 code snippet?
+ 
+fun1 enters call stack and then fun2
+fun1 enters call stack and fun2 first enters callback queue and then callstack
+
+
+
+
+
+7. function fun1(){
+
+console.log("a")
+
+}
+
+function fun2(){
+
+console.log("b")
+
+}
+
+document.getElementById("some button").addEventListener("click", fun1)
+
+fun2();
+
+
+Output of Question 7 when no one clicks on button?
+
+b
+
+
+Output of Question 7 when user clicks on button 2 times?
+b a a 
+
+
+
+
+
+Love the way event loop iis explained by this restaurant example https://www.youtube.com/watch?v=EI7sN1dDwcY and answer the following.
+
+
+1. Why is a Callback Queue used and not a Callback Stack?
+
+
+Call Stack vs Callback Queue
+Concept	     Call Stack	                 Callback Queue
+Purpose	     Executes synchronous code	 Holds asynchronous callbacks
+Behavior	 LIFO – Last In First Out	 FIFO – First In First Out
+
+
+Why Not Use a Stack for Async?
+
+
+If we used a stack (LIFO) for callbacks:
+
+Most recent async tasks would get processed first.
+
+This would break the predictable order of how we expect async operations to finish.
+
+Imagine a slow task being added first, and a fast one later — the fast one may never run if the stack keeps growing.
+
+A Queue (FIFO) ensures:
+Async tasks are executed in the order they’re added.
+
+It respects the timing of events (like setTimeout, network responses).
+
+Prevents starvation of earlier tasks.
+
+
+
+
+
+2. How Does the Event Loop Handle Async Code?
+
+
+JavaScript is:
+Single-threaded (one thing at a time).
+
+But we can write asynchronous code using:
+
+setTimeout
+
+Promises
+
+fetch, async/await
+
+DOM events
+
+What Happens Internally?
+Here's a step-by-step of how the event loop works:
+
+Step 1: Code runs in the Call Stack
+Synchronous code executes line by line.
+
+Step 2: When it hits an async task, like setTimeout():
+It sends the task to the Web APIs (provided by browser, not JS itself).
+
+The Web API will wait (e.g., for 1 second in case of setTimeout).
+
+Step 3: When the task is ready (e.g., time is up):
+The callback is moved to the Callback Queue.
+
+Step 4: Event Loop checks:
+Is the Call Stack empty?
+
+Yes → it moves the first task from the queue into the stack and runs it.
+
+No → it waits.
+
+Step 5: Repeat forever!
+Example:
+
+console.log("1");
+
+setTimeout(() => {
+  console.log("2");
+}, 1000);
+
+console.log("3");
+
+Output:
+
+1
+3
+2
+
+
+Even though the timeout is 0 or 1 second, the setTimeout callback goes to the callback queue. The event loop only pushes it to the call stack after synchronous code is done.
+
+
+Why Doesn't JavaScript Wait for Async Functions?
+Because JavaScript is non-blocking and single-threaded.
+
+If it waited (like using sleep() in some languages):
+
+The entire browser/app would freeze until the async task completes.
+
+That means no UI updates, no inputs, no animations.
+
+Bad user experience 
+
+Instead:
+
+It runs async tasks in the background (via browser APIs or Node.js APIs).
+
+The Event Loop lets the main thread keep working (non-blocking).
+
+When ready, async results are processed without freezing anything.
+
+
+
+Want to know how event loop scales the backend of sharpener - Watch this video
