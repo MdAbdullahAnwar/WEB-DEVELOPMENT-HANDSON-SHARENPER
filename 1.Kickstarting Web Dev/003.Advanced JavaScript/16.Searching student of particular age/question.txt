@@ -1,0 +1,62 @@
+Given a student object as shown below can you write code to iterate through object and find the student's name who is of age n.
+
+Example 1
+
+Input
+
+studentobj = {
+
+'yash': 26,
+
+'vaibhav': 24,
+
+'rajesh' : 25,
+
+}
+
+age = 25
+
+
+Output
+
+rajesh
+
+
+Explanation
+
+Rajesh is the only one with age 25 in the above object.
+
+
+Example 2
+
+Input
+
+studentobj = {
+
+'yash': 26,
+
+'vaibhav': 24,
+
+'rajesh' : 25,
+
+}
+
+
+age = 29
+
+
+Output
+
+-1
+
+
+Explanation
+
+No student has the age 29 , thats why function will return -1
+
+
+Assumption
+
+There will be only one student, at max ,in student Object whose age will match.
+
+2 students of same age will never exist.
