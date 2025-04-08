@@ -1,9 +1,6 @@
 Guess the output with reason stating why you chose the answer
 
-
-
-1)
-
+1.
 console.log('a');
 
 console.log('b');
@@ -13,11 +10,14 @@ setTimeout(() => console.log('c'), 1000)
 console.log('d')
 
 
+Output of Question 1
+a b d c
 
 
 
-2)
 
+
+2.
 console.log('a');
 
 console.log('b');
@@ -27,11 +27,14 @@ setTimeout(() => console.log('c'), 0)
 console.log('d')
 
 
+Output of Question 2
+a b d c
 
 
 
-3)
 
+
+3.
 console.log('a');
 
 console.log('b');
@@ -43,16 +46,23 @@ setTimeout(() => console.log('c'), 0)
 console.log('d')
 
 
+Output of Question 2
+None of the above
 
-4)
 
+
+
+
+4.
 Watch this video and answer the following
 
-4a)What is the use of spread operator?
+4a. What is the use of spread operator?
+
+It is basically used to copy the value from one object to another  and not its reference or address.
 
 
-
-4b) const obj1= {
+4b.
+const obj1= {
 
 "key1": "value1",
 
@@ -67,8 +77,15 @@ const obj2 = { ...obj1}
 console.log(obj2)
 
 
+What is the output of question 4 b
+Same as obj1
 
-4c) const obj1= {
+
+
+
+
+4c.
+const obj1= {
 
 "key1": "value1",
 
@@ -81,8 +98,15 @@ console.log(obj2)
 const obj2 = { ...obj1 , "key3": "new value"}
 
 
+What is the output of question 4c
+Same as obj1 and only key3 value changes
 
-4d) const obj1= {
+
+
+
+
+4d.
+const obj1= {
 
 "key1": "value1",
 
@@ -95,8 +119,15 @@ const obj2 = { ...obj1 , "key3": "new value"}
 const obj2 = { ...obj1, "key3": "new value", "key1": "new val" }
 
 
+What is the output of question of 4 d
+Same as obj1 and only key3 and key1 value changes
 
-4e) const obj= {
+
+
+
+
+4e.
+const obj= {
 
 "key1": "value1",
 
@@ -111,11 +142,22 @@ const obj2 = { ...obj}
 console.log(obj2 === obj)
 
 
+What is the output of question 4e
+false, because because the objects point to different reference
 
-4f) const arr1 = [1, 2, 3]
+
+
+
+
+4f.
+const arr1 = [1, 2, 3]
 
 const arr2 = [3,5,6]
 
 const arr3 = [...arr1, ...arr2]
 
 console.log(arr3)
+
+
+What is the output of question 4f
+123356
