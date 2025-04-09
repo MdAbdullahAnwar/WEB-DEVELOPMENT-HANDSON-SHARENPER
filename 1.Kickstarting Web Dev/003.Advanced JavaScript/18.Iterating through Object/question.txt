@@ -1,0 +1,47 @@
+Given a student object as shown below can you write code to iterate through object and find average age of students.
+
+
+
+Input
+
+studentobj = {
+
+'yash': 26,
+
+'vaibhav': 24,
+
+'rajesh' : 25,
+
+}
+
+
+
+Output
+
+Average age = 25
+
+
+
+Explanation
+
+On adding all the ages we get 75
+
+Total number of keys = 3
+
+So 75/3 = 25.
+
+
+
+Can you write a function which takes the object and return average age.
+
+
+
+function findaverageage(studentObj){
+
+//write your code here.
+
+
+
+return averageAge;
+
+}
