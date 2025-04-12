@@ -1,0 +1,26 @@
+It is mandatory to build the entire project using bootstrap.
+
+
+Useful Resources
+
+
+What is bootstrap?
+
+Watch this video to know how to use bootstrap. Code along with the trainer for better understanding.
+
+
+
+Deliverable
+
+
+Watch this video to understand what you have to do in this task - https://youtu.be/y-BRJiLmQyU.
+
+
+
+This task is super important and should be completed with each and every feature.
+
+
+
+Fetching the expense when the user reloads the screen from the local storage is not required for now.
+
+We will do it in later assignments.
