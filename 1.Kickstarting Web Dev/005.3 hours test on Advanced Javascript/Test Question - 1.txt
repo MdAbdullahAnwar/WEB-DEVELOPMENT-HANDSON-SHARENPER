@@ -1,0 +1,71 @@
+QUESTION 1
+
+
+printName("Sharpener");
+
+console.log(a);
+
+var a = 100;
+
+function printName(name){
+
+console.log(name)
+
+}
+
+
+
+Output of question 1?
+
+Sharpener Undefined
+
+
+
+
+
+QUESTION 2
+
+
+console.log(printName());
+
+console.log(a);
+
+var a = 100;
+
+var printName = (name) => {
+
+console.log(name)
+
+}
+
+
+
+
+Output of Question 2?
+
+Undefined Undefined
+
+
+
+
+
+QUESTION 3
+
+
+console.log(printName);
+
+console.log(a);
+
+var a = 101;
+
+var printName = function (name) {
+
+console.log(name)
+
+}
+
+
+
+Output of Question 3?
+
+Undefined Undefined
