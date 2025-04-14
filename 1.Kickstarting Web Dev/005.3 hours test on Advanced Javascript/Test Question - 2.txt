@@ -1,0 +1,112 @@
+QUESTION 1
+
+Find the output
+
+
+
+function outerfunction() {
+
+console.log(a);
+
+var c = 25;
+
+innerfunction();
+
+function innerfunction() {
+
+console.log(b);
+
+console.log(c);
+
+}
+
+}
+
+var a = 5;
+
+var b =6
+
+outerfunction();
+
+
+
+Output of Question 1?
+5 6 25
+
+
+
+
+
+QUESTION 2
+
+Find the output
+
+
+function outerfunction() {
+
+console.log(a);
+
+var a = 25;
+
+innerfunction();
+
+function innerfunction() {
+
+console.log(a);
+
+console.log(window.a);
+
+console.log(this.a)
+
+}
+
+}
+
+var a = 5;
+
+var b =6
+
+outerfunction();
+
+
+
+Output of Question 2?
+undefined 25 5 5
+
+
+
+
+
+QUESTION 3
+
+Find the output
+
+
+function outerfunction() {
+
+var a = 25;
+
+console.log(a);
+
+return function innerfunction() {
+
+console.log(a);
+
+console.log(window.a);
+
+console.log(this.a)
+
+}
+
+}
+
+var a = 5;
+
+var b =6
+
+outerfunction();
+
+
+
+Output of Question 3?
+None of the above
