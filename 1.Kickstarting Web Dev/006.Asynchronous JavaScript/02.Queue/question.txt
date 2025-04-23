@@ -1,0 +1,11 @@
+Implement Queue from Scratch
+
+
+
+Watch this video to have a better understanding of how to design using classes - https://www.youtube.com/watch?v=eb6UHsS5WWk
+
+
+
+
+
+Write the code in Javascript
