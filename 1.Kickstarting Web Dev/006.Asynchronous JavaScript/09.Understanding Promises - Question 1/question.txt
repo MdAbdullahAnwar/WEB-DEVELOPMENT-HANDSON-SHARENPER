@@ -1,0 +1,20 @@
+Wath the following videos:
+
+What are Promises?
+
+Math.random() Explained
+
+Returning Promise from a Function
+
+
+
+Now, imagine you went to a library to search for a book you want. The librarian promises you that he will find the book. But, like any promise, this promise can either be fulfilled or rejected. Write a code to handle this promise.
+
+
+
+Deliverable:
+
+Create a function "bookSearchPromise" that returns a promise which after 3 seconds either resolves with message "Book found" or gets rejected with message "Book not found".
+Make use of Math.random() to mimic both the resolve and reject case.
+Handle the fulfillment of the promise with then block and print the resolve message to the console.
+Handle the rejection of the promise with catch block and print the reject message to the console.
