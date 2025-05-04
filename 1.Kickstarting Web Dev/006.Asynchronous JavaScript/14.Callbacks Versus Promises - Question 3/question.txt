@@ -1,0 +1,23 @@
+In this question, your task is to resolve callback hell by converting the given callback functions into promises.
+
+
+
+Given Functions:
+task1 prints "Task 1 completed" after 2 seconds and then calls its callback.
+task2 prints "Task 2 completed" after 1 second and then calls its callback.
+The allTasksCompleted function prints "All tasks completed".
+
+Expected Output:
+
+
+Task 1 completed
+
+Task 2 completed
+
+All tasks completed
+
+
+
+Deliverables:
+Convert the task1 and task2 functions into promises.
+Chain the promises to ensure sequential execution.
