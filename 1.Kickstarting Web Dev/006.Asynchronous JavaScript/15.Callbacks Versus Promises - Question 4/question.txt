@@ -1,0 +1,16 @@
+In this question you have to create the functions from scratch . You need to create two functions: step1 , step2 which returns promise. You have to resolve this functions in sequentially to get the expected output
+
+
+
+Functions to Implement
+step1: Prints "Step 1 completed" after 2 seconds and then resolves the promise.
+step2: Prints "Step 2 completed" after 1 second and then resolves the promise.
+Print "All steps completed" after all the promises are resolved.
+
+
+Expected Output
+Step 1 completed
+
+Step 2 completed
+
+All steps completed
