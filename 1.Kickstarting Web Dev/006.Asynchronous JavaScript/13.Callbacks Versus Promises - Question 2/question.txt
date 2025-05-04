@@ -1,0 +1,75 @@
+See the code below:
+
+function boilWater(callback1, callback2, callback3) {
+
+ setTimeout(() => {
+
+  console.log("Water boiled");
+
+  callback1(callback2, callback3);
+
+ }, 2000);
+
+}
+
+
+
+function addCoffeePowder(callback1, callback2) {
+
+ setTimeout(() => {
+
+  console.log("Added coffee powder");
+
+  callback1(callback2);
+
+ }, 500);
+
+}
+
+
+
+function brewCoffee(callback) {
+
+ setTimeout(() => {
+
+  console.log("Brewed coffee");
+
+  callback();
+
+ }, 1000);
+
+}
+
+
+
+function haveCoffee() {
+
+ setTimeout(() => {
+
+  console.log("Enjoying my coffee");
+
+ }, 3000);
+
+}
+
+
+
+boilWater(addCoffeePowder, brewCoffee, haveCoffee);
+
+
+
+This code makes use of callbacks to print messages to the console in the following order:
+
+"Water boiled"
+
+"Added coffee powder"
+
+"Brewed coffee"
+
+"Enjoying my coffee"
+
+
+
+Deliverable:
+
+Your task is to use promises instead of callbacks to print messages in the same order to the console.
