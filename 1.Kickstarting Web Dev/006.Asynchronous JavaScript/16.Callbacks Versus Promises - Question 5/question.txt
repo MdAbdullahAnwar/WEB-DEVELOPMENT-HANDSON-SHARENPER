@@ -1,0 +1,14 @@
+In this task, you are given two callback functions that you need to convert into promises. You have to use promises to handle these delays and chain the functions sequentially.
+
+
+Expected Output:
+Step 1
+
+Step 2 received: Message from Step 1
+
+All steps completed!
+
+
+Deliverables:
+Convert the given callback functions into promises.
+Chain the promises to ensure they execute in sequence.
