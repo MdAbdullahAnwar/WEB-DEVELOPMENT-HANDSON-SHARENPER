@@ -1,0 +1,24 @@
+In this task, your have to create the functions and resolve them sequentially to get the expected output.
+
+Add 3 to the starting number.
+Multiply the result by 2.
+
+
+Functions to Implement
+add: Adds 2-second delay, adds 3 to the value, prints “Added 3”, and resolves the promise with the new value.
+multiply: Adds 1-second delay, multiplies the value by 2, prints “Multiplied by 2”, and resolves the promise with the new value.
+
+
+Example:
+If the initial value is 2:
+
+After adding 3, it becomes 5.
+Then, multiplying 5 by 2 gives 10.
+
+
+Expected Output:
+Added 3
+
+Multiplied by 2
+
+Final result: 10
