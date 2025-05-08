@@ -1,0 +1,19 @@
+Watch the following video:
+
+Promises & Error Handling
+
+
+This Sunday, you have planned to go on a picnic with your family, but you will go only when weather is sunny and not cloudy. Use a promise to simulate this.
+
+
+Deliverables:
+
+1. Create a function called "checkWeather" that returns a promises which gets resolved or rejected after 3 seconds.
+
+2. If weather is sunny resolve the promise with message "Let us go for picnic".
+
+3. If weather is cloudy reject the promise with error message "Error: It is cloudy".
+
+
+
+NOTE: Use Math.random() to simulate the chance of weather being sunny or not.
