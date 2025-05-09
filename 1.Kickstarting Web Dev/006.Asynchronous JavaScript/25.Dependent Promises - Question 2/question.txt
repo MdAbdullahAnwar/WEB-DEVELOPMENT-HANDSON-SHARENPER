@@ -1,0 +1,21 @@
+Recall that in one of the previous tasks you were thinking that if the weather is sunny you will go for picnic with your family, otherwise if the weather is cloudy, you will not go.
+
+Imagine, that the weather is sunny. Now, you want to ensure two more things before you go for picnic:
+
+1. Your car is in a good condition so that your travel is safe.
+
+2. You have all the essential items that are required in a picnic
+
+You will go only if both these conditions are met.
+
+
+
+Deliverables:
+
+1. Create a function called "checkCar" that returns a promise which resolves with message "Car is ready" and rejects with message "Error: Car needs maintenance" in 2 seconds.
+
+2. Create a function called "packForPicnic" that returns a promise which resolves with message "Packed everything for picnic" and rejects with message "Error: Not have some essentials" in 1 second.
+
+3. If both the promises resolve successfully then print to console "Go for picnic".
+
+4. If anyone of the promises is rejected, then print to console "Picnic cancelled".
