@@ -1,0 +1,23 @@
+Go through the following crash course on Axios:
+
+Axios - Premise
+Axios - Explanation
+Axios - Post Request
+Response Object Explained
+HTTP Status Codes
+Axios - Get Request
+Axios - Put Request
+Axios - Delete Request
+
+
+Deliverable:
+
+You are given an interface similar to the one we saw in the videos above. Don't touch the HTML file and write your code in the JavaScript file only at the relevant places. The JavaScript file have four functions, viz. getTodos, postTodo, putTodo and deleteTodo. Here is what you have to do:
+
+Use postTodo function to make a post request to crud-crud using axios. [Payload = {title: "Learn Axios", completed: false}]
+Use getTodo function to make a get request to crud-crud using axios.
+Use putTodo function to make a put request to crud-crud using axios and change the completed status of todo item with title "Learn Axios" to true.
+Use deleteTodo function to make a delete request to crud-crud using axios and delete this todo item.
+
+
+After you are done with the tasks above watch the 3 videos in this playlist to understand the need of headers and find out what common mistakes people make while making HTTP request?
