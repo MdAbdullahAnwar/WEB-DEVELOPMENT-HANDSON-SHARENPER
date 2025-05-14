@@ -1,0 +1,14 @@
+Recall, the Booking Appointment App that we built in the DOM Manipulation Assignment. There we were storing the user details object in the local storage. Now, instead of doing that, we aim to store it in the cloud.
+
+
+
+Deliverable:
+
+Take the user details object and make a POST request to crud-crud using Axios.
+See the solution in this video: https://www.youtube.com/watch?v=plO2tHy8WgU
+After watching the solution video write the code by yourself
+
+
+NOTE: Do not touch the code already written inside the HTML and JavaScript files.
+
+NOTE: Check Crud-Crud resource and see if the request was successful or not. Whether you can see the object there or not.
