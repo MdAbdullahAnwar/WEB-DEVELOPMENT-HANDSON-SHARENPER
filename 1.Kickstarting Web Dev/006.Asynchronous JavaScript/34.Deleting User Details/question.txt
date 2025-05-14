@@ -1,0 +1,13 @@
+In the previous task, we fetched details of all the saved users and displayed them on the screen. In this task we wish to provide delete facility to our users.
+
+
+
+Deliverables:
+
+On clicking of the delete button make a DELETE request to crud-crud using Axios, so that user details of the corresponding user are removed from crud-crud.
+After successful deletion of user details from crud-crud, also remove them from the screen.
+
+
+NOTE: You would have to make use of user's unique "_id" to perform DELETE operation.
+
+NOTE: If stuck for very long, look at the hint.
