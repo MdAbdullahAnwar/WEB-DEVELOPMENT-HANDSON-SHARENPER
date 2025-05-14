@@ -1,0 +1,14 @@
+Previously, you were able to save the user details to crud-crud. But then when you refresh the page, everything is lost. In this task, we aim to solve this problem.
+
+
+
+Deliverable:
+
+When page (DOM content) loads make a GET request to crud-crud using Axios to fetch details of all the users saved and display them on the screen
+See the solution in this video: https://www.youtube.com/watch?v=KU9FoM7uPTw
+After watching the solution video write the code by yourself
+
+
+NOTE: Do not touch the code already written inside the HTML and JavaScript files.
+
+NOTE: Why on the earth do we need "DOMContentLoaded"? Watch this video: https://www.youtube.com/watch?v=dbm1frVJsEw
