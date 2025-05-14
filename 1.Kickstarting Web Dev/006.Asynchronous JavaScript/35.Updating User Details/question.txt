@@ -1,0 +1,13 @@
+In this task we want to provide our users a facility that allows them to edit their details.
+
+
+
+Deliverables:
+
+On clicking of the edit button populate the input fields with details of the corresponding user and make a DELETE request to delete this user.
+Now, user can edit the populated input fields. Once he is satisfied with the changes, he will press the submit button. On form submission make a POST request so that these new details are saved for the user. Obviously, the new details of this user should also be displayed on the screen.
+
+
+NOTE: You would have to make use of user's unique "_id" to perform DELETE operation.
+
+NOTE: If stuck for very long, look at the hint.
