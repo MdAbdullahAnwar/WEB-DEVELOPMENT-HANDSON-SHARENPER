@@ -1,0 +1,15 @@
+Deliverable
+
+First Watch this demo to understand what you have to build.
+
+After, Watch this video for more context about this project.
+
+
+
+MOST IMPORTANT
+
+Watch this video to get ideas on improving your project's UI.
+
+Don't make the project look boring; 
+
+Add some stylings, as explained in the example video.
