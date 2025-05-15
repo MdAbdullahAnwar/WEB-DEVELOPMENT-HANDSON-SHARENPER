@@ -1,0 +1,61 @@
+The classroom is consist of N*M rows and columns . Teacher is taking attendance row wise , The present student will be marked by 1 and absent student
+
+will be marked by 0 . You have to find the row in which maximum students are present .
+
+
+
+Time Complexity required to solve this Question is 0(n+m).
+
+Hint :- Try to identify a pattern.
+
+
+
+Example 1:
+
+Input:
+
+N = 4 ,
+
+M = 4
+
+Arr[][] =
+
+{{0, 1, 1, 1},
+
+{0, 0, 1, 1},
+
+{1, 1, 1, 1},
+
+{0, 0, 0, 0}}
+
+Output: 2
+
+Explanation: Row 3 contains 4 1's
+
+
+
+Example 2:
+
+Input:
+
+N = 2,
+
+M = 2
+
+Arr[][] =
+
+{{0, 0},
+
+{1, 1}}
+
+Output: 1
+
+Explanation: Row 1 contains 2 1's (0-based indexing).
+
+
+
+Constraints:
+
+1 ≤ N, M ≤ 10^3
+
+0 ≤ Arr[i][j] ≤ 1 

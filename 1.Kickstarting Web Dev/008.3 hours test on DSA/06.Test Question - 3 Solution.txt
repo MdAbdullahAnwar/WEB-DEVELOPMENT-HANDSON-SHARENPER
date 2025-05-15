@@ -1,0 +1,19 @@
+string sharpenerParser(string command) {
+    string result = "";
+    for(int i=0;i<command.length();i++)
+    {
+        if(command[i]=='S')
+        {
+            result += "S";
+        }
+        else if(command[i] == '(' && command[i+1] == ')')
+        {
+            result += "h";
+        }
+        else if(command[i] == 'n')
+        {
+            result += "arp";
+        }
+    }
+    return result;
+}

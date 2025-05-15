@@ -1,0 +1,13 @@
+int maxDrinks(int numCoconuts, int numEmptyShells)
+{
+   int totalDrinks = numCoconuts;
+   int emptyShells = numCoconuts;
+
+   while(emptyShells >= numEmptyShells)
+   {
+        int newCoconuts = emptyShells/numEmptyShells;
+        totalDrinks += newCoconuts;
+        emptyShells = emptyShells % numEmptyShells + newCoconuts;
+   }
+   return totalDrinks;
+}

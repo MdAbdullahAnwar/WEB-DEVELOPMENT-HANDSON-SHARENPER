@@ -1,0 +1,19 @@
+You own a Sharpener Parser that can interpret a string command. The command consists of an alphabet of "S", "()", and/or "n" in some order. The Sharpener Parser will interpret "S" as the string "S", "()" as the string "h", and "n" as the string "arp". The interpreted strings are then concatenated in the original order.
+
+Given the string command, return the Sharpener Parser's interpretation of command.
+
+
+
+Input: "S()n"
+
+Output: "Sharp"
+
+Explanation: The Sharpener Parser will interpret the command as "S", "()", and "n", which correspond to "S", "h", and "arp", respectively. The interpreted strings are then concatenated in the original order, resulting in the string "Sharp".
+
+
+
+Input: "Sn"
+
+Output: "Sarp"
+
+Explanation: The Sharpener Parser will interpret the command as "S" and "n", which correspond to "S" and "arp", respectively. The interpreted strings are then concatenated in the original order, resulting in the string "Sarp".

@@ -1,0 +1,7 @@
+Print the following pattern using for loop
+*    *
+**   **
+***  ***
+**** ****
+**********
+(Solve the following question in the compiler, make sure all test case passes and then click submit.)
