@@ -1,0 +1,16 @@
+string isPossible(long long n, long long l, long long s) {
+
+    //your code here
+    if(n < 1)
+        return "NO";
+    
+    long long minSum = l * (l + 1LL)/2;
+
+    long long maxSum = l * (2*n-l+1LL)/2;
+
+    if(s >= minSum && s <= maxSum)
+        return "YES";
+    else
+        return "NO";
+    
+}

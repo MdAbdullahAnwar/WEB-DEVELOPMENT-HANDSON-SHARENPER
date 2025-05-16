@@ -1,0 +1,14 @@
+bool canRearrangeEvenOnes(int N, const string& soldiers) {
+
+// your code here
+    int countOnes = 0;
+    for(char c : soldiers)
+    {
+        if(c == '1')
+        {
+            countOnes++;
+        }
+    }
+
+    return (countOnes % 4 == 0);
+}

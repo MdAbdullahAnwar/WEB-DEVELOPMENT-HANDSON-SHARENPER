@@ -1,0 +1,53 @@
+Solve this Question in 0(N) Time complexity.
+
+Hint use Prefix sum.
+
+
+
+Example 1:
+
+Input:
+
+N = 4
+
+Arr[] = {1, 2, 0, 3}
+
+Output: True
+
+Explanation: Consider i = 3, for [1, 2] sum is 3 and for [0,3] sum is also 3.
+
+
+
+Example 2:
+
+Input:
+
+N = 2
+
+Arr[] = {1, 5}
+
+Output: False
+
+Explanation: No such index present.
+
+
+
+Example 3:
+
+Input:
+
+N = 2
+
+Arr[] = {1,2,3,2,1,2, 5}
+
+Output: True
+
+Explanation: Consider i = 4, for [1, 2,3,2] sum is 8 and for [1,2,5] sum is also 8
+
+
+
+Constraints:
+
+1 ≤ N ≤ 10^5
+
+1 ≤ Arr[i] ≤ 10^6

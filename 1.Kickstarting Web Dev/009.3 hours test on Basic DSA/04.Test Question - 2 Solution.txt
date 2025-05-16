@@ -1,0 +1,29 @@
+#include<algorithm>
+class Solution {
+public:
+    vector<int> topper(vector<int>& arr) {
+        //code here 
+
+        vector<int> ans;
+        int maxi = INT_MIN;
+
+        for(int i=arr.size()-1 ; i >= 0 ; i--)
+        {
+            if(maxi < arr[i])
+            {
+                ans.push_back(arr[i]);
+                maxi = arr[i];
+            }
+        }
+        
+        int s=0;
+        int e=ans.size()-1;
+        while(s<=e)
+        {
+            swap(ans[s],ans[e]);
+            s++;
+            e--;
+        }
+        return ans;
+    }
+};
