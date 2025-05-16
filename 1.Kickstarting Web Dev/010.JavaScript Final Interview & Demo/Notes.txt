@@ -1,0 +1,60 @@
+About this session
+Things To Ensure
+
+
+
+a. Make sure to revise the previous JavaScript assignments. Mentor will ask questions
+
+b. Make sure to revise the DSA whatever you have learned till now. Mentor will ask questions.
+
+c. Make sure you have your project demo ready.
+
+
+
+
+
+Additional Notes: Coding Best Practices
+
+
+Refer to the following videos to understand key coding best practices. Ensure that you apply these principles in your projects:
+
+
+
+Video on Variables : http://loom.com/share/c1446ec8701e41ce8f4d79597a91f39e
+
+
+
+Video on Functions : https://www.loom.com/share/65f8dbcece5f42f9a03c761832794ebb
+
+
+
+Video on Miscellaneous Topics and Documentation : https://www.loom.com/share/143052fdf940481abf4e184841c8c9dd?sid=7b70593f-c902-4dc1-a192-71fce8e7dab5
+
+
+
+Video on Environment Variables : https://www.loom.com/share/ed06451e24fe483088b474929ede84f2?sid=f42ee513-635d-4d9b-9b2b-0c86c2faf81c
+
+
+
+
+
+To speed up your development process and ensure best practices, refer to these documents for JavaScript:
+
+
+
+JS  Quick Reference::
+
+https://docs.google.com/document/d/1T6YthPTQJtc6LKDuzlAcSxxy3WBJCSDPqcdJhI3w_x0/edit?tab=t.0\
+
+
+
+
+
+Deliverable
+
+
+
+Your mentor will guide you then as to how to move ahead.
+You will be given a rating here. Please be very serious in the demo as bad performance here will affect placements.
+Please decide between what you have to move ahead with Frontend or Backend? Do your research. Both of the fields are good and eventually the plan is for you to become full stack developer, but you have to choose one of the paths to begin with.
+If you fail in this round mentor will undo the previous assignments and you have again wait for next 7 days.
