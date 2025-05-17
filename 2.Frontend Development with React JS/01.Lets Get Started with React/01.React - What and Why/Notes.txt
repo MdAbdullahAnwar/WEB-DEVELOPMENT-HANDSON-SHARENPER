@@ -1,0 +1,7 @@
+You have made it so far. Super proud of you. Please watch this video completely for some interesting insights to master the Development phase.
+
+Now, go through the following videos and answer the MCQs that follow:
+
+What is React?
+Why React?
+What is JSX?

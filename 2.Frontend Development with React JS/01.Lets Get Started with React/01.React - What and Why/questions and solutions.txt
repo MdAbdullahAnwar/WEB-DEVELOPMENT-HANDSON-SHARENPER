@@ -1,0 +1,9 @@
+Ques 1. We need react over vanilla javascript to:
+
+Ans. make the process of building complex user interfaces easy
+
+
+
+Ques 2. Which of the following correctly represents the approach taken by React?
+
+Ans. Declarative and Component based
