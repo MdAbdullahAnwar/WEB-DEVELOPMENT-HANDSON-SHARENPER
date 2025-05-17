@@ -1,0 +1,26 @@
+Go through the following videos:
+
+Installing Dependencies
+Initial Project Setup
+Understanding Folders and Files
+Understanding Src Folder - 1
+Understanding Src Folder - 2
+
+
+Download and Install:
+
+VS Code - Download Visual Studio Code - Mac, Linux, Windows
+Node JS - Download | Node.js (nodejs.org)
+
+
+Read more about "create-react-app" tool here (optional): facebook/create-react-app: Set up a modern web app by running one command. (github.com)
+
+
+
+Deliverable:
+
+Inside the JSX that the App component returns create a paragraph (<p>) element, below the <h1> element, with this text "I am learning React".
+
+
+
+Watch hints if stuck for long.
