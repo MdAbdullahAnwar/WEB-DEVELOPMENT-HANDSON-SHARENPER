@@ -1,0 +1,15 @@
+Go through the following video:
+
+First Custom Component
+
+
+
+Deliverable:
+
+Inside the ExpenseItem Component instead of the text "This is expense item!" can you display the following:
+
+Food - $5
+
+Petrol - $20
+
+Movie - $10
