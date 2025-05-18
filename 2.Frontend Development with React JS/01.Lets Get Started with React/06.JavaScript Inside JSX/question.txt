@@ -1,0 +1,11 @@
+Go through the following video:
+
+JavaScript inside JSX
+
+
+
+Deliverable:
+
+Create a <div>, after the date <div>, for location of the expense.
+Make use of a variable (for example, expenseLocation) to mention "Bangalore" as the location of expense.
+To this <div> apply a class called "expense-item__location".
