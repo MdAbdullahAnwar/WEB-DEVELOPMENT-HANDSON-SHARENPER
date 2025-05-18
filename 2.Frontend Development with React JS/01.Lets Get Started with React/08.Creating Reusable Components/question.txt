@@ -1,0 +1,23 @@
+Go through the following videos:
+
+Reusable Components - 1
+
+Reusable Components - 2
+
+Reusable Components - Key Attributes
+
+
+
+Deliverable:
+
+1. Add one more property called "location" to each expense inside the expenses array, such that:
+
+Expense object with id = 1, has location = "Bangalore"
+Expense object with id = 2, has location = "Delhi"
+Expense object with id = 3, has location = "Hyderabad"
+Expense object with id = 4, has location = "Mumbai"
+2. Add one more attribute called "location" to the ExpenseItem component that you are creating using map method, and make sure that the above are passed as its value for each expense item, respectively.
+
+3. Create a <div>, after the date <div>, for location of the expense. Make sure that the location you are receiving inside the props object, you are passing that inside this <div>.
+
+4. To this <div> apply a class called "expense-item__location".
