@@ -1,0 +1,9 @@
+Go through the following video:
+
+Writing Complex JSX
+
+
+
+Deliverable:
+
+After <div> element for date of the expense, create one more <div> element for location of the expense. "Delhi" should be the text inside this <div> element.
