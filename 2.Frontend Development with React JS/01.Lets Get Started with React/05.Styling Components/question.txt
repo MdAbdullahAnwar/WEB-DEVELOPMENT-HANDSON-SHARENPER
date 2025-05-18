@@ -1,0 +1,11 @@
+Go through the following video:
+
+Styling Components
+
+
+
+Deliverable:
+
+Apply the classes to the elements as we have applied in the video.
+After <div> element for date of the expense, create one more <div> element for location of the expense. "Delhi" should be the text inside this <div> element.
+To this location <div> add a class called "expense-item__location" (you can find this in the CSS file).
