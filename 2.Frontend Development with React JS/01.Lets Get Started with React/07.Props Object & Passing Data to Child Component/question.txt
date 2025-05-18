@@ -1,0 +1,21 @@
+Go through the following videos:
+
+Understanding Props - 1
+
+Understanding Props - 2
+
+
+
+Deliverable:
+
+1. Create a <div>, after the date <div>, for location of the expense.
+
+2. To this <div> apply a class called "expense-item__location".
+
+3. In App.js give each ExpenseItem component an extra attribute called location and pass:
+
+Bangalore as its value for ExpenseItem with title Insurance
+Delhi as its value for ExpenseItem with title Book
+Hyderabad as its value for ExpenseItem with title Pen
+Mumbai as its value for ExpenseItem with title Laptop
+4. Display these locations on screen for the corresponding expense item inside the location <div> that you created inside the ExpenseItem component. [Hint: Make use of props object.]
