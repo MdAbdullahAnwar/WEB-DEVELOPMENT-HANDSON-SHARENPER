@@ -1,0 +1,21 @@
+Understand some standard practices followed in most React projects:
+
+
+React import statement
+Proper file structure
+Using arrow function
+
+
+Now, answer the following MCQs.
+
+
+
+1. React import statement is:
+
+Solution: is not compulsory in modern react projects
+
+
+
+2. A good project structure is one:
+
+Solution: in which all the above conditions are met
