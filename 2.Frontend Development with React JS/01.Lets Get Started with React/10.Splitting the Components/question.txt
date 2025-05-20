@@ -1,0 +1,14 @@
+Go through the following video:
+
+Splitting The Components
+
+
+
+Deliverables:
+
+Split the ExpenseItem component into ExpenseDate component just the way I have done in the video.
+Try to split the App component into a component named Expenses as I explained it in the video.
+Import and use the Expenses.css file in the Expenses component.
+
+
+Note: If stuck for long, check hints.
