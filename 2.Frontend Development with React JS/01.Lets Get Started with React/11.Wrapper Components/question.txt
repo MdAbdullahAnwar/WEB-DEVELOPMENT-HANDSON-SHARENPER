@@ -1,0 +1,17 @@
+Note: Watch this video to learn an alternative way in which you can write a custom component.
+
+
+
+Now, go through the following videos:
+
+Concept of Composition
+Creating Wrapper Component
+
+
+Deliverable:
+
+Just code the way I have done in the video.
+
+
+
+Note: Watch this video to learn about relative imports and absolute imports.
