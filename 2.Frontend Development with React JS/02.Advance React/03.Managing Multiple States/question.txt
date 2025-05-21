@@ -1,0 +1,13 @@
+Go through the following videos:
+
+Creating Expense Form
+
+Listening for User Inputs
+
+htmlFor
+
+
+
+Deliverable:
+
+Correctly handle the onChange event for amount and date input fields.
