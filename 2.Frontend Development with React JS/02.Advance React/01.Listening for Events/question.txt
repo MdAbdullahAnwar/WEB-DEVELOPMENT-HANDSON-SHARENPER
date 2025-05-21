@@ -1,0 +1,9 @@
+Go through the following video:
+
+Adding Event Listeners
+
+
+
+Deliverable:
+
+Just code the way I have done in the video.
