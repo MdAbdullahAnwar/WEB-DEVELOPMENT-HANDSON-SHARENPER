@@ -1,0 +1,26 @@
+Let's learn Formik and Yup 
+
+Why does traditional form handling have issues? 🤔
+
+Watch the video to understand the challenges of managing forms manually.
+
+
+
+So how can we improve?
+
+Formik and Yup will save the day! 🚀
+
+Watch the next video to learn how to create forms using Formik & Yup and make form handling seamless and efficient!
+
+Part 1 : Explanation
+
+Part 2: Implementation
+
+
+
+Deliverables
+Define a validation schema using Yup to ensure email and password meet the required conditions.
+Set initial values for email and password as empty strings.
+Implement an onSubmit function to log form values to the console.
+Pass initialValues, validationSchema, and onSubmit to the Formik component.
+Ensure Field and ErrorMessage components are correctly placed for email and password.
