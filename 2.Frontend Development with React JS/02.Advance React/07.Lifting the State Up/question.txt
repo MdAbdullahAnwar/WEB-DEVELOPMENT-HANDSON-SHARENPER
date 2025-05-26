@@ -1,0 +1,12 @@
+Go through the following videos:
+
+Lifting the State Up - 1
+
+Lifting the State Up - 2
+
+
+
+Deliverable:
+
+Code the way I have done in the video and pass the expense data from ExpenseForm component to the NewExpense component.
+Pass the expense data from the NewExpense component to the App component and log it to the console inside the App component.
