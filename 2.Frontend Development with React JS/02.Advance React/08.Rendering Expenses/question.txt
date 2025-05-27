@@ -1,0 +1,11 @@
+So, in the last task we were able to lift the expense data from ExpenseForm component to the App component. Now, inside the App component, can you add this expense data to the expenses array, so that it is also displayed on the screen.
+
+
+
+Deliverable:
+
+Add the expense data to the expenses array and display it along with the other expense items on the screen.
+
+
+
+Hint: expenses.push(expense) will not work because it will only update the expenses array but will not re-render the App component again. Can you think of some other solution? We have already seen this in the context of "Change Title" button in the ExpenseItem component. Same solution will apply here.
