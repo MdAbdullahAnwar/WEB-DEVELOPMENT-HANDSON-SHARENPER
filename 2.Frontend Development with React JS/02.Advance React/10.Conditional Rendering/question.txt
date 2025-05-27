@@ -1,0 +1,23 @@
+Watch the following video:
+
+Conditional Rendering
+
+
+
+Deliverable:
+
+When there is only one expense for a year, render the expense list but then below it also show a message saying "Only one expense here. Please add more"
+
+
+
+Note: If stuck for long look at the hints.
+
+
+
+Push the code to GitHub.
+
+
+
+Once done with the task watch this video to understand a better design pattern:
+
+Conditional Return Statements
