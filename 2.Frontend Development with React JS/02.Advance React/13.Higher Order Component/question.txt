@@ -1,0 +1,13 @@
+What are HOCs, why do we need them, and where can we use them?
+
+Watch the video to dive deeper into these concepts and understand their significance in React development.
+
+Deliverables:
+Use the provided withLoader component and create your HOC .
+The HOC should add a loading state to any component you wrap with it.
+Just code the way I have done in the video.
+Don't change the App.js file .
+You have to write your code in the withLoader component.
+
+
+Think of HOCs as a power adapter—they seamlessly plug additional functionality into your components, just like adapters add compatibility to your devices.
