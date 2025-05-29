@@ -1,0 +1,14 @@
+Deliverables
+Create a custom hook useFetch.js inside src/hooks/.
+Implement loading, error, and data states inside the hook.
+Fetch data from the given URL and handle errors properly.
+Return { data, loading, error } from the hook and use it in App.js.
+
+
+📝 Submission
+Ensure your useFetch hook is inside src/hooks/useFetch.js.
+Your application should display loading, error, and fetched data properly.
+Push your code to a GitHub repository.
+
+
+Happy coding! 🚀
