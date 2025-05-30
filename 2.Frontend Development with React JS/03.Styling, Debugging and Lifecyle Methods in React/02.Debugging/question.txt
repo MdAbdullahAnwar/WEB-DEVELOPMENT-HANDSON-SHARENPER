@@ -1,0 +1,38 @@
+Watch the following videos:
+
+Debugging - Understanding Error Messages
+
+Debugging - Analyzing Code Flow & Warnings
+
+Debugging - Working with Breakpoints
+
+Introduction to React Dev Tools
+
+
+
+Now, answer the MCQs that follow.
+
+
+
+
+1. Which of the following are normally not caught when starting the development server?
+
+Logical Errors
+
+
+
+2. Which of the following can be used to debug your application?
+
+Both (Browser Dev Tools & React Dev Tools)
+
+
+
+3. In which tab of browser dev tools you will normally find the raw files to add breakpoints?
+
+Sources
+
+
+
+4. Which of the following errors will be difficult to spot?
+
+List items with same ids
