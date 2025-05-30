@@ -1,0 +1,22 @@
+Watch the following video:
+
+Dynamic Styling - Inline
+
+
+
+Deliverable:
+
+If the input is invalid, change the color of label to "red" and restore it to "black" for valid inputs.
+If the input is invalid, change the background color of input to "lightpink" and restore it to "transparent" for valid inputs.
+If the input is invalid, change the border color of input to "red" and restore it to "black" for valid inputs.
+
+
+Note: In your task the label is having "htmlFor" attribute and the input is having "id", with their values as "goalInput". Do not remove them.
+
+
+
+Check hints if stuck for long.
+
+
+
+Now, have a look at a better alternative for dynamic styling: Dynamic Styling via Classes
