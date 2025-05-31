@@ -1,0 +1,21 @@
+Watch the following video:
+
+Application Overview
+
+
+
+Deliverables:
+
+In the AddUser component return a form.
+
+Inside the form, create an input element for collecting Username. It should have "username" as its id and must be attached to the relevant label element.
+
+Create one more input element for collecting Age. It should have "age" as its id and must be attached to the relevant label element.
+
+Finally, add a button of type "submit" with text "Add User". This completes the form.
+
+Now, listen for submit event on form with the help of a handler function, name it "addUserHandler".
+
+Inside the handler, prevent the default behavior of form submission.
+
+Now, import the AddUser component in the App component and plug it in between the enclosing div.
