@@ -1,0 +1,8 @@
+Deliverables: In the AddUser component:
+
+
+Listen for change event on input fields and make use of useState hook to collect user inputs.
+
+On form submission, log to console the inputs provided by the user.
+
+Reset the form, i.e., clear the input fields, after that.
