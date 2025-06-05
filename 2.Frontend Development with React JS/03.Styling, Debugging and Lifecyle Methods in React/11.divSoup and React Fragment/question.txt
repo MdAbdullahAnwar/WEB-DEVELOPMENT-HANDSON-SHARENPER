@@ -1,0 +1,20 @@
+Watch the following videos:
+
+divSoup Problem
+
+React Fragment
+
+
+
+Now, answer the questions that follow.
+
+
+1. What are ways in which you can overcome the JSX limitation of having one root element in the return statement?
+
+Ans. All of the above
+
+
+
+2. Which of these is the best solution to the divSoup problem?
+
+Ans. React Fragment
