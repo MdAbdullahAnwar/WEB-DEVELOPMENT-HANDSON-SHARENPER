@@ -7,3 +7,27 @@ React Portals - Implementation
 
 
 Now, answer the questions that follow.
+
+
+
+1. What is React Portal in React.js?
+
+Ans. A way to render element outside the DOM hierarchy of the parent component
+
+
+
+2. Which method is used to create a portal in React?
+
+Ans. ReactDOM.createPortal()
+
+
+
+3. In which scenario is React Portal commonly used?
+
+Ans. Rendering modal or overlays
+
+
+
+4. What is the purpose of the second argument in the createPortal method?
+
+Ans. The destination element where the portal will be rendered
