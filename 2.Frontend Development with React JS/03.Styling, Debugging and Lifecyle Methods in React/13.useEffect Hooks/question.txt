@@ -1,0 +1,19 @@
+Watch the following videos:
+
+useEffect Hook - Explanation
+
+useEffect Hook - Example 1
+
+useEffect Hook - Example 2
+
+useEffect Hook - Clean Up Function
+
+useEffect Hook - Summary 1
+
+useEffect Hook - Summary 2
+
+
+
+Deliverable:
+
+Just code the way I have done in the video, except for the code in summary videos.
