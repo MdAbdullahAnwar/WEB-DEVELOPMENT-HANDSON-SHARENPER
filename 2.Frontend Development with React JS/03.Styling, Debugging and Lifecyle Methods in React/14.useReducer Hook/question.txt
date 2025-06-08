@@ -1,0 +1,21 @@
+Watch the following videos:
+
+useReducer Hook - Explanation
+
+useReducer Hook - Example
+
+
+
+Deliverable:
+
+Implement the state management for the password field using useReducer Hook, just the way we have done it for the email field.
+
+
+
+Check hints if stuck for long.
+
+
+
+Once done with the task above, go through the following video:
+
+useReducer & useEffect
