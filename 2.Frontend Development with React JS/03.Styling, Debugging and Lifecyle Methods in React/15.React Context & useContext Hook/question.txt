@@ -1,0 +1,17 @@
+Watch the following videos:
+
+React Context - Explanation
+
+Using React Context & useContext Hook
+
+
+
+Deliverable:
+
+Just code the way I have done in the video.
+
+
+
+Once you are done with the task, watch the following video:
+
+Custom Context Provider Component
