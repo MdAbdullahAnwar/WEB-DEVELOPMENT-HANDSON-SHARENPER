@@ -1,0 +1,27 @@
+1. What is the primary purpose of the useRef hook in React?
+
+Ans. Accessing the DOM directly
+
+
+
+2. How is useRef object different from a state variable in a functional component?
+
+Ans. useRef does not trigger re-renders, while state does
+
+
+
+3. How can you access the value of a useRef object?
+
+Ans. ref.current
+
+
+
+4. When would you typically use the useRef hook for managing focus in a React application?
+
+Ans. During component mounting or updating
+
+
+
+5. What is the main advantage of using useRef over traditional approaches for accessing the DOM?
+
+Ans. Improved Performance
