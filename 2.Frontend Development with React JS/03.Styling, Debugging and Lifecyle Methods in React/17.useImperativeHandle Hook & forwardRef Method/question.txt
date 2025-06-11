@@ -1,0 +1,19 @@
+Watch the following videos:
+
+useImperativeHandle Hook & forwardRef Method - Video 1
+
+useImperativeHandle Hook & forwardRef Method - Video 2
+
+
+
+Now, answer the questions that follow.
+
+
+
+Once you are done with the task, just go through the following videos. These are some favourite interview questions.
+
+What the hell is lifecycle in React?
+
+How do we control each lifecycle in React?
+
+What the hell are cleanup functions in React, that are needed to prevent memory leakages?

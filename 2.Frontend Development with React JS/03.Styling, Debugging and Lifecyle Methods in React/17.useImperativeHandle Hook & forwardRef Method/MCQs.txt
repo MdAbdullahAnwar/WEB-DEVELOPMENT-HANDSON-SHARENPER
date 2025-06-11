@@ -1,0 +1,27 @@
+1. When should you use "useImperativeHandle" hook in React?
+
+Ans. When you want to expose specific methods of a child component to its parent
+
+
+
+2. What is the second argument to useImperativeHandle used for?
+
+Ans. Callback Function
+
+
+
+3. What is the purpose of the forwardRef method in React?
+
+Ans. To forward refs from parent to child components
+
+
+
+4. How do you use forwardRef in a functional component?
+
+Ans. forwardRef((props.ref)=>{...})
+
+
+
+5. When combining useImperativeHandle and forwardRef, what are you likely trying to achieve?
+
+Ans. Exposing specific methods of a child component to its parent using a forwarded ref
