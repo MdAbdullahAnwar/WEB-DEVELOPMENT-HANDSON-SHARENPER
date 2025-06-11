@@ -1,0 +1,22 @@
+
+Deliverable
+
+First Watch this demo to understand what you have to build.
+
+Build it using React JS - [MANDATORY]
+
+
+
+MOST IMPORTANT
+
+Watch this video to get ideas on improving your project's UI.
+
+Don't make the project look boring; 
+
+Add some stylings, as explained in the example video.
+
+
+
+How to submit
+
+Only after you have completed all the features mentioned in the above demo, paste the commit ID in the section below.
