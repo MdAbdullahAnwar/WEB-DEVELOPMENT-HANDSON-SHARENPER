@@ -3,9 +3,6 @@ Download the resource  from this link.
 Watch videos 1 and 2 from the following link and understand how to maintain the file structure.
 
 
-
-
-
 Deliverable [TRY DOING THIS BY YOURSELF]
 
 Try building the header like this https://drive.google.com/file/d/1i5hLhqdtPLFsrw20m4MJl3GQpdZyyq_q/view?usp=sharing .Its fine if it doesn't look exactly like the image .
@@ -15,9 +12,13 @@ The cart button can for the time being show 0 cart items. You don't have to writ
 Its important that you try doing this by yourself. Its ok if you don't follow the best design patterns and file structure.
 
 
-
 If stuck for very long watch video 3 and 4 from the above link.
 
 
-
 Once done, push the code to git and upload the commit id
+
+
+
+
+Solution: Header of the Restaurant App
+GitHub Commit-ID: 9ed3109ed149eec82d7d9486f5cc8af7a428881c
