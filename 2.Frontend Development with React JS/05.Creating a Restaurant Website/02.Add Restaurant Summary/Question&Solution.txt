@@ -1,0 +1,18 @@
+Deliverable
+
+
+Build the restaurant summary like this https://drive.google.com/file/d/1ZpjBoJOKk3RMzU2sRUtliOd6tBmZXbmM/view?usp=sharing. I have circled what you have to build. IT IS SUPER SIMPLE
+
+
+Try Doing this by yourself.
+
+Its ok if you don't follow the best design patterns and file structure.
+
+ 
+﻿If stuck for long, watch video 5  from the following link and then try writing the code by yourself.
+
+
+
+
+Solution: Adding Restaurant Summary
+GitHub Commit-ID: 939cda9abb755f2980fb37bcf590fc3320531b18
