@@ -1,0 +1,24 @@
+This task is super simple.
+
+
+Deliverable
+
+You have to show the meals like this https://drive.google.com/file/d/1Rg-f8dFzRZgARdnaNxuqVe5HyGeqnsCj/view?usp=sharing.
+
+Take an an array of dummy meal Items and show it on the screen.
+
+The style do not have to exactly match.
+
+Try doing this by yourself.
+
+
+If stuck forever watch video 6  from the following link.
+
+
+Once the code is complete, push the code to git and upload commit ID.
+
+
+
+
+Solution: Adding Individual Meal Items
+GitHub Commit-ID: 85642479cf2022e1552a9d5e8b440ee7addc0dcc
