@@ -1,0 +1,18 @@
+Deliverable [TRY DOING THIS BY YOURSELF]
+
+You have to add a form for user to select number of quantity of item he want to order.
+Also add an "ADD Button"
+On clicking on the add button nothing should happen now. We will add logic later on
+Finally the screen should look like this https://drive.google.com/file/d/1yhNQqiIQGcrGohOvLCUDvxGLVjfsXnvd/view?usp=sharing.
+
+
+If stuck for very long watch video  7  from the following link.
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+Solution: Adding a Form
+GitHub Commit-ID: 42b0c9317937590318e502ae8476712218866d91
