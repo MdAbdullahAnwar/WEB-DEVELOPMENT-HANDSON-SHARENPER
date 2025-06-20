@@ -1,0 +1,19 @@
+Deliverable
+
+You had learnt about React.createportal() previously . Use that to build this https://drive.google.com/file/d/1_3zEu9cRIno287crU7CS-QSGWk1AfNLQ/view?usp=sharing. It is pretty simple i feel.
+Hard code the contents of the cart.
+When the user comes to the page the page should directly open .
+You don't have to make the close and order button work.
+We will do the functionality portion in the next task
+
+
+If stuck for long watch video 9 and 10  from the following link .
+
+
+Push the code to git and upload the commit Id
+
+
+
+
+Solution: Adding Cart Modal Overlay
+GitHub Commit-ID: e590b42b7ee3665c6c471ab09005d8d2ca3941b9
