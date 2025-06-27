@@ -1,0 +1,13 @@
+Deliverable
+
+When the user clicks on the cart icon , the cart should open up  https://drive.google.com/file/d/13TchLhjm_Ubj5Co5bKXVzLQXUaTqyfaW/view?usp=sharing. [TRY IT BY YOPURSELF]
+This could be simply done by using hooks, try it by yourself.
+Now when the user clicks on the close button , the cart should close. Watch video 11  from the following link to understand how to do it.
+
+Push the code to git and upload the commit Id
+
+
+
+
+Solution: Cart open and close
+https://github.com/MdAbdullahAnwar/Creating-Restaurant-Website/commit/31696b411636b07730b057c25659eabcf4f36984
