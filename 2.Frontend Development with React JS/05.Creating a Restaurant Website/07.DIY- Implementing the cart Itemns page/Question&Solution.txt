@@ -1,0 +1,27 @@
+So the items of the carts are used in multiple components in the website
+
+In showing the number of cart Items next to the carticon https://drive.google.com/file/d/13TchLhjm_Ubj5Co5bKXVzLQXUaTqyfaW/view?usp=sharing
+When the cart opens, cart Items are shown
+
+
+A good design pattern to use is Context API so that the cart is accessible to all the components.
+
+Watch video 12 and 13  from the following link to understand how it can be implemented
+
+
+
+Deliverable
+
+1. Tell me how does the reduce work
+2. Without watching videos after 13 , can you try to make the cart Items work. Whenever the user adds an item in his order , the cart Item should get update. [ Hint- You just need to play with Context Api]
+It is super simple .Dont watch videos after 13, the udemy trainer does very stupid and writes complicated stuff, which he also has no clue about XD.
+
+3. If stuck for long watch this playlist to understand how does context APi and states work in react . 
+
+The last video also has the next set of task which you need to implement. Finish that by yourself!!!
+
+
+
+
+Solution: Creating Restaurant Website Final Update
+GitHub Commit-ID: https://github.com/MdAbdullahAnwar/Creating-Restaurant-Website/commit/41cc2b8554f425137a0cbf3758f484321e5faa42
