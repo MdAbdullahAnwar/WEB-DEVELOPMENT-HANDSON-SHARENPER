@@ -1,0 +1,81 @@
+MOST IMPORTANT FOR INTERVIEW QUESTIONS
+
+
+
+
+1. What are the 4 things that the component cares about. Explain each one of them.
+
+Ans:
+i. Props => Props are inputs passed to a component from a parent component. They are read-only and help make components reusable.
+ii. State => State is internal to a component and determines its behavior. A change in state triggers a re-render.
+iii. Context => Context is global data shared across multiple components without props drilling.
+iv. Refs (DOM references) =>  Used to directly access DOM elements or store values that don’t trigger re-renders.
+
+
+
+2. What is Virtual DOM.
+
+Ans:
+The Virtual DOM (VDOM) is a lightweight copy of the Real DOM that React keeps in memory.
+
+How it Works:
+When the UI changes, React updates the Virtual DOM instead of directly modifying the Real DOM.
+React then compares the updated Virtual DOM with the previous one using Diffing Algorithm.
+Only the changed elements are updated in the Real DOM, making it efficient.
+
+
+
+3. How does Virtual DOM diffing make React fast
+
+Ans:
+Virtual DOM diffing optimizes performance by:
+
+i. Finding Differences Efficiently
+Instead of updating the entire DOM, React compares old and new Virtual DOM trees.
+Only elements that changed get updated.
+
+ii. Batch Updates
+React groups multiple changes and updates the DOM in a single operation instead of multiple smaller updates.
+
+iii. Minimal Repaints & Reflows
+Since only changed elements are updated, browser repaints and reflows are minimized, improving performance.
+
+
+
+4. "It all comes down to state change." What does the trainer mean by this.
+
+Ans: 
+React components re-render when state changes.
+If a component’s state doesn’t change, React doesn’t update the UI.
+When state updates, React compares the previous Virtual DOM and new Virtual DOM, and updates only the changed parts.
+
+
+
+5. Why does "APP RUNNING" get printed whenever we click on Toggle Paragragh button
+
+Ans:
+The App component re-renders every time the state changes.
+Every render logs "APP RUNNING", even though only one small part of the UI changes.
+
+
+
+6. Why does only the <p> tag flash?Please Explain.
+
+Ans: 
+The <p> tag flashes because it gets re-rendered when state changes.
+The <p> tag is inside a conditional render ({show && <p>...</p>}).
+When show toggles, React removes and adds the <p> tag, causing a flash effect.
+
+
+
+7. When we pass show = false [HARDCODED VALUE], why does DemoOutput get reevaluated ?
+
+Ans:
+DemoOutput is not memoized, meaning React re-evaluates it even if props don’t change.
+Without React.memo, React treats DemoOutput as a new instance on every render.
+
+8. Does the <p> tag flash? Explain why?
+
+Ans:
+If wrapped in React.memo(), it does NOT flash.
+React skips re-rendering unless the props actually change.
