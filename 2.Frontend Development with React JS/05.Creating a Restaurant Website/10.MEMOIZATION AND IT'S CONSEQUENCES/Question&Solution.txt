@@ -1,0 +1,163 @@
+MOST IMPORTANT COCEPT FOR INTERVIEW TASK AND INTERVIEW.
+
+
+Watch video 5 from the following link  and answer the following
+
+
+
+Ques1. Why do we use React Memo? What are the advantages of React Memo?
+
+Answer:
+
+React.memo() is a performance optimization tool in React that helps avoid unnecessary re-rendering of components. It’s especially useful in large applications or when dealing with components that receive frequently updating props.
+
+- It’s a higher-order component (HOC) that wraps around functional components.
+
+- It tells React: “Only re-render this component if its props have changed”.
+
+
+Advantages of Using React.memo():
+
+1. Improves Performance
+
+- Avoids wasting resources by skipping render cycles when props haven’t changed.
+
+2. Boosts Efficiency in Frequent Updates
+
+- Useful when parent components re-render often but child props remain the same.
+
+3. Works Seamlessly with Pure Components
+
+- It shallowly compares props, similar to PureComponent in class-based components.
+
+4. Simple Syntax, Big Impact
+
+- Just wrap a functional component and React handles the rest.
+
+5. Combines Well with useCallback and useMemo
+
+- These hooks help optimize functions and computed values passed as props.
+
+
+
+Ques2. When should we not use React Memo?
+
+Answer:
+
+1. Component Is Simple or Already Fast
+
+- If your component is tiny (e.g., a button or a plain text element), the overhead of prop comparison might outweigh the benefits.
+
+- Sometimes it's faster to let React re-render than to memoize.
+
+
+2. Props Change Frequently
+
+- React.memo() does a shallow comparison of props.
+
+- If props are constantly changing (e.g., timestamps, real-time data), the memoization won’t help—your component will keep re-rendering anyway.
+
+
+3. Component Relies on Context or State
+
+- If it uses useContext() or internal state, React will re-render regardless of memoization unless you split logic carefully.
+
+
+4. Props Are Complex Objects or Functions
+
+- Objects and functions are compared by reference, so even if values are the same, they’re treated as new unless memoized with useMemo() or useCallback().
+
+- This can lead to missed optimizations or unexpected re-renders.
+
+
+5. App Doesn’t Have Performance Bottlenecks
+
+- Premature optimization adds complexity.
+
+- If your app is already running smoothly, memoization may not give any real benefit.
+
+
+
+Ques3. Why do we use React Memo on Demooutput component and not on Myparagraph component inside it?
+
+Answer:
+
+The DemoOutput component is likely:
+
+- More complex: It may have multiple child components or do heavier rendering.
+
+- Receives props from parent that change less frequently.
+
+- Wrapping it with React.memo() helps prevent re-renders unless props actually change, saving computation.
+
+
+
+Ques4. On applying React memo to button component , why does it get reevaluated whenever we click on "Toggle Paragraph" button.
+
+Answer:
+
+When you click the "Toggle Paragraph" button, it's likely triggering a state change in a parent component. This causes the parent to re-render, and in that process:
+
+- A new instance of the handler function (e.g. toggleParagraphHandler) is created.
+
+- That new function is then passed as a prop to the Button component.
+
+- Since React.memo() only does a shallow comparison, and functions are compared by reference, React sees it as a "new" prop.
+
+- This triggers a re-render of the Button component—even though it seems like nothing changed.
+
+
+
+
+
+Watch video 6 from above link and answer the following
+
+
+
+Ques5. How does useCallback solve the above problem of preventing reevaluation whenever we click on "Toggle Paragraph" button.Please explain the logic.
+
+Answer:
+
+When you wrap your function with useCallback, React stores and returns the same function reference between renders unless its dependencies change
+
+
+
+Ques6. What is the second argument of usecallback? What does it do?
+
+Answer:
+
+The second argument of usecallback is Dependency Array,
+
+const memoizedCallback = useCallback(() => {
+  // function logic
+}, [dependency1, dependency2]);
+
+This array tells React:
+
+Only re-create this callback if something inside this array changes.
+
+
+
+
+
+Watch video 7 
+
+
+
+Ques7. Why do we have to put allowToggle in the dependency list of usecallback?
+
+Answer:
+
+We include allowToggle in the dependency list because the callback uses it inside its logic. If allowToggle changes but it’s not in the dependency array, the memoized function won’t update—and it’ll continue using the old stale value.
+
+
+
+Ques8. Why does the entire component not work without putting allowToggle in the dependency list of usecallback?
+
+Answer:
+
+When you write a function using useCallback, React remembers it so it doesn’t get recreated every time your component re-renders.
+
+But React only updates that remembered function if you tell it what things (called "dependencies") to watch—like a variable or piece of state.
+
+If your function uses a value like allowToggle and you don’t include it in the dependency list, React won't update the function when allowToggle changes. That means your function keeps using the old value, and your feature might stop working properly.
