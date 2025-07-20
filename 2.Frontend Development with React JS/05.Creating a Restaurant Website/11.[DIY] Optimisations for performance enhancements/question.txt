@@ -1,0 +1,225 @@
+Ques 1. Why doesn't useState get re-initialized when the function component gets re-evaluated?
+
+Understanding useState Persistence
+In React, state persists across re-renders because React remembers state values between renders. When a component re-evaluates (re-renders), the function runs again, but React does not reset the state. Instead, it keeps the previous state stored in memory.
+
+
+
+
+
+Ques 2. "State gets initialized only once" - Explanation
+
+When calling useState(initialValue), the initial value is used only on the first render. In subsequent re-renders, React ignores the initial value and instead uses the previously stored state.
+
+Example
+import React, { useState } from "react";
+
+const Counter = () => {
+  console.log("Component rendered!"); 
+  const [count, setCount] = useState(0); // Initializes only once
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+
+export default Counter;
+ Output in Console
+Component rendered!
+Component rendered!
+Component rendered!
+Every time you click the "Increment" button, the component re-renders, but useState(0) does not reset the state to 0. Instead, React preserves the previous state value.
+
+
+
+
+
+Ques 3. What is State Scheduling?
+
+Definition
+State scheduling means that React does not immediately update the state when calling setState(). Instead, React schedules the update and performs the actual state change before the next render.
+
+Example
+import React, { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const incrementHandler = () => {
+    setCount(count + 1);
+    setCount(count + 1);
+    setCount(count + 1);
+  };
+
+  console.log("Component rendered! Count:", count);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={incrementHandler}>Increment</button>
+    </div>
+  );
+};
+
+export default Counter;
+Expected Output (if updates were immediate):
+Component rendered! Count: 0
+Component rendered! Count: 1
+Component rendered! Count: 2
+Component rendered! Count: 3
+Actual Output:
+Component rendered! Count: 0
+Component rendered! Count: 1
+Even though setCount(count + 1) was called three times, the value only increases by 1, because React schedules updates and batches them into one re-render.
+
+
+
+
+
+Ques 4. What is State Batching?
+
+Definition
+State batching means React groups multiple state updates into a single render cycle, improving performance.
+
+Example Without Batching
+If updates happen inside a normal event handler, React batches them:
+
+const incrementHandler = () => {
+  setCount((prev) => prev + 1);
+  setCount((prev) => prev + 1);
+  setCount((prev) => prev + 1);
+};
+The count will increase by 3 because React batches the updates.
+
+Example Without Batching (Inside setTimeout)
+If updates occur outside React's event handlers, React does NOT batch them:
+
+const incrementHandler = () => {
+  setTimeout(() => {
+    setCount(count + 1);
+    setCount(count + 1);
+    setCount(count + 1);
+  }, 1000);
+};
+The count will increase only by 1 each time, because React does not batch state updates inside setTimeout.
+
+
+
+
+
+Ques 5. What Problem is the Udemy Trainer Trying to Solve Using useMemo?
+
+
+The trainer is trying to optimize performance by preventing unnecessary recalculations inside the DemoList component.
+
+Problem Before useMemo
+If the parent (App.js) re-renders, the DemoList component also re-renders, even if its props haven’t changed.
+If a complex sorting operation is happening in DemoList, it gets recalculated on every render, making the app slower.
+
+
+
+
+
+Ques 6. Why Does useMemo Not Work as Expected When Only Used in DemoList?
+
+If we use useMemo only inside DemoList, but the parent (App.js) keeps passing a new array every time, the memoization inside DemoList becomes useless.
+
+Example: Problem in App.js
+const App = () => {
+  const items = [5, 3, 1, 10, 9]; // This creates a NEW array on each render
+
+  return <DemoList items={items} />;
+};
+Even though DemoList uses useMemo for sorting,
+→ The items prop is a new array every render,
+→ This forces DemoList to re-render and recompute sorting.
+Key Issue
+useMemo works only if the inputs remain the same.
+
+But since items = [5,3,1,10,9] is re-created on every render, it makes useMemo inside DemoList ineffective.
+
+
+
+
+
+Ques 7. How Does Using useMemo in App.js Solve This?
+
+To fix this, we memoize the items array in App.js, so React doesn’t treat it as a new array on each render.
+
+Solution: Using useMemo in App.js
+import React, { useMemo } from "react";
+import DemoList from "./DemoList";
+
+const App = () => {
+  const items = useMemo(() => [5, 3, 1, 10, 9], []); // Memoized array
+
+  return <DemoList items={items} />;
+};
+Why This Works?
+useMemo(() => [5, 3, 1, 10, 9], []) creates the array only once.
+Now, items does not change between renders.
+Since DemoList sees the same array reference, React does not re-render it unnecessarily.
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+Optimized Code (App.js)
+
+
+import React, { useState, useMemo } from "react";
+import DemoList from "./DemoList";
+
+const App = () => {
+  const [isDescending, setIsDescending] = useState(false);
+
+  const items = useMemo(() => {
+    const list = [5, 3, 1, 10, 9];
+    return isDescending ? [...list].sort((a, b) => b - a) : [...list].sort((a, b) => a - b);
+  }, [isDescending]);
+
+  return (
+    <div>
+      <h1>Sorted List</h1>
+      <DemoList items={items} />
+      <button onClick={() => setIsDescending((prev) => !prev)}>
+        {isDescending ? "Change to Ascending Order" : "Change to Descending Order"}
+      </button>
+    </div>
+  );
+};
+
+export default App;
+
+DemoList Component (DemoList.js)
+
+
+import React from "react";
+
+const DemoList = ({ items }) => {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default React.memo(DemoList);
+
+
+
+
+
+How It Works Efficiently?
+
+useMemo prevents unnecessary sortingSorting only happens when isDescending state changes.
+Button toggles between sorting ordersClicking switches between ascending & descending order.
+The button text updates dynamically.
+Optimized re-rendersDemoList is wrapped in React.memo → prevents unnecessary renders.
