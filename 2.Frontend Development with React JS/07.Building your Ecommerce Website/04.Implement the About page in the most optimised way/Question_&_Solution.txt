@@ -1,0 +1,74 @@
+The About page should be built in such a manner that when the user clicks on the About Button at the top, the user should be redirected to About Us page and the route should change as well.
+
+The routes should change so that you can share the URL to your friends and they can see it as well https://prasadyash2411.github.io/ecom-website/about.html
+
+[Watch video 1 and 2 from the following link of the udemy course to understand this better]
+
+
+Now coming to how to build such pages in react.
+
+We use a concept called routing. To understand this watch videos from 3, 4 and 5 from above link and answer the following
+
+
+
+Ques1. What is the problem with using <a href > </a> (anchor tags).
+
+Solution:
+1. Full Page Reload:
+Clicking an <a href='/'> causes a full-page reload.
+This destroys the app’s state and reloads all resources (JS, CSS, etc.), making navigation slower.
+
+2. Loss of State:
+Since the page refreshes, any user-entered data, form inputs, or app state in memory is lost.
+
+3. Performance Issues:
+Reloading the entire page is unnecessary for a Single Page Application (SPA) like React.
+React uses client-side rendering, so we don't need a full page reload.
+
+
+
+Ques2. How does Link solve the issue of anchor tag
+
+Solution:
+The Link component from React Router replaces <a> and provides faster navigation without reloading the page.
+
+import { Link } from "react-router-dom";
+
+<Link to="/about">About Us</Link>
+
+How Link is better than <a>:
+
+Uses client-side routing instead of a full-page reload.
+Keeps the app state intact (no loss of form data, cart items, etc.).
+Provides faster navigation because only the needed components update.
+
+
+
+Ques3. Why do we use NavLink. Why is it better than Link ?
+
+Solution:
+NavLink is an enhanced version of Link that automatically applies an active class when the link is selected.
+
+import { NavLink } from "react-router-dom";
+
+<NavLink to="/about" activeClassName="active">About Us</NavLink>
+
+Why NavLink is better than Link:
+Auto Active Styling – Adds a class (active) when the link is selected.
+Great for Menus/Navbars – Highlights the current page automatically.
+Easier Styling – You don’t need to manually check window.location.pathname.
+
+
+
+
+
+
+Deliverable:
+
+Implement the About Page with NavLink , so that when the user clicks on the NavLink he should be redirected to About US page like here ->https://prasadyash2411.github.io/ecom-website/about.html
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/E-Commerce-Site 
+commit ID: c020f64d414880474fdbbf1a0e4ea132da3ae3f1
