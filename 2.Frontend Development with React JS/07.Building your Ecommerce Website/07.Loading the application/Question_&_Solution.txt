@@ -1,0 +1,23 @@
+[Dont watch video 6 from the following link . Try solving by yourself. This is very easy]
+
+
+Deliverable
+
+
+When the user clicks on the button. (Set isLoading = true)
+
+while fetching the data from the backend
+
+show a loader on the screen up till the time data doesn't come.
+
+Once the data has come remove the loader (Set isLoading = false)
+
+
+
+[If stuck for more than 45 minutes watch video 6 from above link]
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/E-Commerce-Site 
+commit ID: 6efe0aa90e874f7b06583fc8f6694e12156fb6f4
