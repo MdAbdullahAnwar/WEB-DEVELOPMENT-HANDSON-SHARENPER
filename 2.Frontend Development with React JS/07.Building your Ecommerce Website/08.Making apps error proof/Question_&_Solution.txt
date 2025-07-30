@@ -1,0 +1,125 @@
+Watch video 7 from the following link and answer the following
+
+
+
+Ques1. What do 4XX responses mean? Explain a few of them.
+
+Ans: 4XX Responses (Client Errors)
+
+4XX responses indicate that the request failed due to an issue from the client side (e.g., invalid request, missing authentication, forbidden access). Some common 4XX responses:
+
+400 Bad Request → The server couldn't understand the request due to incorrect syntax or missing data.
+Example: Sending an API request with invalid JSON.
+
+401 Unauthorized → Authentication is required, but either not provided or incorrect.
+Example: Trying to access a protected API without logging in.
+
+403 Forbidden → The server understands the request but refuses to fulfill it (lack of permission).
+Example: A user without admin rights trying to delete an admin-only resource.
+
+404 Not Found → The requested resource doesn't exist.
+Example: Trying to access a page that has been deleted.
+
+429 Too Many Requests → The client has sent too many requests in a short time (rate limiting).
+Example: Calling an API too frequently without respecting rate limits.
+
+
+
+Ques2. What do 5XX responses mean? Explain a few of them.
+
+Ans: 5XX Responses (Server Errors)
+
+
+5XX responses indicate that the server failed to process a valid request due to an internal issue. Some common ones:
+
+500 Internal Server Error → A generic error when something goes wrong on the server.
+Example: A bug in the backend code causing a crash.
+
+502 Bad Gateway → The server received an invalid response from another server (e.g., database failure).
+Example: A reverse proxy (like Nginx) failing to communicate with an application server.
+
+503 Service Unavailable → The server is temporarily unable to handle the request (maintenance or overload).
+Example: A website going down due to high traffic.
+
+504 Gateway Timeout → A server didn't respond in time to a request from another server.
+Example: A request to an external API taking too long to respond.
+
+
+
+Ques3. How does try catch work?
+
+Ans: try...catch is used to handle errors gracefully in JavaScript.
+
+i. try block → Contains the code that may cause an error.
+
+ii. catch block → Runs only if an error occurs, allowing us to handle it without crashing the program.
+
+
+
+try {
+
+let result = 10 / 0; // This won’t throw an error in JS, but let’s assume another error occurs
+
+console.log(result);
+
+} catch (error) {
+
+console.log("An error occurred:", error.message);
+
+} If an error occurs inside try, execution jumps to catch, skipping the remaining try code
+
+
+
+Ques4. What happens when we throw an error?
+
+Ans: When we use throw, it manually triggers an error, stopping code execution unless handled by catch.
+
+Example:
+
+function divide(a, b) {
+
+ if (b === 0) {
+
+  throw new Error("Cannot divide by zero!"); // Manually throwing an error
+
+ }
+
+ return a / b;
+
+}
+
+try {
+
+ console.log(divide(10, 0));
+
+} catch (error) {
+
+ console.log("Error:", error.message);
+
+}
+
+
+Output: Error: Cannot divide by zero!
+
+
+The throw statement immediately stops execution and jumps to catch. Without try...catch, the program would crash.
+
+
+
+
+
+Deliverable
+
+Can you change the error from ' Something went Wrong' to 'Something went wrong ....Retrying'
+
+Now whenever the api fails, retry calling the api again and again after intervals of 5 seconds , uptill the time it passes.
+
+Put a cancel button to cancel retrying when the user wants to stop retrying.
+
+Push the code to git and upload the commit ID
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/E-Commerce-Site 
+commit ID: 6efe0aa90e874f7b06583fc8f6694e12156fb6f4
