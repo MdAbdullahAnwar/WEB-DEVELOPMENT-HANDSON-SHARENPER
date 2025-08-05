@@ -1,0 +1,180 @@
+Problem Statement
+
+
+
+One problem with the ecommerce website is that customers are not being able to view the products separately
+
+See the other images of the same product to finalize the product.
+
+Also they are not being able to see any reviews of the product which can make their decision to buy easier.
+
+Zoom on the products and see the products even better.
+
+
+
+Research
+
+Watch video 7 and 8 from the following link and answer the following
+
+
+
+1. What is the udemy trainer trying to do?
+
+Ans:
+The trainer is building an e-commerce product details page using dynamic routing in React Router. The aim is to allow users to click on a product from the list and view a separate page with full details, like description, images, and reviews.
+
+
+
+2. What does he mean by dynamic routes?
+
+Ans:
+Dynamic routes allow you to create URLs that change based on the product selected.
+
+For example:
+
+<Route path="/product/:productId" component={ProductPage} />
+:productId is a dynamic segment of the route.
+
+It means the route can handle paths like /product/1, /product/abc, etc.
+
+This allows rendering specific product data based on the productId.
+
+
+
+3. What does useparam do? What does it return?
+
+Ans:
+useParams() is a React Router hook that:
+
+Retrieves dynamic parameters from the URL.
+
+Returns them as an object.
+
+
+Example:
+
+
+const { productId } = useParams();
+If the URL is /product/7, useParams() returns:
+
+
+{ productId: "7" }
+This helps fetch the right product details.
+
+
+
+
+
+Watch video 9, 10 and 11 from the above link and answer the following.
+
+
+
+4. Why does the products page and product/:productid page both show in one page?
+
+Ans: 
+This happens when:
+
+<Switch>
+  <Route path="/product/:productId" component={ProductDetails} />
+  <Route path="/product" component={ProductList} />
+</Switch>
+
+If the Route for /product comes before /product/:productId and exact is not used, then both match.
+
+So both components (ProductList + ProductDetails) render, causing confusion.
+
+
+
+5. What is the problem with using Switch without exact?
+
+Ans:
+Without exact, /product also matches /product/1, /product/2, etc.
+
+This causes:
+
+Multiple components to render.
+
+Unintended behavior in your routes.
+
+
+Fix:
+
+<Route path="/product" exact component={ProductList} />
+<Route path="/product/:productId" component={ProductDetails} />
+
+
+
+6. What are nested routes . Explain with example!!
+
+Ans:
+Nested routes allow you to define child routes inside a parent route's component.
+
+Example:
+
+
+<Route path="/product/:productId" component={ProductDetails} />
+Inside ProductDetails.jsx, you can define nested routes like:
+
+
+<Route path={`/product/${productId}/reviews`} component={ProductReviews} />
+<Route path={`/product/${productId}/images`} component={ProductImages} />
+
+
+It helps organize:
+
+Reviews
+
+Images
+
+Related Products
+
+under the same product page layout.
+
+
+
+7. Why do we need public folder in React ? Any ideas?
+
+Watch this video and answer
+
+Ans:
+The public folder is important because:
+
+Assets placed here are not processed by Webpack.
+
+Files like index.html, favicon.ico, or static images.
+
+Everything in public/ is directly served from the root URL:
+
+
+public/logo.png → https://yourdomain.com/logo.png
+You can link files using:
+
+
+<img src="%PUBLIC_URL%/logo.png" />
+Good for large assets that don’t need processing — like downloadable PDFs, videos, etc.
+
+Note: Use src/ for assets that require imports, transformations, or optimizations.
+
+
+
+
+
+Deliverable
+
+Create a separate product page. Something like this page
+
+When the user clicks on any one of the product, redirect him to the products page and show the following
+
+All the different images of the product which are there
+
+Reviews about the product
+
+
+
+Push the code to git and upload the commit ID.
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Movies-Description-Site
+commit ID: c067863de5db6eb0325c262c15ccc925401f62dd
