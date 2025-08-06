@@ -39,5 +39,5 @@ Push the code to git and upload the commit ID
 
 
 Solution:
-GitHub Repo: https://github.com/MdAbdullahAnwar/Movies-Description-Site
+GitHub Repo: https://github.com/MdAbdullahAnwar/E-Commerce-Site
 commit ID: 5bdaafbc0453e69cb1233db2879aebe8f800f2b2
