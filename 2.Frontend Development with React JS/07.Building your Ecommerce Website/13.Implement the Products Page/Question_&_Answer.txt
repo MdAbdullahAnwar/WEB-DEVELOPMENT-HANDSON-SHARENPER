@@ -176,5 +176,5 @@ Push the code to git and upload the commit ID.
 
 
 Solution:
-GitHub Repo: https://github.com/MdAbdullahAnwar/Movies-Description-Site
+GitHub Repo: https://github.com/MdAbdullahAnwar/E-Commerce-Site
 commit ID: c067863de5db6eb0325c262c15ccc925401f62dd
