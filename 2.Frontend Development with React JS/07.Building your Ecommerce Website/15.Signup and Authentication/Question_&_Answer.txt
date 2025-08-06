@@ -1,0 +1,148 @@
+Watch video 1 , 2 and 3 from the following link and answer the following. For downloading the code resource use the following link
+
+
+
+
+
+1. Why a yes or no reply from the server not good enough?
+
+Ans:
+
+Imagine this:
+
+// Client sends credentials
+POST /login -> { username: "Ali", password: "123" }
+
+// Server responds:
+"yes"
+That might work for one moment... but then what?
+
+
+Problem:
+No memory of the user.
+The client doesn’t know what to send next to prove it's still authenticated.
+No identity is maintained between requests.
+So just saying "yes" isn’t enough. We need a way to remember who the user is for future requests. That’s where sessions or tokens come in.
+
+
+
+2. What is a Server-Side Session?
+
+Ans:
+
+When a user logs in:
+
+Server stores user data in memory or a database (like a session store).
+
+Server sends a session ID (like abc123) back to the client via a cookie.
+
+For every next request, the browser sends that cookie automatically.
+
+Server uses the session ID to look up the user's info.
+
+Example:
+Session store:
+{
+  abc123: { userId: 42, role: "admin" }
+}
+
+Browser sends abc123, server checks it, and says, "Yep, that’s user 42."
+
+
+
+3. What’s the Problem With Server-Side Sessions?
+
+Ans:
+
+Problem 1: Scalability
+Server needs to store session data — more users = more memory/database load.
+In distributed systems (multiple servers), sessions need to be shared across servers or stored in something like Redis.
+
+Problem 2: Stateful
+Sessions are stateful, meaning the server must track the user.
+Harder to manage in microservices or serverless environments.
+
+Problem 3: CSRF (Cross Site Request Forgery) Risk
+Cookies are automatically sent with requests, even to malicious sites — unless properly protected.
+
+
+
+4. What are Authentication Tokens (like JWT)?
+
+Ans:
+
+Authentication tokens are signed pieces of data that prove a user’s identity.
+
+Most common: JWT (JSON Web Token)
+
+Sent to the client after login.
+
+Stored in localStorage, sessionStorage, or as a bearer token in headers.
+
+Client sends it with every request in headers:
+
+Authorization: Bearer eyJhbGciOiJIUzI1...
+
+Server verifies the token (using a secret or public key) and extracts user info.
+
+
+
+5. How is Auth Token Better Than Server-Side Sessions?
+
+Ans:
+
+Let’s break it down with a comparison table, followed by practical examples and use cases.
+
+
+Comparison Table: Auth Token vs Server-Side Sessions
+
+Feature Server-Side Sessions Auth Tokens (e.g., JWT)
+
+
+Where is user info stored? On the server (in memory or a DB) Inside the token itself (on the client)
+
+Scalability Limited (server must keep session data) Scales well (stateless - no server memory needed)
+
+Server Load  Increases with more users Constant (no session tracking)
+
+Ease in Microservices Difficult to share sessions across services Easy to send tokens across services
+
+Storage Usually sent via cookies Sent via HTTP headers (Bearer tokens)
+
+Stateless  Stateful (server has to track sessions) Stateless (self-contained token)
+
+Security Risk of CSRF attacks via cookies Lower CSRF risk (headers are safer)
+
+Token Tampering Sessions can be hijacked if leaked JWTs are signed (can't be altered)
+
+Logout handling  Easy to destroy session Harder – need token blacklisting or expiry
+
+Storage flexibility Cookie only LocalStorage, SessionStorage, Headers
+
+
+
+
+
+Deliverable [Try doing this by yourself. It is very simple]:
+
+When the user click on Sign Up button after having entered the email and passowrd, Show a loader like this https://drive.google.com/file/d/1nfoOhYudpRe-hpzpQ-7WP9_jjPOA1jTn/view?usp=sharing in the place of the button
+
+When the user clicks on signup and signup fails show a feedback to the user with the message like this https://drive.google.com/file/d/1E0BLMhalrXalU1a1bR-jl5gGW6xd3e6F/view?usp=sharing
+
+[HINT - You would get the error from the server only as a response. Show that error]
+
+
+
+Try doing this by yourself as that would help you become good at software development.
+
+If stuck for more than an 1.5hours watch video 4 and 5 from the following link and answer the following
+
+
+
+Push the code to git and upload commit ID
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/E-Commerce-Site
+commit ID: c73aece65cc10e944914bd4e7bdfaeba8503ba2e
