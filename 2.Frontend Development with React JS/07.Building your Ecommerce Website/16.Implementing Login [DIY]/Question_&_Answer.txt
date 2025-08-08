@@ -1,0 +1,97 @@
+Try Implementing login by yourself. It is quite similar to how signup was implemented.
+
+Follow my steps and try doing it by yourself.
+
+
+
+Instead of using signup api url use the login api url as mentioned here - https://firebase.google.com/docs/reference/rest/auth#section-sign-in-email-password
+
+
+
+Everything remains the same in terms of the request
+
+In the response, when you enter the wrong user credentials - show the user Authentication failed alert like the way you did in signup.
+
+When you put the right credentials you get a idToken which is nothing but the JWT. Console log it in the browser and check.
+
+
+
+If stuck for very long watch video 6 from the following link and and understand how things work
+
+
+
+
+
+One question:-
+
+Once the user has successfully logged In and you get the token as a response. Where would you store the token.
+
+Answer keeping the following things in mind
+
+The token. would be used in all the api calls after logging in so we need to store it smartly, so that it could be used
+
+
+
+Ques. Where to Store the Token After Login (Smartly)?
+
+Ans:
+After a user logs in and your server sends back an authentication token (e.g. JWT), you should store it in a way that balances accessibility, security, and session management.
+
+Mentioned:
+The token must be used in all API calls after login
+So it must be easily retrievable by your frontend
+But we also need to be smart about storage for security and performance
+
+Smart Storage Strategy:
+
+Store Access Token in Memory or Session Storage
+
+
+Why? Because:
+
+It's accessible by your frontend (for sending in headers like Authorization: Bearer <token>)
+
+It's not persistent, so if someone gets access to the browser later, it’s not stored forever
+
+It avoids long-term risk from XSS attacks
+
+Use sessionStorage if you want the user to stay logged in only during one tab session
+
+Use memory (e.g., React Context or Redux) if you want even tighter control
+
+Store Refresh Token in HTTP-Only Cookie
+
+The access token expires quickly (as a security best practice), so you’ll need a refresh token to get a new one.
+
+Storing it in an HTTP-only cookie:
+
+Makes it inaccessible to JavaScript (so safe from XSS)
+
+Can be configured with Secure, SameSite, and HttpOnly flags to guard against CSRF
+
+
+
+Token Usage Flow After Login:
+
+1. User logs in → server returns access token and refresh token
+
+2. Store access token in memory or sessionStorage
+
+3. Store refresh token in a secure HTTP-only cookie
+
+4. For each API call:
+   Read the access token and attach it to the Authorization header
+
+5.If access token expires:
+  Use the refresh token to get a new one from the server silently
+
+6.If refresh fails → redirect to login
+
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/E-Commerce-Site
+commit ID: c73aece65cc10e944914bd4e7bdfaeba8503ba2e
