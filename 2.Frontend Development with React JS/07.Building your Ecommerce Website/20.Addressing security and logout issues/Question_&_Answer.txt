@@ -1,0 +1,72 @@
+There is a big security problem with your application
+
+
+
+
+Watch video 11 from the following link to understand the security issue and answer the following
+
+
+
+
+
+Ques1. What is the problem that is there?
+
+Ans:
+When we store the authentication token (idToken) in React Context, the problem is:
+
+The token is lost when the page is refreshed.
+
+That happens because React’s Context exists only in memory during a single session. When you refresh the page, the entire app is reloaded and the context resets, which causes the user to log out unintentionally.
+
+
+
+
+
+Ques2. How does the trainer solve the problem? What are the two solutions he proposes and which one do you think would be bettter? Explain the reason for choosing.
+
+Ans:
+The trainer explains that the solution is to store the token in a persistent place like localStorage.
+
+Store token in  localStorage.
+When the user logs in, save the token using:
+
+localStorage.setItem('token', data.idToken);
+
+
+When the app starts (e.g., inside your AuthContextProvider), check if a token exists:
+
+const storedToken = localStorage.getItem('token');
+
+If it exists, initialize the context with that token.
+
+
+
+
+Deliverable [This is very simple , DIY]
+
+1. Currently one problem with storing the token in the context is that whenever we refresh the page, we have login again. This is because the value of token gets garbage collected when the page reload.
+
+2. We need to store the token in some place where we would not loose it even after refreshing [hint - LocalStorage]
+
+3. Store the token in localStorage when the user gets successfully logged In.
+
+4. When the user logs Out, clear the token from the local Storage
+
+5. When the user refreshes the page , load the token from the local storage and use it so that the user doesn't have to login after every refresh.
+
+
+
+First try by yourself .I have explained everything that is needed.This is very simple
+
+If stuck for long watch video 12 from the above link.
+
+
+
+
+Push the code to git and upload the commit ID
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Authentication-Demo-Project
+commit ID: 3714b1d9b147a59959a659ebaa5ca77638871c90
