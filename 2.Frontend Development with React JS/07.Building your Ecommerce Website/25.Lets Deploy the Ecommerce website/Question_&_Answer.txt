@@ -1,0 +1,141 @@
+Watch all video from following link and make the project along with the udemy trainer
+
+
+
+Learn how to make your code production ready by watching videos
+
+Answer the following
+
+
+
+Ques1. What is the use of suspense?
+
+Ans:
+
+Suspence is a component in React used to handle lazy loading of components.
+
+It lets you wait for a component to load and show a fallback UI (like a spinner or loading text) while the component is being fetched.
+
+
+
+Ques2. What is the use of lazy loading?
+
+Ans:
+
+lazy() is a function provided by React to dynamically load components only when needed.
+
+It improves performance by splitting the code and reducing the initial bundle size.
+
+Useful for large apps to avoid loading everything upfront.
+
+
+
+Ques3. What is the use of the build folder?
+
+Ans:
+
+The build folder is created after running npm run build command.
+
+It contains the production-ready version of your app (HTML, CSS, JS).
+
+This is what you deploy to the server (e.g., Netlify, Vercel, Firebase Hosting).
+
+Files are minified and optimized for faster load time.
+
+
+
+Ques4. What are the various deployment steps , explain each of them?
+
+Ans:
+
+Here’s a general deployment flow using Vite + React (can vary based on platform):
+
+Build the App
+Run: npm run build
+
+→ Generates optimized static files in the dist/ folder.
+
+2.Choose a Hosting Platform
+
+Examples: Vercel, Netlify, Firebase Hosting, GitHub Pages, etc.
+
+3.Deploy
+
+For Vercel/Netlify: Drag and drop the dist/ folder OR link your GitHub repo and it auto-deploys on push.
+
+For Firebase:
+Initialize: firebase init
+Select Hosting, choose dist/ as the public folder.
+Deploy:
+firebase deploy
+
+
+
+Ques5. What does '-g ' do?
+
+Ans:
+
+The -g flag stands for global.
+
+Example:
+npm install -g firebase-tools
+
+This installs the package globally so you can use it from anywhere in your system's terminal.
+
+
+
+Ques6. How do we want to configure our server.Why do we do so?
+
+Ans:
+
+Configuration Goals:
+
+Serve the index.html for all routes in a SPA (Single Page Application).
+Redirect unknown routes to home.
+Enable HTTPS if needed.
+Add caching, compression, and security headers.
+
+
+Why we do this:
+
+To ensure your app works correctly after refreshing or navigating via links.
+To make your site secure, fast, and user-friendly.
+
+Example (for Firebase):
+"rewrites": [
+{
+    "source": "**",
+    "destination": "/index.html"
+  }
+]
+
+This makes sure all routes are handled by React Router.
+
+
+
+Ques7. Successfuly deploy the app and paste the URl here
+
+https://e-commerce-site-opal-tau.vercel.app/
+
+
+
+
+
+Deliverable:
+
+
+Add suspense and lazy loading to your ecommerce website as well
+
+Make a production build of it
+
+Deploy your code to firebase. [ PLEASE SKIP THIS TASK. NO NEED TO DEPLOY]
+
+Once done, paste the hosted url. This url would be used in your resume, so save it and keep it. [ PLEASE SKIP THIS TASK. NO NEED TO DEPLOY]
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/E-Commerce-Site
+commit ID: 7f860420be5a41fe967ed587cbd0388ffcf2a3f8
