@@ -1,0 +1,34 @@
+Deliverable
+
+Watch this video to understand what you have to build
+
+
+
+
+But wait there is one big problem which I want you to fix.
+
+Watch this video to know about the problem. (It is mandator to fix this).
+
+
+
+
+MOST IMPORTANT
+
+Watch this video to get ideas on improving your project's UI.
+
+Don't make the project look boring; 
+
+Add some stylings, as explained in the example video.
+
+
+
+
+Once done, push the code to git and upload the commit ID
+
+
+
+Solution:
+
+https://github.com/MdAbdullahAnwar/Inventory-for-Medicine-Shop-Guide
+
+87b6cdc3b5145ff2d4f3b81874ee13aacfa943cf
