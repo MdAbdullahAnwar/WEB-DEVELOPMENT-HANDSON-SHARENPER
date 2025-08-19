@@ -1,0 +1,31 @@
+Deliverables
+
+
+
+1. Create the signup screen like this - https://drive.google.com/file/d/1VlQsBXuQux-aDpp2gqud_K0xlnJAap69/view?usp=sharing so that new users can signup
+
+2. Only take Email , password and confirm password. All fields are mandatory. Dont let users submit uptill they dont fill everything.
+
+3. Use google firebase authentication like the way you did before. New user should be successfuly created so he can login from here on.
+
+4. Handle errors appropriately and show them to the users like the way you did before.
+
+5. Once the user has successful registered , console log - User has successfully signed up.
+
+
+
+
+Any idea where these signed users get saved in firebase? Watch this video to figure out.
+
+
+
+
+Once done, push the code to git and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Expense-Tracker-Site
+commit ID: e87943a5c013538987b8dc1e285a81ee6129d3b3
