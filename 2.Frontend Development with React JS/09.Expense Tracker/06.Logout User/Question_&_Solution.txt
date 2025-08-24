@@ -1,0 +1,28 @@
+Deliverable
+
+
+
+
+
+Add a logout button at the top
+
+
+
+When the user clicks on it redirect the user to the login page
+
+
+
+Clear the idToken stored in local storage
+
+
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Expense-Tracker-Site
+commit ID: 5465fef5715299254e175f036a3ef42b5221167f
