@@ -1,0 +1,37 @@
+Problem
+
+
+
+Once the user has logged Out , there is a very high chance that he might forget the password.
+
+
+
+What do we do now
+
+
+
+
+Solution
+
+Add a forgot password button so that when the user clicks on it https://drive.google.com/file/d/1P0HWepSUWoY7a7akbtPti07ZbqdPiRhr/view?usp=sharing, it should open a page like this
+
+Once the user enters the mail id call the firebase API and show a loader on the screen uptill the response doesnt come from firebase api. Follow this doc
+
+You would recieve a password reset link in your mail id which you entered above.
+
+Open the link and change the password.
+
+Now try logging into your website via the new password and it should work
+
+
+
+
+Push the code and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Expense-Tracker-Site
+commit ID: 1adf1867cde17706a8924490207d0d4d22d042f7
