@@ -1,0 +1,635 @@
+Watch the video 1 and 2 from the following link and answer the following
+
+
+
+What are the different types of state
+
+Types of State in React
+1. Local/Component State
+
+State that's local to a single component
+Managed with useState or useReducer hooks
+Example: Form input values
+const [count, setCount] = useState(0);
+
+
+2. Global/Application State
+
+State shared across multiple components
+Managed with Context API, Redux, or other state management libraries
+Example: User authentication status
+
+
+3. Server State
+
+Data fetched from APIs/servers
+Managed with libraries like React Query, SWR, or custom hooks
+Example: List of products from backend
+
+
+4. URL State
+
+State stored in the URL (route params, query params)
+Managed with React Router
+Example: Current page in pagination
+
+
+5. Form State
+
+Specialized state for complex forms
+Managed with libraries like Formik or React Hook Form
+Example: Multi-step form data
+
+
+Differences between each one of them
+
+
+Type Scope LifetimeManagement Tools UseCase Example
+
+
+
+Local Single component Component mount useState, useReducer Form inputs, UI toggles
+
+
+
+Global App-wide App session Context, Redux, Zustand	User auth, theme
+
+
+
+Server App-wide Cached React Query, SWR API data, products list
+
+
+
+URL Route-based Page reload React Router Pagination, filters
+
+
+
+Form Form instance Until submit Formik, React Hook Form	Registration forms
+
+
+
+
+
+
+
+What is prop drilling? How did Context Api of react solve this problem of prop drilling?
+
+
+
+
+What is Prop Drilling?
+
+
+Prop Drilling is the process of passing props (data) through multiple intermediate components that don’t need them, just to reach a deeply nested component that does need them.
+
+
+
+Example of Prop Drilling:
+
+
+
+// Grandparent passes theme to Parent, which passes it to Child unnecessarily
+function Grandparent() {
+  const theme = "dark";
+  return <Parent theme={theme} />;
+}
+
+function Parent({ theme }) {
+  return <Child theme={theme} />; // Parent doesn't use theme but passes it
+}
+
+function Child({ theme }) {
+  return <button style={{ background: theme }}>Click Me</button>;
+}
+Problems with Prop Drilling:
+
+Messy Code: Components in the middle must forward props even if they don’t use them.
+Hard to Maintain: Changing a prop requires modifying multiple layers.
+Performance Issues: Unnecessary re-renders in intermediate components.
+
+
+
+
+How Context API Solves Prop Drilling
+
+
+Context API allows data to be passed directly to deeply nested components without manually threading props through every level.
+
+Solution with Context API:
+
+
+
+// Step 1: Create a Context
+const ThemeContext = createContext("light"); // Default value
+
+// Step 2: Wrap components in a Provider
+function Grandparent() {
+  return (
+    <ThemeContext.Provider value="dark">
+      <Parent /> {/* No need to pass theme */}
+    </ThemeContext.Provider>
+  );
+}
+
+// Step 3: Skip intermediate components
+function Parent() {
+  return <Child />; // Parent doesn’t need to know about theme
+}
+
+// Step 4: Directly consume context in Child
+function Child() {
+  const theme = useContext(ThemeContext); // Get theme directly
+  return <button style={{ background: theme }}>Click Me</button>;
+}
+How Context API Fixes Prop Drilling:
+
+No Intermediate Props: Components like Parent no longer need to pass props down.
+
+Cleaner Code: Only components that need the data consume it.
+
+Easier Refactoring: Changing data in Provider updates all consumers automatically.
+
+Better Performance: Avoids unnecessary re-renders in middle components.
+
+
+
+
+
+
+
+What are the disadvantages of using Context Api? Explain with your own examples.
+
+1. Performance Issues with Frequent Updates
+Context causes all consuming components to re-render whenever the context value changes. This can lead to performance problems when you have frequent updates or many consuming components.
+
+
+
+// ThemeContext.js
+const ThemeContext = createContext();
+
+function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState('light');
+  
+  // Imagine this gets called very frequently
+  const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+// Any component consuming this context will re-render on every theme toggle
+// even if they only use the theme value and not the toggle function
+
+2. Not Optimized for High-Frequency Updates
+Context isn't designed for state that changes very frequently (like mouse position or animations).
+
+
+
+// MousePositionContext.js
+const MousePositionContext = createContext();
+
+function MouseProvider({ children }) {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  
+  useEffect(() => {
+    const handleMove = (e) => setPosition({ x: e.clientX, y: e.clientY });
+    window.addEventListener('mousemove', handleMove);
+    return () => window.removeEventListener('mousemove', handleMove);
+  }, []);
+
+  return (
+    <MousePositionContext.Provider value={position}>
+      {children}
+    </MousePositionContext.Provider>
+  );
+}
+
+// This would cause all consuming components to re-render on EVERY mouse movement
+// which would be terrible for performance
+
+3. Potential for Prop Drilling of Context Itself
+You might end up with "context drilling" where you pass context through many layers just to reach deep components.
+
+
+
+// App.js
+function App() {
+  return (
+    <UserContext.Provider value={user}>
+      <ThemeContext.Provider value={theme}>
+        <PreferencesContext.Provider value={prefs}>
+          <Layout>
+            {/* Layout might not need any context but has to be nested inside */}
+            <Header />
+            <MainContent />
+          </Layout>
+        </PreferencesContext.Provider>
+      </ThemeContext.Provider>
+    </UserContext.Provider>
+  );
+}
+
+4. Can Lead to Overly Large Context Objects
+Developers might be tempted to put too much state into a single context, making components depend on more than they need.
+
+
+
+// Bad practice - putting everything in one context
+const AppContext = createContext();
+
+function AppProvider({ children }) {
+  const [user, setUser] = useState(null);
+  const [theme, setTheme] = useState('light');
+  const [notifications, setNotifications] = useState([]);
+  const [preferences, setPreferences] = useState({});
+  // ... more state
+  
+  return (
+    <AppContext.Provider value={{
+      user, setUser,
+      theme, setTheme,
+      notifications, setNotifications,
+      preferences, setPreferences
+      // ...
+    }}>
+      {children}
+    </AppContext.Provider>
+  );
+}
+
+// Now any component using just theme will re-render when notifications change
+
+5. Testing Complexity
+Components using context can be harder to test as they need to be wrapped in providers.
+
+
+
+// UserProfile.js
+function UserProfile() {
+  const { user } = useContext(UserContext);
+  return <div>{user.name}</div>;
+}
+
+// In tests you have to do this:
+test('renders user name', () => {
+  const mockUser = { name: 'John' };
+  render(
+    <UserContext.Provider value={{ user: mockUser }}>
+      <UserProfile />
+    </UserContext.Provider>
+  );
+  expect(screen.getByText('John')).toBeInTheDocument();
+});
+
+6. No Built-in Optimization Like Selectors
+Unlike Redux or other state management libraries, Context doesn't have built-in selector functionality to optimize which parts of state a component subscribes to.
+
+
+
+// With Redux you can do:
+const userName = useSelector(state => state.user.name);
+
+// With Context, you typically get the whole user object:
+const { user } = useContext(UserContext);
+const userName = user.name; // Still re-renders when any part of user changes
+
+
+
+
+When should you use Context then?
+
+
+1. Theme and UI Preferences
+Best for: Global UI settings that don't change frequently
+
+
+
+2. Authentication State
+Best for: User authentication data that's needed across the app
+
+
+
+3. Localized Content/Internationalization
+Best for: Language preferences and translations
+
+
+
+4. Feature Flags
+Best for: Application-wide feature toggles
+
+
+
+5. Static or Rarely-Changing Configuration
+Best for: App configuration that's set at initialization
+
+
+
+Guys redux is like context API but more performant and easy to manage. Thats it. We use it on all react Apps. So super important to understand it
+
+
+ Redux is important to understand, but it's not exactly "like Context API but more performant." Let me clarify the relationship and differences between these tools.
+
+Core Differences Between Redux and Context API
+1. Architecture Pattern
+Redux: Implements the Flux architecture (single source of truth, unidirectional data flow)
+Context API: Just a dependency injection mechanism, no architectural pattern
+2. State Management
+Redux: Centralized store with reducer functions
+
+
+// Redux store setup
+const store = createStore(rootReducer, applyMiddleware(thunk));
+Context API: Just passes data through component tree
+
+
+// Context provider
+<MyContext.Provider value={someValue}>
+3. Performance Optimization
+Redux: Uses selectors to prevent unnecessary re-renders
+
+
+// Component only re-renders when specific data changes
+const count = useSelector(state => state.counter.value);
+Context API: All consumers re-render when context value changes
+
+When Redux Shines Over Context API
+1. Complex State Logic
+2. Middleware Needs
+3. Time-Travel Debugging
+4. Large-Scale Applications
+
+
+
+
+What is the central state?
+
+
+Understanding Central State in React Applications
+Central state refers to a single source of truth for your application's data that's accessible from any component, without having to pass props through multiple levels (prop drilling). Let me explain this fundamental concept clearly.
+
+
+
+What is Central State?
+Central state is a unified data store that holds the entire state of your application in one place. Instead of having state scattered across multiple components, all important data lives in a central location that any component can access.
+
+Key Characteristics:
+Single source of truth - One definitive place where state lives
+Global accessibility - Any component can access what it needs
+Predictable updates - State changes follow consistent patterns
+
+
+
+What does it mean by component has subscribed to the central state?
+
+
+Understanding Component Subscription to Central State
+When we say a component has "subscribed" to the central state, we mean the component is actively listening for changes to specific parts of the application's global state and will re-render when those parts change.
+
+
+
+How Subscription Works
+Basic Mechanism:
+Component declares interest in specific state pieces
+State management system tracks these dependencies
+When subscribed state changes, the component re-renders
+When unrelated state changes, the component doesn't re-render
+
+
+
+
+Can the component directly change the values in the central state?
+
+
+Modifying Central State from Components
+No, components cannot directly modify central state values in most state management systems. Instead, they must follow specific patterns to request changes. Here's how it works across different solutions:
+
+Redux (Standard Approach)
+Components must dispatch actions to modify state:
+
+
+
+function Counter() {
+  const dispatch = useDispatch();
+  
+  // Cannot do this:
+  // state.counter.value = 5   Direct mutation forbidden
+  
+  // Must do this:
+  return (
+    <button onClick={() => dispatch(increment())}> // Dispatch action
+      Increment
+    </button>
+  );
+}
+Context API
+Components call functions provided by the context:
+
+
+
+function ThemeToggle() {
+  const { theme, setTheme } = useContext(ThemeContext);
+  
+  // Cannot do this:
+  // theme = 'dark'  Direct mutation won't update
+  
+  // Must do this:
+  return (
+    <button onClick={() => setTheme('dark')}> // Call setter function
+      Dark Mode
+    </button>
+  );
+}
+Why Indirect Modification?
+Predictability - All state changes are explicit and traceable
+Centralized Logic - Business rules are enforced in one place
+Performance - Changes are batched and optimized
+Debugging - Easier to track state changes via actions/logs
+Exception Cases
+Some state managers like MobX allow direct mutation through observables:
+
+
+
+// MobX example (not recommended pattern for most apps)
+function MobXComponent() {
+  const { cart } = useStore();
+  
+  // MobX allows this (but most state managers don't):
+  return <button onClick={() => cart.items.push(newItem)}>Add Item</button>;
+}
+Proper Modification Patterns
+1. Redux (Action → Reducer)
+
+
+// Component dispatches
+dispatch({ type: 'cart/addItem', payload: newItem });
+
+// Reducer handles
+function cartReducer(state, action) {
+  switch(action.type) {
+    case 'cart/addItem':
+      return { ...state, items: [...state.items, action.payload] };
+    default:
+      return state;
+  }
+}
+2. Modern Redux Toolkit (Slice Actions)
+
+
+// Component
+dispatch(addToCart(newItem));
+
+// Slice definition
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState: { items: [] },
+  reducers: {
+    addToCart: (state, action) => {
+      state.items.push(action.payload); // Immer allows "mutation"
+    }
+  }
+});
+3. Context API with useReducer
+
+
+// Component
+const { dispatch } = useContext(CartContext);
+dispatch({ type: 'ADD_ITEM', item: newItem });
+
+// Provider setup
+function CartProvider({ children }) {
+  const [state, dispatch] = useReducer(cartReducer, { items: [] });
+  return (
+    <CartContext.Provider value={{ state, dispatch }}>
+      {children}
+    </CartContext.Provider>
+  );
+}
+
+
+
+
+
+
+What are reducer function?
+
+
+Understanding Reducer Functions in State Management
+A reducer function is a pure function that determines state changes in your application. It's a fundamental concept in Redux and React's useReducer hook that follows the "current state + action = new state" pattern.
+
+Core Characteristics of Reducers
+Pure Functions:
+No side effects
+Same input always produces same output
+Doesn't modify its arguments
+Deterministic:
+Given current state and action, there's only one possible output state
+Immutable Updates:
+Always returns new state objects rather than mutating existing state
+
+
+A pure function that takes current state and an action → returns new state.
+
+
+
+
+
+What are actions?
+
+
+Actions are payloads of information that describe what happened in your application. They're the only way to trigger state changes in Redux and similar state management systems.
+
+
+What Actions Are
+Event Descriptors: Plain objects that describe an event/change
+State Change Triggers: The only way to modify the central state
+Information Carriers: Contain data needed to update the state
+
+
+Plain JS objects that describe what happened.
+
+{ type: 'increment' }
+{ type: 'add', value: 5 }
+
+
+
+
+
+
+Can you explain the core redux concepts. (Favourite Interview Question - Asked in 99% of react interviews)
+
+Store: Holds the central state.
+Reducer: Pure function to update state.
+Actions: Payloads of information.
+Dispatch: Sends an action to the reducer.
+Subscribe: Reacts to state changes.
+
+
+What does npm init do?
+
+
+Initializes a new Node project by creating a package.json file.
+
+
+
+
+
+What does npm init -y do?
+
+
+Skips prompts and creates package.json with default values.
+
+
+
+
+
+Why does counter = 2 after calling dispatch({ type: 'increment' })?
+
+
+If dispatch() is called twice, or component renders twice during dev mode (due to React.StrictMode), it can result in a double increment.
+
+
+Redux Deliverables
+Dispatching increment 5 times:
+
+
+
+store.dispatch({ type: 'increment' });
+store.dispatch({ type: 'increment' });
+store.dispatch({ type: 'increment' });
+store.dispatch({ type: 'increment' });
+store.dispatch({ type: 'increment' });
+
+Counter will now increase by 5.
+
+
+
+Decrement Action Test
+If reducer doesn’t handle "decrement" correctly, value won’t change or will increase instead.
+
+
+
+Final Reducer Function (Correctly Handles Decrement)
+
+const counterReducer = (state = { counter: 0 }, action) => {
+  if (action.type === 'increment') {
+    return { counter: state.counter + 1 };
+  }
+  if (action.type === 'decrement') {
+    return { counter: state.counter - 1 };
+  }
+  return state;
+};
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Redux-Demo
+commit ID: d584aae60848f772ec0d8ab307a85320da5dd1d3
