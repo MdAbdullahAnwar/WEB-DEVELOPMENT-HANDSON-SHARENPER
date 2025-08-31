@@ -1,0 +1,27 @@
+Watch video 6 from the following link to understand the workings better of how to implement types
+
+
+
+Watch video 7 and 8 from above link. The trainer has a challenge for you, try doing it by yourself, before seeing the answer.
+
+
+
+Deliverable
+
+
+1. Can you add action type INCREMENTBY2 , which increases the counter by 2 when dispatched.
+
+2. Can you add action type DECREMENTBY2 , which decreases the counter by 2 when dispatched.
+
+
+
+
+Push the code to git and upload the commit id
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Redux-Demo
+commit ID: 22c56868af492038556408b625c8b52eeb449db2
