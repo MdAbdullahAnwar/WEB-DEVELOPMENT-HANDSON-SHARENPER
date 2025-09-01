@@ -1,0 +1,74 @@
+Subscribing and Dispatching Actions
+
+Javascript
+React Js
+
+
+Watch video 9 from the following link and answer the following
+
+
+What does the <Provider> exactly do?
+
+The <Provider> component from react-redux:
+
+Makes the Redux store available to all components in your React app.
+Allows any child component to access the state and dispatch actions via useSelector and useDispatch.
+
+
+
+Why do we need to provide it with the store?
+
+The store holds the central Redux state and logic (reducers, middleware).
+<Provider store={store}> injects this store into the React app so that every component can interact with the Redux state.
+
+
+
+
+Watch video 10 from above link and answer the following 
+
+
+What is the need for useSelector? What does it do?
+
+useSelector is a hook provided by react-redux.
+It lets your component read data from the Redux store.
+You pass a function to useSelector that selects the part of the state you want.
+
+
+const counter = useSelector(state => state.counter);
+
+
+This makes your component subscribe to changes in that part of the state, so it re-renders automatically when that value changes.
+
+
+
+What does useSelector return?
+
+It returns the selected slice of state from the Redux store.
+
+Example:
+
+const user = useSelector(state => state.auth.user);
+
+
+
+
+Watch video 11 from above liink and code along with the trainer
+
+
+Deliverables
+
+
+1. Add a button on the screen called IncrementBy5.
+2. Onclick of this button,IncrementBy5, dispatch the relevant action type so that the counter increases by 5
+3. Similarly do the same for Decremenenby5
+
+
+Push the code to git and upload the commit id
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Redux-Demo
+commit ID: d8c4c59fc508b5f069d781d494a22f3277829b2a
