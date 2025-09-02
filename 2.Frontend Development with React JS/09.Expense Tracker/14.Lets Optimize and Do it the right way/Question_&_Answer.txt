@@ -1,0 +1,169 @@
+Skip video number 12 from the following link. Class components are dead
+
+
+
+
+Watch video 13 from above link understand the right way to do the previous task xD.
+
+
+
+
+
+1. Change the code of incrementby2 in the previous task to work like the way the trainer has shown(The optimized way)
+
+Answer:
+
+Instead of dispatching the same action multiple times, you should create a new action that handles the full increment logic at once.
+
+Optimized version of incrementBy2 (Previous Task Improvement):
+
+// In your actions
+store.dispatch({ type: 'incrementByAmount', payload: 5 });
+
+// In your reducer
+const counterReducer = (state = { counter: 0 }, action) => {
+  if (action.type === 'incrementByAmount') {
+    return {
+      counter: state.counter + action.payload,
+    };
+  }
+  return state;
+};
+
+This is more efficient and readable than dispatching the increment action 5 times.
+
+
+
+
+
+Watch video 14 and 15 and answer the following
+
+
+
+2. Why cant we do state.counter++ . (Favourite Interview Question - Why should we not mutate the state)
+
+Answer:
+
+Because Redux expects immutable state updates.
+
+Mutating state directly:
+Causes bugs in large apps.
+Breaks time-travel debugging and state traceability.
+React/Redux may fail to detect the state change, leading to components not re-rendering.
+state.counter++ changes the existing object.
+
+return {
+  ...state,
+  counter: state.counter + 1,
+};
+This returns a new object, which Redux can recognize as a changed state.
+
+
+
+
+
+Watch video 16 and answer the following
+ 
+
+
+3. What is the problem with identifiers?What remedy does the trainer give?
+
+Answer:
+Using string literals (like 'INCREMENT') is error-prone. Typos cause silent bugs.
+
+Remedy: Use constants or better, use createSlice (from Redux Toolkit), which auto-generates unique action identifiers.
+
+
+
+
+4. Why is it a bad idea to keep counter and toggle in the same reducer?
+
+Answer:
+It couples unrelated logic together.
+Makes the reducer harder to read, test, and maintain.
+Reducer becomes bloated.
+
+
+
+
+5. What are the other problems the udemy trainer talks about?What are the solutions suggested by him?
+
+Answer:
+
+Other problems the trainer mentioned and solutions:
+ProblemSolutionAction strings are error-proneUse createSlice to auto-generateReducers are too bigUse multiple reducers/slicesManually configuring storeUse configureStore() from Redux ToolkitTedious action creator boilerplatecreateSlice removes need for manual action creators
+
+
+Solution: Split state logic into multiple reducers/slices and combine them.
+
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  toggle: toggleReducer,
+});
+
+
+
+
+
+Watch video 17 and 18 from above link and answer the following
+
+
+
+
+6. What is the advantage of using createSlice?
+
+Answer:
+
+Reduces boilerplate: no need to define action types, action creators manually.
+
+Automatically creates action creators and action types.
+
+Cleaner, organized code.
+
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: { counter: 0 },
+  reducers: {
+    increment(state) {
+      state.counter++;  // allowed!
+    },
+    decrement(state) {
+      state.counter--;
+    },
+  },
+});
+
+
+
+
+7. How can we mutate the state now and write state.counter++? How is it handled behind the scenes?
+
+Answer:
+
+Thanks to Immer.js, built into Redux Toolkit:
+
+We can write state.counter++
+
+It does NOT mutate the actual state.
+
+Immer handles converting it to immutable logic behind the scenes.
+
+
+
+
+8. What is the use of configureStore. Why do we even need it?
+
+Answer:
+
+Simplifies the store setup.
+
+Automatically sets up Redux DevTools and middleware.
+
+Helps easily combine multiple slices.
+
+const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer,
+    auth: authSlice.reducer,
+  },
+})
