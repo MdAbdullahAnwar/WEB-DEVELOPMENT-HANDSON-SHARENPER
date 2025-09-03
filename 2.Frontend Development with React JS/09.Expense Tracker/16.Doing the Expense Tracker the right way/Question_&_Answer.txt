@@ -1,0 +1,131 @@
+Watch video 23 from the following link and answer the following.
+
+
+
+1. Why are we splitting the file?
+
+Answer:
+We're splitting the files to:
+
+Keep code modular and manageable as the app grows.
+Separate concerns like:
+Redux logic (slice files)
+Store setup (store.js)
+Component logic (UI components)
+Avoid having one large file where all logic is mixed together (which becomes hard to debug and scale).
+
+
+
+2. What is the logic behind diving the files like the way the udemy trainer does?
+
+Answer:
+Typical folder structure:
+
+src/
+├── store/
+│   ├── index.js            // configureStore with all slices
+│   ├── counter-slice.js    // logic for counter
+│   └── auth-slice.js       // logic for authentication
+
+
+Each slice file handles:
+
+Initial state
+Reducers
+Action creators
+The store/index.js centralizes the setup using configureStore.
+This separation improves readability, testing, and collaboration on large projects.
+
+
+
+Watch video 24 from above link and answer the following.
+
+
+
+3. Explain the core concepts of redux?
+
+Answer:
+Core concepts of Redux:
+
+Store – Single source of truth that holds the entire state tree.
+Actions – Plain JS objects that describe what happened (e.g. { type: 'increment' }).
+Reducers – Functions that determine how the state changes based on actions.
+Dispatch – Method to send actions to the reducer.
+Selector – Function to read data from the state.
+Provider – React component that makes the store available to all child components.
+
+
+
+4. Tell the utilities of following
+
+Answer:
+
+useDispatch
+
+Hook from react-redux
+Used to dispatch actions from components to the store.
+const dispatch = useDispatch();
+dispatch(counterActions.increment());
+
+
+
+combineReducers
+
+A Redux utility (not from Redux Toolkit directly)
+Combines multiple reducer functions into a single root reducer.
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  auth: authReducer,
+});
+In Redux Toolkit, you typically skip this and directly pass an object to configureStore.
+
+
+
+useSelector
+
+Hook to read a value from the Redux state in a component.
+const counter = useSelector((state) => state.counter.counter);
+
+
+
+5. When to use redux and when to use context API?
+
+Answer:
+
+FeatureReduxContext APIState complexityHigh complexity (many states, logic)Simple or moderate state sharingGlobal state changes oftenYesNoDebugging & DevToolsExcellent Redux DevTools supportMinimal toolingMiddleware & asyncBuilt-in support (thunk, saga, etc.)Needs custom setupScalabilityHighModerate
+
+
+Use Redux for large apps with complex, frequently changing global state.
+
+Use Context API for small-scale or one
+-level prop drilling problems (like theme, auth status).
+
+
+
+
+
+Deliverables
+
+The Expense tracker is going to be a big app now. So managing it like the way we did previously ,is not right approach.
+
+Add the following reducers to the Expense Tracker app and make it work via reducers
+
+Auth Reducer - The users logged in status and bearer tokens, user ID should be saved here. Use this bearer token whenever you are calling the apis that need it/
+
+Expenses reducers - All the expense entered by the user and fetched from the backend should be save in the reducer.
+
+If the expenses go above 10000 rupees show an activate Premium Button.
+
+
+
+
+
+Once completed, push the code to git and upload the commit ID.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Expense-Tracker-Site
+commit ID: 6940c5ba849f02358a3f384aa2f443033f6e8395
