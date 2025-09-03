@@ -1,0 +1,146 @@
+Watch video 19 from the following link and answer the following
+
+
+
+
+1. How is Redux Toolkit better than the old structure?
+
+Answer:
+
+Redux Toolkit significantly simplifies the Redux workflow:
+
+Old Redux (Manual Setup)Redux Toolkit (Modern)Manually define constants for action typescreateSlice auto-generates themManually create action creatorscreateSlice gives you built-in creatorsWrite large switch-case reducersSlice reducers are cleaner and conciseHandle immutability manually (...state)Uses Immer – lets you mutate safelyManually set up middleware & DevToolsconfigureStore sets everything for you
+
+Your life as a developer becomes easier, code becomes more maintainable, and fewer bugs sneak in.
+
+
+
+
+2. How can we pass payload in actions and use it in reducers?
+
+Answer:
+
+In Redux Toolkit, passing and accessing payload is simple.
+
+Dispatching with payload:
+
+dispatch(counterActions.incrementByAmount(5)); // 5 is payload
+
+In createSlice reducer:
+
+reducers: {
+  incrementByAmount(state, action) {
+    state.counter += action.payload; // payload used here
+  }
+}
+
+
+
+
+Video 20 & 21: Splitting Slices and Understanding Store Behavior
+
+
+
+3. Why not keep auth logic inside the counter slice?
+
+Answer:
+
+Separation of concerns.
+Counter logic and authentication are completely unrelated.
+Keeping them in separate slices:
+Makes code cleaner and easier to maintain.
+Allows scaling logic independently.
+
+
+// Bad practice
+counterSlice: { counter, authStatus }
+
+// Good practice
+counterSlice: { counter }
+authSlice: { isAuthenticated }
+
+
+
+4. Why enclose everything inside configureStore?
+
+Answer:
+
+configureStore is the new recommended way to create the Redux store.
+It:
+Combines all slices' reducers.
+Adds Redux DevTools automatically.
+Adds good default middleware (e.g., for async).
+Prevents common mistakes (like forgetting middleware or devtools setup).
+const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer,
+    auth: authSlice.reducer,
+  },
+});
+
+
+
+5. Why do we now access state.counter.counter?
+
+Answer:
+
+This is due to how slices are nested in the Redux state tree.
+
+With:
+
+reducer: {
+  counter: counterSlice.reducer,
+  auth: authSlice.reducer,
+}
+
+
+The Redux store structure becomes:
+
+{
+  counter: {
+    counter: 0,
+  },
+  auth: {
+    isAuthenticated: false,
+  }
+}
+
+
+So when using useSelector, you access:
+
+const count = useSelector((state) => state.counter.counter);
+const isAuth = useSelector((state) => state.auth.isAuthenticated);
+First counter is the slice name; second counter is the actual value inside its initial state.
+
+
+
+
+
+Deliverables (Try Doing it yourself)
+
+
+We dont care about what the user puts in login form. Whenever he clicks on login button , change isAuthenticated = true and log him In
+
+When the user is not Logged In (isAuthenticated = false) show the screen like this - https://drive.google.com/file/d/1obJXoA9eHXDfAMUA6OKSoxf3HFtRjgYi/view?usp=sharing
+
+When the user is Logged In (isAuthenticated = true) show the screen like this - https://drive.google.com/file/d/1ANxcnTXTxwMQk5Louk5fLNlEMXIWNElv/view?usp=sharing
+
+Once the above 3 task is done -> Implement the logout functionality as well (isAuthenticated = false) and change the screen to this - https://drive.google.com/file/d/1obJXoA9eHXDfAMUA6OKSoxf3HFtRjgYi/view?usp=sharing
+
+
+
+
+
+If stuck for long watch video 22
+
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Redux-Demo
+commit ID: 2754ca3daf76a392223f9ee3fda88f7aae761d0c
