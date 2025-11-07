@@ -1,0 +1,24 @@
+When the user clicks on the "Activate Premium" after reaching Rs 10000 in expenses button, do the following
+
+
+
+Add a dark theme in your application.
+
+Put a toggle button to switch from light theme to dark theme (Hint - You have to use reducer - theme reducer)
+
+Add a download File button. When the user clicks on it, a file containing all his expenses gets downloaded as csv. 
+
+
+
+If stuck for too long check this video for downloading files in csv ,but please make sure you have tried implementing it yourself first.
+
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Expense-Tracker-Site
+commit ID: 37c46dd59ac7cc34a752d60ec22f47378654b975
