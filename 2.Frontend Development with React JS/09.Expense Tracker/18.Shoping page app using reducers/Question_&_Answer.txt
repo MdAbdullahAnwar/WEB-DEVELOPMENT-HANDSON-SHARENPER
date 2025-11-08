@@ -1,0 +1,45 @@
+Watch video 1 and 2 from the following link and understand the problem statement we are about to solve
+
+
+
+
+Watch the first 2 min of the video 3, understand what set of features the trainer is asking for and try doing it yourself.
+
+Don't watch the entire video. Try it by yourself. It is super simple
+
+
+
+
+Deliverables
+
+
+
+
+
+First install all the dependencies for using reducer--> react-redux and redux toolkit
+
+
+
+When we click on mycart button, the cart should become visible. If we click on it again it should become invisible again. (cartreducer)
+
+
+
+
+
+
+
+If stuck for more than 1 hour watch the video 3.
+
+
+
+
+Once done,Push the code to git and upload the commit ID.
+
+Also write whether you did the code by yourself or not. Be honest!!!!
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Redux-Shopping-App
+commit ID: 69eb34dfbd400cef6a2bf4890fd749423c681bbd
