@@ -1,0 +1,62 @@
+Dont watch video 4 from the following link and TRY DOING THE FOLLOWING BY YOURSELF.
+
+
+
+
+Deliverables
+
+
+
+
+
+If the quantity of the item becomes 0, it should be removed from the cart
+
+
+
+When the user click on Add to Cart , the number on the cart Icon should also increase.
+
+
+
+Similarly when we remove an element , the number on the cart Icon should decrease
+
+
+
+Now read all the cart Items that we have stored and show it on the screen
+
+
+
+When the user click on 'Add to Cart' Button of any product,
+
+
+
+
+
+the product should get added to the cart - If it didn't exist before
+
+
+
+If it existed before, the quantity of the product should be increased.
+
+6The user should be able to increase / reduce the quantity of items in the cart.
+
+
+
+
+if stuck for more than 2 hours watch video 4 from the following link . But try doing yourself, you will understand everyting properly
+
+
+
+
+
+
+
+Once done,Push the code to git and upload the commit ID.
+
+Also write whether you did the code by yourself or not. Be honest!!!!
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Redux-Shopping-App
+commit ID: c982b7243e7f08999a32a9736819d84be18f6583
