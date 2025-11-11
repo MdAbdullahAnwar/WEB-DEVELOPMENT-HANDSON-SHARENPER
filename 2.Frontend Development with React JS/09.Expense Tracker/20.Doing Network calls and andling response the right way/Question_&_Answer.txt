@@ -1,0 +1,201 @@
+Watch video 5 and 6 from the following link and answer the following.
+
+
+
+
+
+Ques1. What are the 2 places where we can call asyncCode (http request) when we use reducers
+
+Ans: 
+
+Two Places to Call Async Code (HTTP Requests) When Using Reducers
+
+
+When utilizing useReducer in React, asynchronous operations like HTTP requests should be handled outside the reducer function, as reducers are meant to be pure functions. The two primary places to manage async code are:
+
+Inside useEffect Hooks: Initiate the async operation within a useEffect hook and dispatch the result to the reducer once the operation completes.
+
+
+useEffect(() => {
+  const fetchData = async () => {
+    const data = await fetchDataFromAPI();
+    dispatch({ type: 'SET_DATA', payload: data });
+  };
+  fetchData();
+}, []);
+Within Action Creators or Middleware: Implement middleware or custom hooks that handle async operations and dispatch actions based on the outcomes.
+
+
+const fetchData = async (dispatch) => {
+  const data = await fetchDataFromAPI();
+  dispatch({ type: 'SET_DATA', payload: data });
+};
+
+
+
+
+
+Ques2. Why do we have to do a lot of work on the frontend when making making backend calls
+
+Ans:
+
+Reasons for Extensive Frontend Work When Making Backend Calls
+
+
+Handling backend calls on the frontend involves several responsibilities:
+
+State Management: Managing loading states, success responses, and error handling requires additional state variables and logic.
+
+Data Transformation: Transforming and formatting data received from the backend to suit the UI components.
+
+User Feedback: Providing real-time feedback to users during asynchronous operations, such as loading spinners or error messages.
+
+Optimistic Updates: Updating the UI before the backend confirms the operation, necessitating rollback mechanisms in case of failures.
+
+
+
+
+
+
+Watch video 7 and answer the following.
+
+
+Ques3. Why should we not do cart.totalQuantity = cart.totalQuantity + 1?Why cant we change reducer value like this
+
+Ans:
+
+Avoid Direct State Mutation like cart.totalQuantity = cart.totalQuantity + 1
+
+Directly mutating the state in reducers is discouraged because:
+
+Immutability Principle: React relies on immutability to detect changes. Mutating the state directly can lead to unexpected behaviors and inefficient rendering.
+
+Predictability: Immutable updates ensure that state changes are predictable and traceable, facilitating debugging and testing.
+
+Instead, always return a new state object:
+
+return {
+  ...state,
+  totalQuantity: state.totalQuantity + 1,
+};
+
+
+
+
+
+Ques4. What is the problem with data transformation at component level and not at reducer level
+
+Ans:
+
+Issues with Data Transformation at the Component Level
+
+
+Transforming data within components rather than in reducers can lead to:
+
+Redundancy: Multiple components may perform the same transformation, leading to code duplication.
+
+Inconsistency: Different components might implement transformations differently, causing inconsistent UI behavior.
+
+Performance Overhead: Repeated transformations during each render can degrade performance.
+
+Centralizing data transformation in reducers ensures a single source of truth and consistent data across the application.
+
+
+
+
+
+Watch video 8 and answer the following.
+
+
+Ques5. Why does he put cart as a dependency in the useffect.
+
+Ans:
+
+Including cart as a Dependency in useEffect
+
+
+Including cart in the dependency array of a useEffect hook ensures that the effect runs whenever the cart state changes. This is crucial for operations like syncing the cart state with a backend or local storage.
+
+useEffect(() => {
+  // Perform sync operation
+}, [cart]);
+
+
+
+
+
+Ques6. When will the fetch function be called
+
+Ans:
+
+Timing of the Fetch Function Call
+
+
+The fetch function inside the useEffect hook will be called:
+
+On Component Mount: When the component is first rendered.
+
+On cart State Change: Whenever there's a change in the cart state, triggering the effect to run again.
+
+
+
+
+
+Ques7. Why is the trainer using PUT method and not POST?
+
+Ans:
+
+Using PUT Instead of POST
+
+
+The PUT method is used to update existing resources or create a resource if it doesn't exist, ensuring idempotency. In the context of updating the cart:
+
+PUT: Replaces the entire cart resource with the new data, suitable for complete updates.
+
+POST: Adds a new cart resource or appends data, which might not be appropriate for updating exist
+
+
+
+
+
+Deliverables - [DIY]
+
+
+When we are making api calls , we are not caring about errors . What if an error happens? You have to notify the user like this
+
+
+
+When you send a request show the screen like this - https://drive.google.com/file/d/1UnK91c8LA-n27Xx7oKx_LKDqizttRXvn/view?usp=sharing
+
+
+
+When the request fails , show the screen like this - https://drive.google.com/file/d/1PJo12H2pjS2KkjTsBNHWzQvTBMO8VOCw/view?usp=sharing
+
+
+
+When the request is successful , show the screen like this - https://drive.google.com/file/d/1yYInsgQEGYXDKm2To0uXHpXrDxZoE_Zi/view?usp=sharing
+
+
+
+Use the Notification component which is already there in the UI folder.(Don't have to write new components). You just have to handle the UI states correctly. [Hint - Just add state.notification in the uislice. Use this state to conditionally render The notifications]
+
+
+
+In video 8 , the udemy trainer points out a big problem with the current app. Can you fix it? It is super easy.
+
+
+
+
+Try doing this by yourself. If stuck for more than 2 hours watch video 9 from above link. But try doing by yourself first.
+
+
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Redux-Shopping-App
+commit ID: fe4b7e0ca81dfdef5fd7cb65c302a0cc7c683cb6
