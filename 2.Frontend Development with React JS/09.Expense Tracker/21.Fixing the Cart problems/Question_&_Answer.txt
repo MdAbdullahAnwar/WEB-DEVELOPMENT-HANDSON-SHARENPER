@@ -1,0 +1,122 @@
+Fixing the Cart problems
+
+React Js
+Watch video 10 from the following link and answer the following
+
+
+
+Ques1. What is this action creator thunk design pattern?
+
+Ans:
+In Redux, an action creator is typically a function that returns a plain JavaScript object, known as an action. However, with the introduction of middleware like Redux Thunk, action creators can return a function instead of an action object. This returned function, known as a thunk, can perform asynchronous operations and dispatch actions based on the outcomes.
+
+Example:
+
+// Traditional action creator
+const fetchData = () => {
+  return {
+    type: 'FETCH_DATA',
+  };
+};
+
+// Thunk action creator
+const fetchDataThunk = () => {
+  return (dispatch, getState) => {
+    // Perform asynchronous operations here
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => {
+        dispatch({ type: 'FETCH_DATA_SUCCESS', payload: data });
+      })
+      .catch(error => {
+        dispatch({ type: 'FETCH_DATA_FAILURE', error });
+      });
+  };
+};
+In the above example, fetchDataThunk is a thunk action creator that performs an asynchronous fetch operation and dispatches actions based on the result.
+
+
+
+Ques2. Why do we even need it?What advantage do we get using action creator thunk?
+
+Ans:
+Redux by default handles synchronous state updates. However, real-world applications often require handling asynchronous operations, such as:
+
+Fetching data from an API
+
+Delaying actions
+
+Performing side effects
+
+Without middleware, Redux cannot handle these asynchronous tasks. Redux Thunk bridges this gap by allowing action creators to return functions (thunks) instead of plain objects. These functions can perform asynchronous operations and dispatch actions when appropriate.
+
+
+
+Advantages of Using Action Creator Thunks
+
+Asynchronous Operations Handling:
+Thunks allow you to perform asynchronous tasks within action creators, such as API calls, and dispatch actions based on the results.
+
+Access to Dispatch and State:
+Thunks receive dispatch and getState as arguments, enabling them to dispatch multiple actions and access the current state.
+
+Code Organization:
+By moving asynchronous logic out of components and into action creators, your components remain clean and focused on rendering UI.
+
+Conditional Dispatching:
+Thunks can dispatch actions conditionally based on the current state or other logic.
+
+Improved Testability:
+Separating side effects from components makes it easier to write unit tests for your logic.
+
+Example:
+
+const fetchUserData = () => {
+  return async (dispatch, getState) => {
+    dispatch({ type: 'FETCH_USER_REQUEST' });
+    try {
+      const response = await fetch('/api/user');
+      const data = await response.json();
+      dispatch({ type: 'FETCH_USER_SUCCESS', payload: data });
+    } catch (error) {
+      dispatch({ type: 'FETCH_USER_FAILURE', error });
+    }
+  };
+};
+In this example, fetchUserData is a thunk that performs an asynchronous API call and dispatches actions based on the outcome.
+
+In summary, the action creator thunk design pattern is essential for handling asynchronous operations in Redux
+
+
+
+Problem with the current app
+
+When the user reloads the page , he is not able to see the items that he saved in the cart.
+
+Everything is lost and its a nightmare for your users.
+
+
+
+Deliverables - [This is super simple]
+
+But data is present in the DataBase. Why don't we retrieve it when the user reloads the page? That would solve the issue.
+Make a GET request and get all the elements that the user has saved in the cart.
+Handle the error situations and show the various notifications - Success , Error and Sending data
+
+
+
+
+Once done Push the code to git and upload the commit ID.
+
+Let me know if you did this by yourself or not , by writing a message after the commit ID.
+
+
+
+[Watch video 11 and 12 if stuck for more than 2 hrs]
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Redux-Shopping-App
+commit ID: d28a3a44dcf9fc57496041a103d8e81f97b81bb9
