@@ -1,0 +1,129 @@
+Watch video 1, 2, 3 and 4 from the following link and answer the following
+
+
+
+
+
+Ques1. Why do we need automated tests?
+
+Ans:
+Automated tests are essential for several reasons:
+
+Efficiency and Speed: They allow for faster execution of repetitive test cases, which is crucial for rapid development cycles.
+
+Consistency: Automated tests perform the same operations precisely each time they are run, eliminating human error.
+
+Early Bug Detection: They help in identifying defects early in the development process, reducing the cost and effort required for fixes.
+
+Improved Test Coverage: Automated tests can cover a broad range of test cases, including edge cases and scenarios that are often overlooked in manual testing .
+
+
+
+
+Ques2. What are the 3 types of automated tests?Explain each one of them?
+
+Ans:
+Unit Tests:
+Purpose: Test individual components or functions in isolation.
+Example: Verifying that a function returns the correct output for a given input.
+Benefit: Fast execution and precise pinpointing of issues within specific units of code.
+
+Integration Tests:
+Purpose: Test the interaction between different modules or services.
+Example: Checking if a user authentication module correctly interacts with a database.
+Benefit: Ensures that combined parts of an application work together as intended.
+
+End-to-End (E2E) Tests:
+Purpose: Test the complete flow of an application from start to finish.
+Example: Simulating a user logging in, adding items to a cart, and completing a purchase.
+Benefit: Validates the system's overall functionality and user experience .
+
+
+
+
+Ques3. What to test and how to test?
+
+Ans:
+What to Test:
+
+Critical Functionality: Features that are essential to the application's operation.
+User Workflows: Common paths users take through the application.
+Edge Cases: Unusual or extreme scenarios that might cause failures.
+
+How to Test:
+
+Automated Testing: For repetitive, regression, and performance tests.
+Manual Testing: For exploratory, usability, and ad-hoc testing scenarios.
+Use of Testing Frameworks: Employ tools like Jest, Mocha, or Selenium to structure and execute tests efficiently.
+
+
+
+
+Watch video 5 , 6 , 7 and 8 from above link, code along with the udemy trainer and answer the following
+
+
+
+
+Ques4 What does render function do?
+
+Ans:
+In the context of React Testing Library:
+
+Purpose: The render function renders a React component into a testing environment, allowing you to interact with and test its output.
+Usage: It sets up the component for testing by mounting it to a virtual DOM provided by the testing library .
+
+
+
+
+Ques5. What does screen.getText exactly do.
+
+Ans:
+Functionality: screen.getByText searches the rendered DOM for an element that matches the provided text.
+
+Use Case: It's used to assert that certain text content is present in the component's output, ensuring that the UI displays expected information .
+
+
+
+
+Ques6. What does test suites exactly mean. How do we write them?
+
+Ans:
+Definition: A test suite is a collection of test cases that are intended to test a behavior or set of behaviors of a software application or system.
+
+Purpose: Organizing tests into suites helps manage, execute, and report test results efficiently.
+
+Writing Test Suites:
+
+Structure: Use testing frameworks like Jest or Mocha to group related tests using describe blocks.
+
+Example:
+describe('Authentication Module', () => {
+  test('should log in a user with correct credentials', () => {
+    // test implementation
+  });
+
+  test('should not log in a user with incorrect credentials', () => {
+    // test implementation
+  });
+});
+
+Benefit: Enhances readability and maintainability of tests by logically grouping them .
+
+
+
+
+Deliverable
+
+
+Install the testing library node modules into your expense tracker app which you previously created
+
+Write a total of 10 test cases in it.
+
+Push the code and upload the commit ID.
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Expense-Tracker-Site
+commit ID: e91a90df5f80ca0009b539ef70e1616f95f9b33f
