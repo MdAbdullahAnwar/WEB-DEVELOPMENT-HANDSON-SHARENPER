@@ -1,0 +1,98 @@
+Watch video 11 from the following link and answer the following [also code along with the trainer]
+
+
+
+
+Ques1. What is the difference between findbyText and getbyText?
+
+Ans:
+getByText:
+
+Behavior: Synchronously searches for an element with the specified text.
+
+Usage: Throws an error immediately if the element is not found.
+
+When to Use: When you expect the element to be present in the DOM immediately.
+
+
+findByText:
+
+Behavior: Asynchronously waits for an element with the specified text to appear in the DOM.
+
+Usage: Returns a promise that resolves when the element is found or rejects after a timeout.
+
+When to Use: When the element may appear after some asynchronous operation, such as a data fetch.
+
+
+
+
+Ques2. Why do we have to put await before findbyText?
+
+Ans:
+findByText returns a promise because it waits for the element to appear in the DOM. Therefore, you must use await to wait for the promise to resolve before proceeding with assertions or further actions in your test.
+
+
+
+
+Ques3. What is the default timeout for findbyText? What does this timeout exactly mean ?
+
+Ans:
+The default timeout for findByText is 1000 milliseconds (1 second).
+
+This means that findByText will wait up to 1 second for the element to appear in the DOM before throwing an error if the element is not found.
+
+
+
+
+Watch video 12 and 13 and answer the following [also code along with the trainer]
+
+
+Ques4. What is the need of mocking Apis?
+
+Ans:
+Mocking APIs is essential in testing for several reasons:
+
+Isolation: Allows testing components in isolation without relying on external services.
+
+Consistency: Provides consistent responses, making tests more reliable.
+
+Speed: Tests run faster as they don't have to wait for actual network requests.
+
+Availability: Enables testing even when the real API is unavailable or under development.
+
+Control: Allows simulation of various scenarios, including error responses and edge cases.
+
+
+
+
+Ques5. Why shouldnt we directly call APis?
+
+Ans:
+Directly calling real APIs in tests is discouraged because:
+
+Flakiness: Tests can fail due to network issues or API downtime, not because of bugs in your code.
+
+Performance: Real API calls can slow down your test suite.
+
+Cost: Some APIs have usage limits or costs associated with each call.
+
+
+
+Deliverables
+
+
+
+
+
+Write 10 more test cases in your Expense tracker.
+
+
+
+Make sure you mock all the necessary api calls and work accordingly
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Expense-Tracker-Site
+commit ID: 3629b2bedfb872374764abdaea0fcce61151bcd2
