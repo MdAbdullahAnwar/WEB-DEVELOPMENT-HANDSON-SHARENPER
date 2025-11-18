@@ -1,0 +1,43 @@
+It is mandatory to build the entire project using react bootstrap.
+
+
+
+Useful Resources
+
+
+What is bootstrap?
+
+Watch this video to know how to use bootstrap. Code along with the trainer for better understanding.
+
+
+
+Watch this video to understand how to use react bootstrap
+
+
+
+Deliverables
+
+Create the signup screen similar to this - https://drive.google.com/file/d/1VlQsBXuQux-aDpp2gqud_K0xlnJAap69/view?usp=sharing so that new users can signup. Use react bootstrap.
+
+Only take Email , password and confirm password. All fields are mandatory. Dont let users submit uptill they dont fill everything.
+
+[If you know Node JS ] - Design your own backend . Dont use Firebase.
+
+Use google firebase authentication like the way you did before. New user should be successfuly created so he can login from here on.
+
+Handle errors appropriately and show them to the users like the way you did before.
+
+Once the user has successful registered , console log - User has successfully signed up.
+
+
+
+
+Once done, push the code to git and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/MailMate
+commit ID: 7f7b5ca8c4d5e7f100af67b21da5494830f7d48f
