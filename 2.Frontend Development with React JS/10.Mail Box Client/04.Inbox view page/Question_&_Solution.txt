@@ -1,0 +1,36 @@
+Problem
+
+You have been sending mails.
+
+But how will the other user who is receiving it view it?
+
+
+
+
+Solution
+
+Build a page like this where user can see all the mails that has been sent to him.
+
+[If you know Node JS - build your own api or else use firebases]
+
+
+
+
+
+Make a GET request and get all the mails that have been sent to the user.
+
+
+
+When the user clicks on compose button , open the editor for composing and sending mails which you created in previous task.
+
+
+
+
+Push the code to git and upload the commit ID.
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/MailMate
+commit ID: 3b0c0a572d5d41632ea00a4117dd526b7e8f4b9f
