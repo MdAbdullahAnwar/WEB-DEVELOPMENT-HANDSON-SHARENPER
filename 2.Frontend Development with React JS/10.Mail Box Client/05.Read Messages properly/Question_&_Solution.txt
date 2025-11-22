@@ -1,0 +1,36 @@
+Problem
+
+The user is not able to distinguish between mails that he has read and mails that he has not read
+
+The user is not able to see the complete message in the inbox view.
+
+The user doesn't even get to see the total number of unread message.
+
+
+
+
+Solution
+
+1. When the user gets a new message , it should have a blue dot before the message like this
+
+2. When the user clicks on the message he should be able to read the entire message like this
+
+3. When the user has read the message by clicking on it , the blue dot should no loner be visible , like this.
+
+4. When I refresh the page too, I should not see blue dots for read messages , so update it in backend[If you know node JS - Make an api which marks the message as read: true in db or else update the same in firebase.]
+
+The total number of unread message should be visible on the left for the user to know, like this
+
+
+
+
+Hints
+
+You have to use reducers for storing all the details that you get from the api
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/MailMate
+commit ID: b47097ca9513fef139defe5e390d5b4b10d69e65
