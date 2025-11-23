@@ -1,0 +1,12 @@
+The user should be able. to delete mails which he doesnt want.
+
+Add a delete button next to each mail message.
+
+Call the backend api [firebase or node js api] and delete the mail and dont show it in the frontend anymore.
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/MailMate
+commit ID: 83726a6549f4e7df85a0652349e2304779a707db
