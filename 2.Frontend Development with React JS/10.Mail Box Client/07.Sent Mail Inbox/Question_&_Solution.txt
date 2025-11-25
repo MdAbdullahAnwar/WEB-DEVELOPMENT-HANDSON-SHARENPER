@@ -1,0 +1,37 @@
+Problem
+
+The user cannot see the mails which he has sent to other users.
+
+This is a big problem
+
+
+
+
+Deliverable
+
+
+
+
+
+When the user clicks on the sent button on the left , open the sent box (Like this)
+
+
+
+Call the backend api (Node Js api or firebase) and get all the mails that have been sent by the users. (Reuse the inbox component which you made before)
+
+
+
+He should be able to read the mails like before (Reuse the Read Mail component you built previously)
+
+
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/MailMate
+commit ID: b3ff4450a19f96b0f118078331b712660e925fff
