@@ -1,0 +1,22 @@
+Problem
+
+When a user has recieved a mail from other user, uptill the user doesnt refresh the page -> he will not be able to see the new mail
+This is a big problem
+
+
+Deliverable
+
+Keep calling the backend api every 2 seconds from the frontend and get the list of mails.
+If there are any new mail rerender the UI in the most optimised way and show the list.
+Make sure the unread mail count increases too on the left side too.
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/MailMate
+commit ID: a777d70e98cca2d85695e0abc59656e70a28b30e
