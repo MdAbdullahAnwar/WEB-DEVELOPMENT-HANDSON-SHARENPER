@@ -1,0 +1,43 @@
+In the mailbox app which you just created use custom hooks for making api calls. [ This will surely impress the interviewer]
+
+
+
+
+What are custom hooks?(Most asked interview question)
+
+Watch this video to understand how to make custom hooks in detail.
+
+
+
+
+Section 15 of the udemy video explains custom hooks in detail too.(Video 185 -194)
+
+
+
+
+
+
+
+Deliverable
+
+All the API calls in the mail app should happen through the custom hook.
+
+
+
+
+TIP of the day
+
+Moreover if you see any useffect pattern being repeated again and again , you should make a custom hook and reuse it everywhere just like normal functions
+
+
+
+
+Push the code to git and upload the commit ID
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/MailMate
+commit ID: e89a667b3d17f9c043ed399100a0cd50900a0af1
