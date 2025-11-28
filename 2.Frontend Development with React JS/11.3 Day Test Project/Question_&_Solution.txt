@@ -1,0 +1,161 @@
+Reference Website: Demo Movie Booking
+
+Note: You only need to build the features mentioned below. Change the fonts, colors, logos, and names for originality.
+
+
+
+
+
+
+
+Quick Overview
+
+This project involves building a Movie Booking Website using React and Firebase. The website will allow users to browse movies, book tickets, and receive booking confirmations via email. Admins will have access to an admin panel to manage categories, add movies, and view booked tickets.
+
+
+
+
+Tech Stack
+
+
+
+
+
+Frontend: React JS (You can use any CSS and React framework)
+
+
+
+Backend: Firebase/Appwrite (Do not use crud crud)
+
+
+
+Avoid Firebase SDK Methods
+
+Do not use Firebase SDK (like createUserWithEmailAndPassword).
+Instead, use the Firebase REST API for authentication and other interactions.
+Firebase Auth REST API Documentation: https://firebase.google.com/docs/reference/rest/auth
+
+
+Use Multiple Commits
+
+Avoid pushing everything in a single commit.
+Make multiple meaningful commits during your development process.
+This shows your work clearly and helps track changes effectively.
+
+
+
+Add Deployed Project Link
+
+Deploy your project on Vercel (or Netlify).
+
+
+
+Deployment Video
+
+Check this deployment video so that you know how to deploy.
+
+video link : https://youtu.be/hAuyNf0Uk-w?si=vLlH1OGPOLsURuTl
+
+
+
+
+Admin Features
+
+
+
+
+
+Repository: Create a separate repository for the admin panel with minimal design.
+
+
+
+
+
+
+
+
+Authentication: Implement authentication for admins to access the admin panel with login credentials.
+
+
+
+
+
+
+
+
+Sidebar: Create a sidebar with the following options:
+
+
+
+Add Category: Admins can add categories like "Now Playing," "Top Movies in Theaters," "Top Rated," and "Hero Section."
+
+
+
+Add Movie: Admins can add movies by providing details such as movie poster, hero section image, name, description, director, genre, release date, language, IMDB rating, showtime, and trailer link.
+
+
+
+Showtime Management: Admins can manage different dates and times for movie showtimes.
+
+
+
+Booked Movies: Display details of booked tickets, including user name, email, movie name, and showtime information.
+
+
+
+
+
+
+
+
+If the admin chooses the "Hero Section" category while adding a movie that should appear in the top hero section in a slider format. The release date will be prominently displayed as per the reference website. Movies in other categories will be displayed accordingly.
+
+
+
+
+User Features
+
+
+
+
+
+Repository: Create a separate repository for the user interface with minimal design.
+
+
+
+Header and Footer: Design a header and footer similar to the reference website.
+
+Displaying Movies All movies will be visible according to the category as the reference website has nothing will be hardcoded
+
+
+
+
+
+Ticket Booking: Allow users to select a movie, choose showtime, and book tickets by providing their name, email, and phone number. Upon booking, users will receive a confirmation email.
+
+
+
+Email Confirmation: Send email notifications to users confirming their ticket bookings.
+
+
+
+No Authentication Required: Users can book tickets without the need for authentication.
+
+
+
+
+
+
+
+If you encounter any issues with this task, please reach out to your mentor via WhatsApp at 6294543902 (do not call).
+
+Please note that your mentor will not provide instructions on how to build the project.
+
+You are expected to complete the project independently. Your mentor is available to help clarify any confusion regarding the project's requirements.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/FoodRush
