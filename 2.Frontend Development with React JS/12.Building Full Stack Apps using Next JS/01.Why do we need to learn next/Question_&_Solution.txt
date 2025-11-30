@@ -1,0 +1,67 @@
+Why Are We Moving from React to Next.js?
+
+
+
+
+If you're comfortable with React, you might be wondering —
+
+"Why do I need to learn Next.js now?"
+
+"Isn’t React already doing everything I need?"
+
+
+
+
+Those are great questions! But as your projects grow, you’ll notice that React alone doesn’t give you everything out of the box .
+
+That’s exactly where Next.js comes in.
+
+
+
+
+It’s like React, but with superpowers 🚀
+
+Before we jump into coding, go through these two short videos. They’ll help you understand:
+
+👉 Why we need NextJS ?
+
+👉 How to set it up step-by-step
+
+
+
+
+Deliverables:
+
+Complete the following mcq's after watching the videos.
+
+
+
+
+
+Ques1. What was one major problem the speaker faced while using plain React for larger projects?
+
+Ans: SEO didn't work well and pages were slow
+
+
+
+Ques2. How does React typically render content by default?
+
+Ans: Client-side rendering
+
+
+
+Ques3. What does Server-Side Rendering (SSR) help with in a Next.js app?
+
+Ans: Rendering pages on the server for faster load and better SEO
+
+
+
+Ques4. What is one key difference in routing between React and Next.js?
+
+Ans: In React we use React Router, while in Next.js we use file-based routing
+
+
+
+Ques5. Which of the following is a built-in feature of Next.js mentioned in the script?
+
+Ans: Automatic optimization and code splitting
