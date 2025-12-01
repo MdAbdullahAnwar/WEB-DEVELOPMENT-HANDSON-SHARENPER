@@ -1,0 +1,51 @@
+Routing in Next.js — Watch This Video
+
+Now that you've seen how Next.js helps us move beyond the limitations of plain React, it’s time to explore routing.
+
+Before you jump into code, watch this video: Routing in NextJS
+
+to understand how routing works in Next.js. It covers:
+
+
+Normal routes
+
+Nested routes
+
+Dynamic routes
+
+
+
+
+Make sure you go through it carefully. It’ll help you understand how routing in Next.js is handled differently—and more easily—than in React.
+
+
+
+
+
+Ques1. What happens when you create a new file named about.js inside the pages folder in a Next.js app?
+
+Ans: It becomes accessible as a route at /about
+
+
+
+Ques2. How do you create a nested route like /blog/post in Next.js?
+
+Ans: Create a folder blog inside pages, then add post.js inside it
+
+
+
+Ques3. What is the correct way to create a dynamic route like /product/123 in Next.js?
+
+Ans: Create a file named [id].js inside the product folder
+
+
+
+Ques4. In a Next.js app using the App Router, which folder is responsible for generating routes automatically?
+
+Ans: app
+
+
+
+Ques5. If you have a file named [slug].js inside pages/blog/, which URL will it match?
+
+Ans: Any route like /blog/my-first-post
