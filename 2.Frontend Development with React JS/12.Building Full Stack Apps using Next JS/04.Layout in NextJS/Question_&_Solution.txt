@@ -1,0 +1,62 @@
+Learn Layouts in Next.js (App Router)
+
+Description
+
+Watch the video "Using Layouts with the App Router in Next.js" to understand how the new layout system works in Next.js 13+ using the app/ directory.
+
+
+
+
+You’ll learn:
+
+
+How to set up a global layout in app/layout.js
+
+How layouts wrap your pages automatically
+
+How to use nested layouts for different sections of your app
+
+
+
+After watching, complete a short multiple-choice quiz to check your understanding of shared and nested layouts in the App Router.
+
+
+
+
+Deliverables
+
+Submit your quiz as instructed.
+
+Be sure to watch the full video : the questions are based on real examples shown during the walkthrough.
+
+
+
+
+
+Ques1. Where is the main layout file located in a Next.js App Router project?
+
+Ans: /app/layout.js
+
+
+
+Ques2. What is the purpose of app/layout.js in a Next.js project using the App Router?
+
+Ans: To apply a shared layout(e.g., header, footer, nav) to all pages
+
+
+
+Ques3. What must the app/layout.js component include to render child pages correctly?
+
+Ans: The {children} prop inside JSX
+
+
+
+Ques4. In a nested route like /dashboard/settings, where would you define a layout that only wraps the dashboard section?
+
+Ans: app/dashboard/layout.js
+
+
+
+Ques5. What happens if you don’t define a layout.js in a nested folder like app/blog/?
+
+Ans: The root app/layout.js will still be used as the layout
