@@ -1,0 +1,26 @@
+Let's revise layouts
+
+
+
+Deliverables:
+
+Create a global layout file at /app/layout.js that wraps all pages in the app.
+
+Include a header section with static text (e.g., a site title or navigation placeholder).
+
+Include a footer section with static text (e.g., copyright or site info).
+
+Ensure the layout properly renders the page content between the header and footer.
+
+
+
+
+Please submit your GitHub commit link after you have created the layout.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: 6a483ae2f0f0b3d16491f8ecd28245bf05de8d14
