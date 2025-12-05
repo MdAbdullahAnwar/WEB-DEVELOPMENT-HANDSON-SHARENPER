@@ -1,0 +1,74 @@
+Introduction to SSR and SSG in Next.js (App Router)
+
+In this task, you’ll learn the core concepts of SSR (Server-Side Rendering) and SSG (Static Site Generation) using the App Router in Next.js 13+.
+
+
+
+▶️ Instructions
+
+
+
+Watch the video following video: SSR and SSG
+
+
+Pay close attention to:
+
+The difference between server-side rendering and static rendering
+
+How async server components work for data fetching
+
+When data is fetched on the server and when pages are pre-rendered at build time
+
+How fetch() is automatically cached or revalidated
+
+
+
+💡 Key Concept
+
+In the App Router:
+
+
+
+Static Rendering (SSG) happens when a component fetches data at build time (default with fetch()).
+
+Server-Side Rendering (SSR) happens when you disable caching or use dynamic functions like fetch(..., { cache: "no-store" }).
+
+
+
+Deliverables:
+
+
+
+After watching, you’ll complete:
+
+A short quiz on SSR vs SSG in the App Router
+
+
+
+Ques1. In the App Router, what happens when you fetch data using fetch() in a server component without any options?
+
+Ans: It fetches data during build time and caches it.
+
+
+
+Ques2. What makes a page server-side rendered in the App Router?
+
+Ans: Disabling fetch cache with {cache: "no-store"}
+
+
+
+Ques3. Which of the following is TRUE about data fetching in App Router?
+
+Ans: Fetching data inside server components happens on the server by default.
+
+
+
+Ques4. What is the default rendering strategy when using fetch() in a server component?
+
+Ans: Static rendering with full caching
+
+
+
+Ques5. Which of the following will trigger Server-Side Rendering (no cache)?
+
+Ans: fetch(url, { cache: "no-store" })
