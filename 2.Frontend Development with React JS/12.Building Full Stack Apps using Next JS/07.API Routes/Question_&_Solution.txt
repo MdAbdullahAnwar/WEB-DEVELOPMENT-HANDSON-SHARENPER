@@ -1,0 +1,54 @@
+Getting Started with API Routes in Next.js (App Router)
+
+We’re about to dive into creating API routes using the App Router in Next.js — an essential skill for building full-stack applications.
+
+
+👉 Step 1: Watch the Two Videos Provided Below
+
+
+
+Video 1: Learn how to set up a basic API route using the App Router.
+
+Video 2: Understand how to create a dynamic API route that handles parameters like IDs.
+
+These videos will walk you through the folder structure, routing conventions, and method handling.
+
+
+🎯 Your goal is to get familiar and comfortable with how the App Router handles APIs differently from the traditional Pages Router.
+
+
+🔍 Your Task
+
+Once you've finished watching both videos, take a moment to reflect and answer the following:
+
+
+
+
+Ques1. Where should API routes be created when using the App Router in Next.js?
+
+Ans: /app/api
+
+
+
+Ques2. What is the correct file name to define an API route in the App Router approach?
+
+Ans: route.js
+
+
+
+Ques3. In a dynamic API route using the App Router, how do you define a dynamic segment in the folder name?
+
+Ans: [id]
+
+
+
+Ques4. Which HTTP methods can you export from a route.ts file in a Next.js App Router-based API route?
+
+Ans: Any standard HTTP method like GET, POST, PUT, DELETE
+
+
+
+Ques5. What does the following folder structure represent?
+/app/api/user/[id]/route.js
+
+Ans: A dynamic API route that handles requests like /api/user/123
