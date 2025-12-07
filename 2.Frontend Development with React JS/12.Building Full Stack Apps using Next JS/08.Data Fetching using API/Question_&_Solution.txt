@@ -1,0 +1,63 @@
+Data Fetching with Caching & Navigation
+
+We're not creating our own backend at this stage. However, you can integrate one later if needed. For now, we are using a predefined dataset from https://dummyjson.com to simulate backend responses.
+
+
+
+
+Task 1:
+
+
+
+
+
+Update /app/products/page.js to fetch product data from:
+
+
+
+https://dummyjson.com/products
+
+
+
+Go through the documentation for next and make yourself familiar with revalidate. and enable caching with:
+
+
+
+
+
+fetch('https://dummyjson.com/products')
+
+Task 2:
+
+
+
+
+
+Update /app/products/[id]/page.js to dynamically fetch and display individual product details based on the product ID in the URL.
+
+
+
+Add navigation links in the layout header to:
+
+
+
+
+
+Home (/)
+
+
+
+Products (/products)
+
+
+
+
+Please submit your GitHub commit link after you have created the layout.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: ad21e54dcb2f515f2b273e756199c480bdc22472
