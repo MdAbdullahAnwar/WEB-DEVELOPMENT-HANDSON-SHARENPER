@@ -1,0 +1,58 @@
+Learn how to serve and use static files like images in a Next.js app.
+
+Watch the video to understand how to add files to the public folder and reference them in your components.
+
+
+
+Ques1. Where should you place static assets like images, icons, or fonts in a Next.js project?
+
+Ans: /public
+
+
+
+Ques2. How can you reference a file named logo.png located in the /public folder inside a component?
+
+Ans: <img src="/logo.png" />
+
+
+
+Ques3. Which of the following statements is true about the /public directory in Next.js?
+
+Ans: Files in /public are served from the root and do not require import statements.
+
+
+
+Ques4. If you want to serve a custom favicon.ico in a Next.js app, where should you place it?
+
+Ans: /public/
+
+
+
+Ques5. What happens if two files with the same name exist in both /public and /app directories?
+
+Ans: Ony the /public file is accessible via the browser.
+
+
+
+
+
+Deliverables:
+
+After watching, update your project to include a product image displayed on the product detail page using a static file from the public directory.
+
+Let’s go through the video!
+
+Handling Static Assests
+
+
+
+
+Please follow the instructor and understand the use of static files.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: dfcfaf37eec2281613a0b25ee1c4e458d7bfdc9a
