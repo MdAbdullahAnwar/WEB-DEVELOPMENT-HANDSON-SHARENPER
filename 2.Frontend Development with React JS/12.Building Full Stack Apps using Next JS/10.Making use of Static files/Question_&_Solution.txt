@@ -1,0 +1,18 @@
+Static Files and Logo Integration
+
+Add a logo image (e.g., logo.png) to the /public directory.
+
+Incorporate this logo prominently within the layout header so that it appears consistently across all pages, enhancing the site’s branding.
+
+
+
+
+Once completed, please share the link to your GitHub commit containing the implemented layout.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: 6fdbc1ca16b7016d4174d5a2734c4d5b2e3bf061
