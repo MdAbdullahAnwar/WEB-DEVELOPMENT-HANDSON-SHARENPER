@@ -1,0 +1,57 @@
+JWT Authentication in Next.js Using jose and Cookies
+
+Go through the following video to learn how to implement authentication in a Next.js app without NextAuth.js, using the jose library and cookies:
+
+
+
+🔗 Form and Authentication
+
+
+
+🔗Form function and validation
+
+
+
+🔗Complete login and logout
+
+
+
+🔗Middleware and da﻿shboard
+
+
+
+
+📌 What to Do:
+
+
+
+
+
+Follow the video and build a simple authentication system using:
+
+
+
+jose for JWT creation and verification
+
+
+
+Cookies for storing the token securely (HTTP-only)
+
+
+
+Add a login route, a protected page, and a logout option
+
+
+
+
+✅ Submission:
+
+Push your code to GitHub and submit the Git commit ID of your final working version.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: 01cde4b082b4dba0b7ff6ec566bb14a0276909af
