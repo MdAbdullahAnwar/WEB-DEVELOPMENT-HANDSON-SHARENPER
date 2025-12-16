@@ -1,0 +1,53 @@
+ Implement Authentication in Next.js Using NextAuth.js
+
+
+
+
+Authentication is a core part of any web application that handles user data.
+
+Next.js makes this easy with the help of NextAuth.js, a powerful authentication library built specifically for Next.js apps.
+
+
+
+
+How to add Authentication to a Next.js App Using NextAuth.js ?
+
+
+
+
+Part 1: Watch the Video
+
+Watch this video on implementing authentication in Next.js using NextAuth.js:
+
+
+
+🔗 Video Link
+
+
+
+
+Part 2: Understand
+
+Focus on how SessionProvider, useSession(), signIn(), and signOut() are used, and how providers like GitHub or Google are set up.
+
+
+
+
+Part 3: Implement
+
+Using the video as a guide, add authentication to a basic Next.js app with one provider. Protect a route or component based on the user’s session.
+
+
+
+
+Part 4: Submit
+
+Push your code to GitHub and share the link.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: ffab0e005720dd9920ff6e7e75e3f4c06840c2b1
