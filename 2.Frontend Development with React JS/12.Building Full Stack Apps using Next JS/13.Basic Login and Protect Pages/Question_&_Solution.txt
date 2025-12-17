@@ -1,0 +1,45 @@
+Add Basic Login and Protect Pages
+
+
+
+
+Deliverables:
+
+
+
+
+
+Create a login page (/app/login/page.js) with a simple form (hardcoded username/password).
+
+
+
+Show a Login button in the header when the user is logged out; clicking it goes to the login page.
+
+
+
+Protect the products pages (/app/products and /app/products/[id]) so only logged-in users can access them.
+
+
+
+If not logged in, redirect users to the login page.
+
+
+
+After login, redirect back to the products page.
+
+
+
+When logged in, show a Logout button in the header that logs the user out and redirects to login.
+
+
+
+
+Please submit your GitHub commit link after you have created the login functionality.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: 2051269eec7c097ca3331b2a7ee0048f2be29e03
