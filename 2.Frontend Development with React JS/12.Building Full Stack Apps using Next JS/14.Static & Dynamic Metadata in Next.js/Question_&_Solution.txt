@@ -1,0 +1,37 @@
+Static & Dynamic Metadata in Next.js
+
+Next.js allows you to define static metadata like title and description, and also generate dynamic metadata for routes like blog posts or product pages.
+
+
+
+
+Let’s go through the video to understand how it works.
+
+🔗 Video Link
+
+Please follow how the instructor is taking care of the metadata,
+
+
+
+
+Deliverables:
+
+Let’s create a simple Next.js website with both static and dynamic metadata:
+
+
+
+
+
+Create a homepage with static metadata where the title is "This is Homepage" and description of your choice.
+
+
+
+Create a dynamic route like /posts/[id] where the title is dynamic and changes based on the post ID or content (e.g., "Post 1 - My Blog" for /posts/1).
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: f740900243cc22ec69c290ac4eaee8a7944bf31b
