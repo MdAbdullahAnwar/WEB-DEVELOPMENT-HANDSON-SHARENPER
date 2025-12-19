@@ -1,0 +1,48 @@
+Add Metadata (Static & Dynamic)
+
+
+
+
+Deliverables:
+
+
+
+
+
+Add static metadata to the homepage with the title:
+
+
+
+"Products Store - Home".
+
+
+
+Add static metadata to the product listing page with the title:
+
+
+
+"Products Store - Products List".
+
+
+
+Add dynamic metadata to the product detail page so that the page title reflects the product’s name fetched from the API e.g: e.g., "Wireless Headphones - Products Store" for one product, and "Smartwatch - Products Store" for another.
+
+
+
+Ensure the metadata updates correctly when navigating between different product detail pages.
+
+
+
+
+
+
+
+Please submit your GitHub commit link after you have created the metadata.
+
+
+
+
+
+Solution:
+GitHub Repo: https://github.com/MdAbdullahAnwar/Next.JS_Crash-Course
+commit ID: 302f8d64dafd5cd49d266ed896c18842e6cf9c54
