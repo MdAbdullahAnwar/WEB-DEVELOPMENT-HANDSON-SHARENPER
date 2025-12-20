@@ -1,0 +1,31 @@
+Deploy a Next.js App Using Vercel
+
+Once your Next.js project is ready, the next step is to take it live.
+
+Vercel is the official deployment platform for Next.js and offers an easy, seamless experience to host your application with features like continuous deployment, custom domains, and environment variable management. 
+
+
+Watch the video to learn the deployment steps: Video link
+
+
+Deliverables:
+
+Prepare your Next.js project for deployment.
+Push your code to GitHub.
+Connect your GitHub repo to Vercel.
+
+Deploy the app and ensure it builds without errors.
+
+
+Verify the live site: check routes, styling, and metadata.
+
+Choose a frontend project of your choice and deploy it on Vercel and share it's public url.
+
+I hope you’ve completed the deployment.
+
+Please share the URL of your deployed project so it can be accessed publicly?
+
+
+
+
+Solution: https://expense-tracker-site-xi.vercel.app/
