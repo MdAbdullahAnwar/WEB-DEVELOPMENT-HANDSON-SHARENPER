@@ -1,0 +1,29 @@
+Ques1. Are HTML tags and elements the same thing?
+
+Ans: No they are distinct entities.
+
+
+
+Ques2. What are tags and attributes in HTML?
+
+Ans: Tags define elements and attributes provide additional information about elements.
+
+
+
+Ques3. What are void elements in HTML?
+
+Ans: HTML elements that do not require closing tags and are self-closing are contained.
+
+
+
+Ques4. What are different types of lists in HTML?
+
+Ans: Ordered list, unordered list, and definition list.
+
+The ordered list has numbers, the unordered list has bullets, and the definition list has terms and definitions.
+
+
+
+Ques5. What is the ‘class’ attribute in HTML?
+
+Ans: 'class' is for styling, 'id; is for identification.
