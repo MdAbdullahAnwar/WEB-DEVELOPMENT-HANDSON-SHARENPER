@@ -1,0 +1,31 @@
+Ques1. How to optimize website assets loading?
+
+Ans: All of the above
+
+
+
+Ques2. What is the difference between <strong>, <em> tags and <b>, <i> tags?
+
+Ans: <strong> and <em> have semantic meaning, while <b> and <i> are purely presentational.
+
+
+
+Ques3. What is the significance of <head> and <body> tag in HTML?
+
+Ans: <head> contains metadata and <body> contains visible content.
+
+
+
+Ques4. Can we display a web page inside a web page or Is nesting of webpages possible?
+
+Ans: Yes, the nesting of webpages is possible.
+
+
+
+Ques5. What are inline and block-level elements?
+
+Ans: Inline elements do not create line, while block-level elements do.
+
+Answer Explanation
+
+Inline elements do not create line breaks, whereas block-level elements start on a new line.
