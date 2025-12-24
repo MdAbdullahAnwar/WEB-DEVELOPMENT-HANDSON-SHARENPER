@@ -1,0 +1,33 @@
+Ques1. In how many ways can we position an HTML element? What are the permissible values of the position attribute?
+
+Ans: Five ways: static, relative, absolute, fixed, and sticky
+
+Answer Explanation:
+Static, relative, absolute, fixed, and sticky are the permissible values of the position attribute in HTML
+
+
+
+Ques2. How can you render a website within your own website in HTML?
+
+Ans: Use an <iframe> element with the src attribute set to the URL of the website.
+
+Answer Explanation
+Use an <iframe> element with the src attribute set to the URL of the website.
+
+
+
+Ques3. What is the correct way to create a hyperlink that opens in a new tab in HTM
+
+Ans: <a href="https://example.com" target="_blank">Link</a>
+
+
+
+Ques4. In how many ways can you display HTML elements?
+
+Ans: Three ways: Inline, block, and inline-block. 
+
+
+
+Ques5. In how many ways can we specify the CSS styles for the HTML element?
+
+Ans: Three ways: Inline styles, internal styles, and external stylesheets.
