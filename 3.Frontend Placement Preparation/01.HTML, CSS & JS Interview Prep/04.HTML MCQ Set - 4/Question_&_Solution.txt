@@ -1,0 +1,28 @@
+Ques1. How many types of CSS can be included in HTML?
+
+Ans: Three types: inline CSS, internal CSS, external CSS.
+
+
+
+Ques2. What is a style sheet?
+
+Ans: A style sheet is a document that contains CSS code.
+
+
+
+Ques3. Which of the following is NOT a valid HTML5 semantic element?
+
+Ans: <div>
+
+
+
+Ques4. What does the
+<pre></pre> tag do in HTML?
+
+Ans: It displays text exactly as it is written in the HTML code, preserving spaces and line breaks.
+
+
+
+Ques5. In HTML, what does the break tag do?
+
+Ans: It creates a line break within a paragraph.
