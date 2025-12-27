@@ -1,25 +1,27 @@
-The property in CSS used to change the background color of an element is
-Select one answer
+Ques1. The property in CSS used to change the background color of an element is
 
-background-color
-
-What does the CSS property display: inline-block; do?
-Select one answer
-Display the element as a block-level element with no line break.
-
-Which CSS selector has the highest specificity?
-Select one answer
-ID selector
-
-What does the CSS property box-sizing: border-box; do?
-Select one answer
-Includes padding and border in the element's total width and height.
-
-What is the purpose of the CSS property z-index?
-Select one answer
+Ans: background-color
 
 
-Previous
 
-Question List
-Next
+Ques2. What does the CSS property display: inline-block; do?
+
+Ans: Display the element as a block-level element with no line break.
+
+
+
+Ques3. Which CSS selector has the highest specificity?
+
+Ans: ID selector
+
+
+
+Ques4. What does the CSS property box-sizing: border-box; do?
+
+Ans: Includes padding and border in the element's total width and height.
+
+
+
+Ques5. What is the purpose of the CSS property z-index?
+
+Ans: Specifies the order of stacked elements along the z-axis.
