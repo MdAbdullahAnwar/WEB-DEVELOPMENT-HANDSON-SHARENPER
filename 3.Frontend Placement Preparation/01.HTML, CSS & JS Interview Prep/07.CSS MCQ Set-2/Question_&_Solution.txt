@@ -1,0 +1,23 @@
+Ques1. Which CSS property is used to define a flex container?
+
+Ans: display:flex
+
+
+Ques2. Which property is used to align flex items along the main axis?
+
+Ans: justify-content
+
+
+Ques3. Which CSS property is used to create a grid layout?
+
+Ans: display:grid
+
+
+Ques4. How do you define the number of columns in a CSS grid layout?
+
+Ans: grid-template-columns
+
+
+Ques5. Which CSS property is used to position an element relative to its normal position?
+
+Ans: position:relative
