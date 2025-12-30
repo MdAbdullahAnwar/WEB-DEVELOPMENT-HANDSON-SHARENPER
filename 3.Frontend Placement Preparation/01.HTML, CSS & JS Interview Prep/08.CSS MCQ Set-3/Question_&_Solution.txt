@@ -1,0 +1,27 @@
+Ques1. Which of the following property controls the horizontal overflow of a block or inline block?
+
+Ans: overflow-x
+
+
+
+Ques2. Which unit is not a relative unit in CSS?
+
+Ans: px
+
+
+
+Ques3. Which unit is relative to the font-size of the root element?
+
+Ans: rem
+
+
+
+Ques4. How does position: sticky; differ from position: fixed;?
+
+Ans: sticky keeps an element in the flow of the document: fixed removes it from the flow.
+
+
+
+Ques5. Which value of the position property removes an element from the normal document flow and positions it relative to its nearest positioned ancestor?
+
+Ans: absolute
