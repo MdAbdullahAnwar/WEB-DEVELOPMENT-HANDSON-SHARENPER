@@ -1,0 +1,27 @@
+Ques1. Which pseudo-class is used to apply styles to an element when it is being clicked?
+
+Ans: :active
+
+
+
+Ques2. How would you style the last child of a specific type within a parent element?
+
+Ans: parent child:last-of-type
+
+
+
+Ques3. How do you hide overflow content that exceeds the dimensions of an element?
+
+Ans: overflow: hidden
+
+
+
+Ques4. What does the overflow-y property control?
+
+Ans: Vertical overflow content
+
+
+
+Ques5. What is the effect of setting flex: 1 on a flex item?
+
+Ans: The item will grow to fill the available space.
