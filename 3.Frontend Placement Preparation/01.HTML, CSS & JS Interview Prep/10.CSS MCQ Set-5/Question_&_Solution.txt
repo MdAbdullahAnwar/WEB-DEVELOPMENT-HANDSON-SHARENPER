@@ -1,0 +1,27 @@
+Ques1. How do you create a CSS grid with three columns of equal width?
+
+Ans: grid-template-columns: 1fr 1fr 1fr;
+
+
+
+Ques2. How can you create a circular image using CSS?
+
+Ans: border-radius: 50%;
+
+
+
+Ques3. In CSS, what is the purpose of the :nth-child() pseudo-class?
+
+Ans: To select element based on their index in the parent element's children list.
+
+
+
+Ques4. Which of the following CSS properties is used to control the spacing between lines of text?
+
+Ans: line-height
+
+
+
+Ques5. What is the purpose of the calc() function in CSS?
+
+Ans: To perform calculations to determine CSS property values.
