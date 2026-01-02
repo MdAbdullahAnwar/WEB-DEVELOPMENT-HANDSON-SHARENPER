@@ -1,0 +1,21 @@
+Ques1. What is the difference between let and const? What is the difference between let and var?
+
+Ans: let and const both declare variables with block scope, but const variables cannot be reassigned after nitial assignment. let and var both declare variables, but let has block scope while var has function scope.
+
+
+
+Ques2. What is the output of this function? function sample() { for (let i = 0; i <= 5; i++) { setTimeout(() => console.log(i), 1000); } }
+
+Ans: 0 1 2 3 4 5
+
+
+
+Ques3. What is the output of this code? setTimeout(() => { console.log("a")}, 2000); console.log("b");
+
+Ans: b(after 2 seconds) a
+
+
+
+Ques4. In above question How can you print "a" first and "b" later without using any extra setTimeouts?
+
+Ans: By using a Promise to control the order of execution.
