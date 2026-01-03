@@ -1,0 +1,21 @@
+Ques1. What is process.nextTick?
+
+Ans: It is a function in Node.js used to schedule a callback to be executed in the next iteration of the event loop, immediately after the current operation completes.
+
+
+
+Ques2. How can you check if a variable is an array?
+
+Ans: Using the Array.isArray() method.
+
+
+
+Ques3. What is the output of console.log(1 + '1'); ?
+
+Ans: 11
+
+
+
+Ques4. What is the value of typeof null in JavaScript?
+
+Ans: object
