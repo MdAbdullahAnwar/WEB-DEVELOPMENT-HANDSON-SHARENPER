@@ -1,0 +1,33 @@
+Ques1. What is the output of this code? setImmediate(() => { console.log("first"); }); setTimeout(() => { console.log("second"); }, 0); console.log("third");
+
+Ans: third first second
+
+
+
+Ques2. Difference between setImmediate and process.nextTick
+
+Ans: Both setImmediate and process.nextTick are used to schedule asynchronous tasks, but setImmediate executes the I/O events phase of the event loop, while process.nextTick executes before I/O events.
+
+
+
+Ques3. What is the difference between a Promise and a callback?
+
+Ans: Promises handle asynchronous operations in a more structured and manageable way than callbacks, allowing for better error handling and chaining of multiple asynchronous operations.
+
+
+
+Ques4. What is the output? let a = new Promise((resolve, reject) => { reject({ msg: 'Something went wrong' }); }); a.then(resolve => { console.log(resolve); }).catch(err => { console.log(err.msg); });
+
+Ans: {msg: 'Something went wrong'}
+
+
+
+Ques5. What is the output? await delay(6000); setTimeout(() => { console.log("first"); }, 10000); console.log("second");
+
+Ans: second (after 6 seconds) first
+
+
+
+Ques6. What is a function definition?
+
+Ans: A function definition is a block of code that describes the behaviour of a function, including its name, parameters, and the statements to be executed when the function is invoked.
