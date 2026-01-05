@@ -1,0 +1,33 @@
+Ques1. What are the differences between let, var, and const in JavaScript?
+
+Ans: let is block-scoped, var is function scoped, and const is used for constants.
+
+
+
+Ques2. Which of the following is NOT an ES6 feature?
+
+Ans: Callbacks
+
+
+
+Ques3. What is the main difference between array.map and array.filter in JavaScript?
+
+Ans: array.map creates a new array by applying a function to each element, while array.filter creates a new array with elements that pass a test.
+
+
+
+Ques4. How can you find the length of an object in JavaScript?
+
+Ans: Use the Object.keys(obj).length method.
+
+
+
+Ques5. What are promises in JavaScript, and what are the three states of promises?
+
+Ans: Promises are used for asynchronous operations, and their states are: Pending, Resolved (Fulfilled), and Rejected.
+
+
+
+Ques6. Why do we use promises over callbacks, and why use await and async?
+
+Ans: Promises allow for better error handling and readability in asynchronous code, and await and async make working with promises more convenient.
