@@ -1,0 +1,32 @@
+Ques1. When is it appropriate to use async/await in JavaScript?
+
+Ans: async/await is used when working with promises and asynchronous code to make it appear more like synchronous code.
+
+
+
+Ques2. What is the reason for using await inside an async function in JavaScript?
+
+Ans: await ensures that the function execution is paused until the awaited promise is resolved or rejected.
+
+
+
+Ques3. What are callbacks in JavaScript, and what is "Callback hell"?
+
+Ans: Callbacks are functions passed as arguments to other function to be executed later, and :Callback hell" refers to the complex and deeply nested structure of callbacks, making code hard to read and maintain.
+
+
+
+Ques4. Can you provide an example of "Callback hell" in JavaScript?
+
+Ans: fs.readFile('file1.txt':function(err,data){fs.readFile('file2.txt':function(err.data){fs.readFile('file3.txt':function(err,data){...more nested callbacks});});});
+
+
+
+Ques5. What will the output of this be? async fun fun1(){ console.log('a'); console.log('b'); await setTimeout(() => console.log('c'), 1000) await setTimeout(() => console.log('d'), 0) console.log('e'); } fun1() Explain the reason behind the answer? can you solve thee above problem, so that we get proper outputs ? Hint await should works properly.
+
+Ans:
+a
+b
+e
+d
+c
