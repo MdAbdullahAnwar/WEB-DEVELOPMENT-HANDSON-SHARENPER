@@ -30,4 +30,4 @@ Ans: Function currying is a way to turn a function with multiple arguments into 
 
 Ques6. What is an IIFE?
 
-Ans: IIFE is a progrmming
+Ans: IIFE is a progrmming pattern where a function is defined and executed immediately after its creation.
