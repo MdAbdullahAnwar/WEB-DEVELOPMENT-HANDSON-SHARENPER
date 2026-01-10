@@ -1,0 +1,33 @@
+Ques1. What is the main difference between the == and === operators in JavaScript?
+
+Ans: == performs type coercion, while === does not perform type coercion and checks both value and type.
+
+
+
+Ques2. What is the difference between null and undefined in JavaScript?
+
+Ans: null represents an explicitly assigned "empty" or "non-existent" value, while undefined represents an uninitialized or missing value.
+
+
+
+Ques3. What will the output (true or false) of the following code be? console.log(null === undefined); console.log(null == undefined);
+
+Ans: The first statement will output true, and the second statement will output false.
+
+
+
+Ques4. What is event bubbling and event capturing (Event Propagation)? What is the difference between them?
+
+Ans: Event bubbling is the propogation of an event from child elements to their parent elements, while event capturing is the opposite, propagation from parents to children.
+
+
+
+Ques5. What is function currying?
+
+Ans: Function currying is a way to turn a function with multiple arguments into a sequence of functions, each taking one argument.
+
+
+
+Ques6. What is an IIFE?
+
+Ans: IIFE is a progrmming
