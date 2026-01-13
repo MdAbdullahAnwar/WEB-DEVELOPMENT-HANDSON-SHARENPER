@@ -12,22 +12,22 @@ Ans: null represents an explicitly assigned "empty" or "non-existent" value, whi
 
 Ques3. What will the output (true or false) of the following code be? console.log(null === undefined); console.log(null == undefined);
 
-Ans:
+Ans: The first statement will output false, and the second statement will output true.
 
 
 
 Ques4. What is event bubbling and event capturing (Event Propagation)? What is the difference between them?
 
-Ans: 
+Ans: Event bubbling is the propagation of an event from child elements to parent elements, while event capturing is the opposite, propagating from parents to children.
 
 
 
 Ques5. What is function currying?
 
-Ans:
+Ans: Function currying is a way to turn a function with multiple arguments into a sequence of functions, each taking one argument.
 
 
 
 Ques6.What is an IIFE?
 
-Ans:
+Ans: IIFE is a programming pattern where a function is defined and executed immediately after its creation.
