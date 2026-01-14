@@ -1,0 +1,130 @@
+Ques1. Explain the different ways of creating object in javascript? Explain all the 3 ways.
+
+Ans:
+1. Object Literal Syntax
+
+const person = {
+  name: "Alice",
+  age: 25,
+  greet: function () {
+    console.log("Hello!");
+  },
+};
+
+
+2. Using the new Object() Constructor
+
+const person = new Object();
+person.name = "Bob";
+person.age = 30;
+person.greet = function () {
+  console.log("Hi!");
+};
+
+
+3. Using Constructor Functions
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = function () {
+    console.log(`Hello, my name is ${this.name}`);
+  };
+}
+
+const person1 = new Person("Charlie", 28);
+const person2 = new Person("Dana", 32);
+
+
+
+Ques2. What are Object Prototype Methods in JavaScript?
+
+Ans: Methods that are shared among all instances of objects created from the same constructor function.
+
+
+
+Ques3. What are Object Prototype Methods in JavaScript?
+
+Ans: Methods that are shared among all instances of objects created from the same constructor function.
+
+
+
+Ques4. What is "object chaining" in JavaScript?
+
+Ans: A programming technique where multiple methods or properties are called on an object in a sequence, and each method returns the object itself.
+
+
+
+Ques5. What is the main difference between fat arrow function and normal function?
+
+Ans: Arrow functions always have a lexical this value, while normal functions have a dynamic this value.
+
+
+
+Ques6. Can you give an example to explain how "this" works differenetly with fat arrow function and normal function?
+
+Ans:
+const obj = {
+  name: "Alice",
+  normalFn: function () {
+    console.log("Normal:", this.name);
+  },
+  arrowFn: () => {
+    console.log("Arrow:", this.name);
+  }
+};
+
+obj.normalFn(); // Normal: Alice
+obj.arrowFn();  // Arrow: undefined (or window.name in browser)
+
+Explanation:
+
+normalFn() uses this bound to obj.
+
+arrowFn() uses this from the outer scope (not obj), so this.name is undefined.
+
+
+
+Ques7. What are the advantages of Axios compared to other competitors like fetch, http, got, etc.?
+
+Ans: All of the above.
+
+
+
+Ques8. What are closures?
+
+Ans: Closures are a mechanism that allow functions to access and remember their lexical scope, even after they have finished executing.
+
+
+
+Ques9. Explain closures with an example?
+
+Ans:
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+
+Explanation:
+The inner function closes over the count variable and keeps access to it, even after outer() has finished.
+
+
+
+Ques10. What is the output of this console.log(0.1 + 0.2). Why is it not 0.3?
+
+Ans: 0.30000000000000004
+
+JavaScript uses floating-point arithmetic (IEEE 754 standard), which cannot precisely represent some decimal fractions like 0.1 and 0.2, leading to small precision errors.
+
+
+
+Ques11. What will be the output of this console.log((0.2+ 0.3) === 0.5)
+
+Ans: true
