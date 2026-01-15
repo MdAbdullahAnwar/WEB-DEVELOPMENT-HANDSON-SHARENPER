@@ -1,0 +1,138 @@
+Ques1. How to iterate inside and object and print all the values inside it without the keys? Give a code example?
+
+Ans:
+const obj = {
+  name: "Alice",
+  age: 25,
+  city: "New York"
+};
+
+Object.values(obj).forEach(value => {
+  console.log(value);
+});
+
+
+
+Ques2. What is the NaN property in JavaScript?
+
+Ans: The NaN property represents a value that is "Not a Number" and is returned when a mathematical operation fails.
+
+
+
+Ques3. Explain pass by value and pass by reference? Give code example of how you would pass by reference in javascript?
+
+Ans: 
+Pass by Value: For primitive types (string, number, boolean), the value is copied.
+
+let a = 10;
+let b = a;
+b = 20;
+console.log(a); // 10
+Pass by Reference: For non-primitives (objects, arrays), the reference is passed.
+
+
+const obj1 = { name: "Alice" };
+const obj2 = obj1;
+obj2.name = "Bob";
+console.log(obj1.name); // "Bob" (same reference)
+
+
+
+Ques4. What does the "this" keyword represent in JavaScript?
+
+Ans: The current execution context or the object that owns the currently executing code.
+
+
+
+Ques5. What is memoization in javascript? Can you give a code example implementing the same?
+
+Ans:
+Memoization is an optimization technique that stores the results of expensive function calls and returns the cached result when the same inputs occur again.
+
+function memoizedAdd() {
+  let cache = {};
+  return function(n) {
+    if (cache[n]) {
+      console.log("Returning from cache");
+      return cache[n];
+    }
+    console.log("Calculating...");
+    const result = n + 10;
+    cache[n] = result;
+    return result;
+  };
+}
+
+const add = memoizedAdd();
+console.log(add(5)); // Calculating... 15
+console.log(add(5)); // Returning from cache 15
+
+
+
+Ques6. What is the data type of variables in JavaScript?
+
+Ans: JavaScript variables can have any data type, and their data types can change dynamically.
+
+
+
+Ques7. What are escape characters? Why are they used? Give code example.
+
+Ans:
+Escape characters allow you to use special characters inside strings (like quotes, newlines, tabs).
+
+const message = "He said, \"Hello!\"";
+const newline = "Line1\nLine2";
+
+
+
+Ques8. What is break and continue statements? How are they different?
+
+Ans: "break" is used to exit a loop prematurely, while "continue" is used to skip the current iteration of a loop and proceed to the next one.
+
+
+
+Ques9. What is the typeof an array in JavaScript?
+
+Ans: The typeof operator returns "object".
+
+
+
+Ques10. What are anonymous functions in JavaScript?
+
+Ans: Anonymous functions are functions that are defined without a formal function name and can be used as expressions or assigned to variables.
+
+
+
+
+Ques11. Give example of anonymous function
+
+Ans:
+setTimeout(function () {
+  console.log("Hello from anonymous function");
+}, 1000);
+
+
+
+Ques12. What is the difference between the event.preventDefault() and event.stopPropagation() methods in JavaScript?
+
+Ans: event.preventDefault() prevents the default behavior of the event, while event.stopPropagation() stops the event from propogating to its parent elements.
+
+
+
+Ques13. Here's the question converted into a multiple-choice question (MCQ) with options and the correct answer: What are higher-order functions in JavaScript?
+
+Ans: Higher order functions are functions that operates on other functions by either taking them as arguments or returning them.
+
+
+
+Ques14. Explain higher order functions with code example.
+
+Ans:
+function greet(name) {
+  return function (message) {
+    console.log(`Hello ${name}, ${message}`);
+  };
+}
+
+const greetJohn = greet("John");
+greetJohn("Welcome!"); // Hello John, Welcome!
