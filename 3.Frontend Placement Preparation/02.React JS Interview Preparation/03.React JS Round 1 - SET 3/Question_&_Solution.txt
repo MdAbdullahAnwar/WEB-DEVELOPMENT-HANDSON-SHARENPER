@@ -1,0 +1,242 @@
+Ques1. What are the different ways to style a React component?
+
+Ans:
+React provides multiple ways to style components:
+
+a. Inline styling
+b. CSS Stylesheets
+c. CSS Modules
+d. Styled Components
+
+
+
+Ques2. Techniques to optimize React app performance
+
+Ans:
+Here are a few:
+
+a. Using React.memo to prevent re-renders
+
+const MyComponent = React.memo(({ value }) => {
+
+ console.log('Rendering');
+
+ return <div>{value}</div>;
+
+});
+
+
+b. Using useCallback and useMemo
+
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+const memoizedCallback = useCallback(() => handleClick(a), [a]);
+
+
+c. Code splitting with lazy and Suspense
+
+const LazyComponent = React.lazy(() => import('./LazyComponent'));
+
+
+d. Avoid anonymous functions in JSX
+
+
+
+Ques3. Parent to Child Communication
+
+Ans:
+Pass props from parent to child.
+
+function Child({ message }) {
+
+ return <h1>{message}</h1>;
+
+}
+
+
+function Parent() {
+
+ return <Child message="Hello from parent!" />;
+
+}
+
+
+
+Ques4. Child to Parent Communication
+
+Ans:
+Use callback functions.
+
+function Child({ onSend }) {
+
+ return <button onClick={() => onSend('Data from child')}>Send</button>;
+
+}
+
+
+function Parent() {
+
+ const handleReceive = (data) => console.log(data);
+
+ return <Child onSend={handleReceive} />;
+
+}
+
+
+
+Ques5. Communication Between Sibling Components
+
+Ans:
+Through parent component or global state.
+
+function SiblingA({ onChange }) {
+
+ return <button onClick={() => onChange("Hello from A")}>Send</button>;
+
+}
+
+
+function SiblingB({ message }) {
+
+ return <p>{message}</p>;
+
+}
+
+
+function Parent() {
+
+ const [msg, setMsg] = useState('');
+
+ return (
+
+  <>
+
+   <SiblingA onChange={setMsg} />
+
+   <SiblingB message={msg} />
+
+  </>
+
+ );
+
+}
+
+
+
+Ques6. What are Higher Order Components (HOC)?
+
+Ans:
+A HOC is a function that takes a component and returns a new component with added behavior.
+
+function withLogger(WrappedComponent) {
+
+ return function(props) {
+
+  useEffect(() => {
+
+   console.log("Component Mounted");
+
+  }, []);
+
+  return <WrappedComponent {...props} />;
+
+ };
+
+}
+
+
+function Hello() {
+
+ return <h1>Hello</h1>;
+
+}
+
+const EnhancedHello = withLogger(Hello);
+
+
+
+Ques7. Different Phases of Component Lifecycle
+
+Ans:
+Mounting → Updating → Unmounting
+
+class Example extends React.Component {
+
+ componentDidMount() {
+
+  console.log("Mounted");
+
+ }
+
+ componentDidUpdate() {
+
+  console.log("Updated");
+
+ }
+
+ componentWillUnmount() {
+
+  console.log("Unmounted");
+
+ }
+
+ render() {
+
+  return <div>{this.props.count}</div>;
+
+ }
+
+}
+
+
+
+Ques8. What are custom hooks in React?
+
+Ans:
+Custom hooks are reusable logic extracted from components using hooks like useState, useEffect.
+
+Example: useLocalStorage custom hook
+
+import { useState, useEffect } from 'react';
+
+function useLocalStorage(key, initialValue) {
+
+ const [val, setVal] = useState(() =>
+
+  JSON.parse(localStorage.getItem(key)) || initialValue
+
+ );
+
+ useEffect(() => {
+
+  localStorage.setItem(key, JSON.stringify(val));
+
+ }, [key, val]);
+
+ return [val, setVal];
+
+}
+
+
+
+Usage:
+
+function App() {
+
+ const [name, setName] = useLocalStorage('name', '');
+
+ return (
+
+  <input
+
+   value={name}
+
+   onChange={(e) => setName(e.target.value)}
+
+   placeholder="Enter name"
+
+  />
+
+ );
+
+}
