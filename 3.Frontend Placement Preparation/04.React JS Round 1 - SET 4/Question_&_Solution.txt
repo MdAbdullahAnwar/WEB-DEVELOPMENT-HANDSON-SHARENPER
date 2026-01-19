@@ -1,0 +1,133 @@
+Ques1. What is Reconciliation in React?
+
+Ans:
+Reconciliation is React's diffing algorithm that determines what parts of the DOM need to be updated when state or props change.
+
+When a component's state changes, React creates a new Virtual DOM (a lightweight copy of the real DOM).
+It then compares (diffs) the new Virtual DOM with the previous one to find the minimal changes needed.
+Finally, it updates only those parts in the real DOM (instead of re-rendering everything).
+This makes React fast and efficient because it avoids unnecessary DOM manipulations.
+
+
+
+Ques2. What are Fragments? How are they better than <div> elements?
+
+Ans:
+Fragments (<React.Fragment> or <>...<>) let you group multiple elements without adding an extra DOM node.
+
+Advantages over <div>:
+No unnecessary DOM clutter (avoids "div soup").
+Better performance (fewer nodes to render).
+Useful when returning multiple adjacent elements (React components must return a single root element).
+
+
+Example:
+
+// Without Fragment (adds extra div)
+
+return (
+
+ <div>
+
+  <h1>Title</h1>
+
+  <p>Description</p>
+
+ </div>
+
+);
+
+
+
+// With Fragment (no extra div)
+
+return (
+
+ <>
+
+  <h1>Title</h1>
+
+  <p>Description</p>
+
+ </>
+
+);
+
+
+
+Ques3. What element gets introduced into the DOM when we use Fragments? How does it work?
+
+Ans:
+Fragments do not introduce any element into the DOM.
+They act as invisible wrappers, allowing grouped elements to be rendered side by side without an extra parent node.
+How it works:
+
+When React renders <React.Fragment>, it skips creating a DOM node and just renders its children.
+This keeps the DOM cleaner and more efficient.
+
+
+
+Ques4. What are the Advantages of React Compared to Vanilla JS?
+
+Ans:
+React offers several advantages over vanilla JavaScript. It simplifies the process of building complex user interfaces by using a component-based architecture, which promotes reusability and modularity. React also provides a virtual DOM that optimizes rendering performance by minimizing direct DOM manipulation. Additionally, it enables efficient state management and makes it easier to handle dynamic data updates. With a strong ecosystem, developer tools, and community support, React significantly enhances productivity and maintainability compared to writing everything manually in vanilla JavaScript.
+
+
+
+Ques5. Why Does React Use className Instead of class?
+
+Ans:
+className is a reserved keyword in JavaScript (used for ES6 classes).
+React uses JSX (JavaScript XML), so it follows JavaScript naming conventions.
+className avoids conflicts and matches the DOM property name (element.className).
+
+Example:
+
+<div className="header">Hello</div>
+
+<div class="header">Hello</div> (works but not recommended)
+
+
+
+Ques6. What is the children Prop? When Should We Use It?
+
+Ans:
+The children prop is a special prop that lets you pass content between component tags.
+When to use it:
+
+When you want a wrapper component to render nested content.
+For layout components (e.g., Modal, Card).
+
+
+Example:
+
+// Parent Component
+
+const Card = ({ children }) => {
+
+ return <div className="card">{children}</div>;
+
+};
+
+
+// Usage
+
+<Card>
+
+ <h2>Title</h2> {/* This becomes `children` */}
+
+ <p>Content</p> {/* This also becomes `children` */}
+
+</Card>
+
+
+
+Output:
+
+<div class="card">
+
+ <h2>Title</h2>
+
+ <p>Content</p>
+
+</div>
