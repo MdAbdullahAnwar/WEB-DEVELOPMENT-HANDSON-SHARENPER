@@ -1,0 +1,301 @@
+Ques1. What is React Router? When should we use it?
+
+Ans:
+Definition:
+
+React Router is a library for routing in React applications. It enables navigation between components without refreshing the page (i.e., Single Page Application behavior).
+
+
+When to Use It:
+
+When your app has multiple views/pages.
+
+You want dynamic routing and navigation without full page reloads.
+
+
+Example:
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import Home from "./Home";
+
+import About from "./About";
+
+
+function App() {
+
+ return (
+
+  <BrowserRouter>
+
+   <nav>
+
+    <Link to="/">Home</Link> | <Link to="/about">About</Link>
+
+   </nav>
+
+   <Routes>
+
+    <Route path="/" element={<Home />} />
+
+    <Route path="/about" element={<About />} />
+
+   </Routes>
+
+  </BrowserRouter>
+
+ );
+
+}
+
+
+
+Ques2. How to pass data between sibling components using React Router?
+
+Ans:
+Sibling components can't directly share data — you can lift state up to a common parent or use state management tools (Context, Redux).
+
+But using React Router, you can pass data via navigate or query params.
+
+
+Example Using useNavigate + State:
+
+import { useNavigate } from "react-router-dom";
+
+function Sender() {
+
+ const navigate = useNavigate();
+
+ const data = { message: "Hello from Sender!" };
+
+ return (
+
+  <button onClick={() => navigate("/receiver", { state: data })}>
+
+   Send Data
+
+  </button>
+
+ );
+
+}
+
+
+
+Receiver.jsx
+
+import { useLocation } from "react-router-dom";
+
+function Receiver() {
+
+ const location = useLocation();
+
+ const { message } = location.state || {};
+
+ return <p>{message}</p>;
+
+}
+
+
+
+Ques3. What is useCallback? When should we use it?
+
+Ans:
+Definition:
+
+useCallback memoizes a function so that it doesn’t get recreated on every render, unless dependencies change.
+
+Use Case:
+
+When passing callback functions to child components that rely on React.memo.
+
+Prevent unnecessary re-renders.
+
+
+Example:
+
+import React, { useCallback, useState } from 'react';
+
+const Child = React.memo(({ onClick }) => {
+
+ console.log("Child rendered");
+
+ return <button onClick={onClick}>Click</button>;
+
+});
+
+
+function Parent() {
+
+ const [count, setCount] = useState(0);
+
+ const handleClick = useCallback(() => {
+
+  console.log("Clicked");
+
+ }, []);
+
+ return (
+
+  <>
+
+   <Child onClick={handleClick} />
+
+   <button onClick={() => setCount(count + 1)}>Update Count</button>
+
+  </>
+
+ );
+
+}
+
+Without useCallback, Child would re-render every time Parent renders.
+
+
+
+Ques4. What does useMemo do?
+
+Ans:
+Definition:
+
+useMemo memoizes the result of a computation, recomputing it only when dependencies change.
+
+Example Use Case:
+
+import { useMemo, useState } from "react";
+
+function ExpensiveCalculationComponent({ num }) {
+
+ const expensiveValue = useMemo(() => {
+
+  console.log("Calculating...");
+
+  let total = 0;
+
+  for (let i = 0; i < 1e8; i++) {
+
+   total += i;
+
+  }
+
+  return total + num;
+
+ }, [num]);
+
+ return <div>Value: {expensiveValue}</div>;
+
+}
+
+
+Use it when:
+
+Expensive function calls
+
+Prevent recalculating unless needed
+
+
+
+Ques5. Difference between React.memo and useMemo
+
+Ans:
+React.memo and useMemo are both used for performance optimization in React, but they serve different purposes. React.memo is a higher-order component that prevents a functional component from re-rendering if its props haven’t changed, effectively memoizing the entire component. On the other hand, useMemo is a React Hook that memoizes the result of a function or computation within a component, preventing unnecessary recalculations on every render unless its dependencies change.
+
+
+
+Ques6. What is the use of Context API?
+
+Ans:
+Definition:
+
+Context API provides a way to pass data deeply through the component tree without manually passing props at every level.
+
+
+When to Use:
+
+Global themes
+
+Auth status
+
+Language preferences
+
+Cart or user info in eCommerce apps
+
+
+How It Works:
+
+Create context with createContext
+
+Wrap component tree with <Provider>
+
+Access data via useContext
+
+
+
+Example:
+
+// AuthContext.js
+
+import { createContext, useContext, useState } from "react";
+
+const AuthContext = createContext();
+
+export const AuthProvider = ({ children }) => {
+
+ const [user, setUser] = useState(null);
+
+ return <AuthContext.Provider value={{ user, setUser }}>{children}</AuthContext.Provider>;
+
+};
+
+
+export const useAuth = () => useContext(AuthContext);
+
+
+Then wrap your app:
+
+<AuthProvider>
+
+ <App />
+
+</AuthProvider>
+
+Access it inside any component:
+
+const { user, setUser } = useAuth();
+
+
+
+Ques7. What is the use of Babel?
+
+Ans:
+Definition:
+
+Babel is a JavaScript compiler that converts modern JavaScript/JSX into backward-compatible JavaScript code.
+
+
+Why Use Babel?
+
+Convert JSX → vanilla JS
+
+Support old browsers (like IE11)
+
+Use ES6+ features safely
+
+Transpile TypeScript (via plugins)
+
+
+Example:
+
+Before (JSX/ES6+):
+
+const App = () => <h1>Hello, World!</h1>;
+
+After Babel Transpile:
+
+
+"use strict";
+
+var App = function App() {
+
+ return /*#__PURE__*/React.createElement("h1", null, "Hello, World!");
+};
