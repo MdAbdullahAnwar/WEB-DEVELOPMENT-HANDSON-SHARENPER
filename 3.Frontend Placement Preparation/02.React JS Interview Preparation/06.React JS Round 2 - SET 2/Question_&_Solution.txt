@@ -1,0 +1,97 @@
+Ques1. What is the Virtual DOM? How does React use it to render the UI?
+
+Ans:
+Virtual DOM (VDOM) is a lightweight in-memory copy of the real DOM.
+
+It allows React to efficiently update the UI by minimizing direct DOM manipulation.
+
+
+How React uses Virtual DOM:
+1. On every render, React creates a new Virtual DOM tree.
+2. It compares the new tree with the previous one (diffing).
+3. It calculates the minimum number of changes.
+4. It updates only the changed parts in the real DOM (called reconciliation).
+
+
+Why it's efficient?
+
+Ans:
+Real DOM operations are slow. Updating just the changed parts boosts performance.
+
+
+
+Ques2. What are the differences between controlled and uncontrolled components?
+
+Ans:
+Controlled and uncontrolled components differ in how they manage form data in React. In controlled components, form data is handled by React state, meaning the component’s input values are controlled through props and updated via event handlers like onChange. In contrast, uncontrolled components store their own state internally using the DOM, and data is accessed using refs rather than React state. Controlled components offer more control and are easier to validate and manipulate, while uncontrolled components are simpler and require less code for basic use cases.
+
+
+
+Ques3. Types of Side Effects in React Components
+
+Ans:
+Side effects are anything that happens outside the component's render process.
+
+
+Common types of side effects:
+
+1. Data fetching (e.g., API calls)
+2. Subscriptions (e.g., WebSocket, event listeners)
+3. Manual DOM manipulations
+4. Timers (setTimeout, setInterval)
+5. LocalStorage / SessionStorage access
+6. Third-party integrations (e.g., analytics)
+
+
+All of these are typically handled using the useEffect hook.
+
+
+
+Ques4. Can useEffect return anything? When is the return function called?
+
+Ans:
+Yes. useEffect  can optionally return a cleanup function.
+
+Before the component unmounts
+Before re-running the effect again (if dependencies change)
+
+
+It’s used to avoid memory leaks, cancel network requests, clear timers, etc.
+
+
+Example:
+
+useEffect(() => {
+
+ const timer = setInterval(() => console.log("Tick"), 1000);
+
+ // cleanup function:
+
+ return () => {
+
+  clearInterval(timer);
+
+  console.log("Cleanup");
+
+ };
+
+}, []);
+
+
+When is it called?
+
+Before the component unmounts
+Before re-running the effect again (if dependencies change)
+It’s used to avoid memory leaks, cancel network requests, clear timers, etc.
+
+
+
+Ques5. What are the different ways to style a React component which you know?
+
+Ans:
+1. CSS Stylesheets – Import regular .css files and use class names.
+2. Inline Styles – Apply styles directly using the style attribute as an object in JSX.
+3. CSS Modules – Use scoped class names from Component.module.css files to avoid conflicts.
+4. Tailwind CSS – Use utility-first classes directly in the JSX for fast styling.
+5. Styled Components – Write actual CSS inside JavaScript using the styled-components library.
+6. Emotion / JSS – Use CSS-in-JS libraries for dynamic and theme-based styling.
