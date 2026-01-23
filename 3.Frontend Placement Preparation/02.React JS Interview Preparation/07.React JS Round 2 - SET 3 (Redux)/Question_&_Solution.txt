@@ -1,0 +1,83 @@
+Ques1. What is Redux?
+
+Ans:
+Redux is a predictable state management library used mainly in JavaScript applications (especially with React) to manage global application state in a centralized store.
+
+
+
+Ques2. Why do we need Redux? How is it better than Context API?
+
+Ans:
+Redux is needed when an app has complex state logic or shared state across many components.
+
+Compared to Context API:
+
+1. Redux offers better performance with large-scale apps (due to selective re-rendering).
+2. It provides dev tools, middleware, and action history, which Context API lacks.
+3. Redux is more structured and testable for big apps.
+
+
+
+Ques3. What is Flux?
+
+Ans:
+Flux is a design pattern (by Facebook) for managing data flow in applications. Redux is inspired by Flux but simplifies it by having a single store and pure reducers.
+
+
+
+Ques4. Core Principles of Redux:
+
+Ans:
+1. Single source of truth – Entire state is in one store.
+2. State is read-only – State can only be changed by dispatching actions.
+3. Changes are made with pure functions – Reducers specify how state updates happen.
+
+
+
+Ques5. What are Pure Functions?
+
+Ans:
+A pure function:
+
+1. Returns the same output for the same input.
+2. Has no side effects (e.g., no API calls, no modifying external variables).
+3. Reducers in Redux must be pure functions.
+
+
+
+Ques6. Can Redux only be used with React?
+
+Ans:
+No. Redux is a JavaScript library that can be used with any frontend framework (e.g., Angular, Vue, vanilla JS)—not just React.
+
+
+
+Ques7. How do you decide which state to put in a reducer vs local state?
+
+Ans:
+Use Redux (reducer) for:
+
+1. Global/shared state (e.g., auth, user, cart, theme).
+2. State needed in multiple components.
+3. State that must persist or be debugged via Redux DevTools.
+
+
+Use local state (useState) for:
+
+- UI-only state
+Form inputs, toggles, modals, dropdowns, tabs
+Example: isOpen, inputValue, hoveredItem
+
+- Ephemeral state
+Data that doesn’t need to persist beyond the component’s lifecycle
+Example: temporary filters, animation flags
+
+- Performance-sensitive state
+Avoid pushing trivial state into Redux to prevent unnecessary global re-renders
+
+- Component-specific logic
+State that only matters to one component and doesn’t affect others
+Example: local pagination, step in a wizard, controlled input fields
+
+- Prototyping or isolated features
+When you’re experimenting or building a feature that may later move to Redux if it grows
