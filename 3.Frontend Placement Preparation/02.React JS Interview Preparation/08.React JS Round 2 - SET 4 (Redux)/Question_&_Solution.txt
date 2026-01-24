@@ -1,0 +1,322 @@
+Ques1. What do you understand by ACTIONs in Redux's architecture? Explain with example.
+
+Ans:
+Actions are plain JavaScript objects that describe what happened in the application. They must have a type property (usually a string constant) and can optionally include a payload (data).
+
+
+Example:
+
+// Action type as a constant (best practice)
+
+const ADD_TODO = 'ADD_TODO';
+
+// Action creator (a function that returns an action)
+
+const addTodo = (text) => {
+
+ return {
+
+  type: ADD_TODO,
+
+  payload: {
+
+   text,
+
+   completed: false,
+
+  },
+
+ };
+
+};
+
+type describes the action (e.g., ADD_TODO, DELETE_TODO).
+
+payload carries the data needed to update the state.
+
+Usage:
+
+dispatch(addTodo("Learn Redux")); // Dispatches the action to the store
+
+
+
+Ques2. What are reducers in Redux's architecture? Show with an example.
+
+Ans:
+Reducers are pure functions that take the current state and an action, then return a new state. They must not mutate the state directly.
+
+
+Example:
+
+const initialState = {
+
+ todos: [],
+
+};
+
+
+const todoReducer = (state = initialState, action) => {
+
+ switch (action.type) {
+
+  case 'ADD_TODO':
+
+   return {
+
+    ...state, // Copy existing state
+
+    todos: [...state.todos, action.payload], // Add new todo
+
+   };
+
+  default:
+
+   return state; // Return unchanged state if action doesn't match
+
+ }
+
+};
+
+Pure Function: No side effects (e.g., API calls, mutations).
+
+Immutability: Always return a new state object.
+
+
+
+Ques3. Explain the typical data flow in an application made using React and Redux (Redux Lifecycle for an application).
+
+Ans:
+Action Dispatched:
+
+dispatch({ type: 'ADD_TODO', payload: 'Learn Redux' });
+
+
+Reducer Processes Action:
+
+Redux calls the reducer with the current state and action.
+
+Reducer returns a new state.
+
+
+Store Updates:
+
+The Redux store saves the new state.
+
+
+React Re-renders:
+
+Connected components receive the updated state via mapStateToProps.
+
+Components re-render with new data.
+
+
+Flow:
+
+Action → Reducer → Store → React Components
+
+
+
+Ques4.Name all the Redux Store methods. Explain each one of them in details with examples as to when to use them?
+
+Ans:
+1. getState()
+
+Purpose: Retrieves the current state tree of your application.
+
+Usage Example:
+
+const currentState = store.getState();
+
+console.log(currentState);
+
+
+When to Use:
+
+- Inside components or middleware to read the latest state.
+- Useful for conditional logic based on current state values.
+
+
+2. dispatch(action)
+
+Purpose: Sends an action to the store to trigger a state change via reducers.
+
+
+Usage Example:
+
+store.dispatch({ type: 'INCREMENT' });
+
+
+When to Use:
+
+- Anytime you want to update the state.
+
+- From UI events, API responses, or async logic (with middleware like redux-thunk).
+
+
+3. subscribe(listener)
+
+Purpose: Registers a callback that runs whenever an action is dispatched and the state might have changed.
+
+Usage Example:
+
+const unsubscribe = store.subscribe(() => {
+
+ console.log('State changed:', store.getState());
+
+});
+
+
+When to Use:
+
+- For logging, analytics, or triggering side effects outside React.
+
+- You can unsubscribe later using the returned function:
+
+unsubscribe();
+
+
+4. replaceReducer(nextReducer)
+
+Purpose: Dynamically replaces the current reducer with a new one.
+
+Usage Example:
+
+store.replaceReducer(newRootReducer);
+
+
+When to Use:
+
+- In advanced scenarios like code splitting or hot module replacement.
+- Useful when loading reducers dynamically based on user interaction or route changes.
+
+
+
+Ques5. Explain with an example how to set the initial state in Redux?
+
+Ans:
+Pass the initial state as the second argument to createStore or as a default parameter in the reducer.
+
+Option 1: In the reducer
+
+const initialState = { todos: [] };
+
+const todoReducer = (state = initialState, action) => {
+
+ // Reducer logic
+
+};
+
+
+Option 2: In createStore (overrides reducer's default)
+
+const preloadedState = { todos: [{ text: "Initial Todo" }] };
+
+const store = createStore(todoReducer, preloadedState);
+
+
+
+Ques6. What does the connect keyword do in react redux?
+
+Ans:
+The connect function links a React component to the Redux store.
+
+import { connect } from 'react-redux';
+
+const TodoList = ({ todos }) => (
+
+ <ul>{todos.map((todo) => <li>{todo.text}</li>)}</ul>
+
+);
+
+
+const mapStateToProps = (state) => ({
+
+ todos: state.todos,
+
+});
+
+export default connect(mapStateToProps)(TodoList);
+
+mapStateToProps: Maps store state to component props.
+
+mapDispatchToProps: Maps action dispatchers to props.
+
+
+
+Ques7.How can we access a redux store outside a react component?
+
+Ans:
+Export the store instance and use store.getState() or store.dispatch().
+
+Example:
+// store.js
+
+export const store = createStore(rootReducer);
+
+
+// authService.js (outside React)
+
+import { store } from './store';
+
+if (store.getState().user.isLoggedIn) {
+
+ store.dispatch({ type: 'FETCH_DATA' });
+
+}
+
+
+
+Ques8. What are the things which we should never do inside a reducer?.
+
+Ans:
+Never:
+
+Mutate state directly (state.todos.push()).
+Perform side effects (API calls, setTimeout).
+Call non-pure functions (Math.random(), Date.now()).
+
+
+Do:
+
+Return new objects/arrays ([...state.todos, newTodo]).
+Keep reducers pure.
+
+
+
+Ques9. What are middlewares in reducers? What are they used for? (Most asked interview question) Watch this video to understand
+
+Ans:
+Middleware intercepts actions before they reach the reducer. Used for:
+
+Async actions (e.g., redux-thunk).
+
+Logging (redux-logger).
+
+Crash reporting.
+
+
+Example (Redux Thunk):
+
+const fetchUser = () => {
+
+ return (dispatch) => {
+
+  dispatch({ type: 'FETCH_USER_REQUEST' });
+
+  axios.get('/user').then((res) => {
+
+   dispatch({ type: 'FETCH_USER_SUCCESS', payload: res.data });
+
+  });
+
+ };
+
+};
+
+store.dispatch(fetchUser()); // Dispatches async action
+
+
+Key Points:
+
+Middleware sits between dispatch and the reducer.
+Enables complex logic (e.g., API calls).
