@@ -1,0 +1,21 @@
+class Solution {
+public:
+    vector<int> target_hitting(vector<int>& nums, int target) {
+        
+        unordered_map<int, int> seen;
+
+        for(int i=0; i<nums.size(); ++i){
+            int curr = nums[i];
+
+            if(seen.count(curr - target)){
+                return {seen[curr - target], i};
+            }
+            if(seen.count(curr + target)){
+                return{seen[curr +target], i};
+            }
+
+            seen[curr] = i;
+        }
+        return {};
+    }
+};
