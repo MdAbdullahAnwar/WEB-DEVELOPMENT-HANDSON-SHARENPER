@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int maximum(vector<vector<int>>& arr) {
+        int maxVal = -1000000;
+
+        for(const auto& row : arr){
+            for (int num : row){
+                if(num > maxVal){
+                    maxVal = num;
+                }
+            }
+        }
+        return maxVal;
+    }
+};
