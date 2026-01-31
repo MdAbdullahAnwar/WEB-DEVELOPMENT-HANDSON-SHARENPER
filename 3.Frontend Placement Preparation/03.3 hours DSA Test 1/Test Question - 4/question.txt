@@ -1,0 +1,43 @@
+You have given a sorted array of how much sharpenerians is placed by sharpener in a month ,the number of sharpenerians placed can be duplicates
+
+You are given a number X which is the number of sharpenerians placed , it can have many duplicate X elements
+
+You have to Find the index of first and last occurance of X .
+
+
+
+Solve it in LOG(N) Time Complexity
+
+
+
+Example 1:
+
+Input:
+
+n=9, x=5
+
+arr[] = { 1, 3, 5, 5, 5, 5, 67, 123, 125 }
+
+Output: 2 5
+
+Explanation: First occurrence of 5 is at index 2 and last occurrence of 5 is at index 5.
+
+
+
+Example 2:
+
+Input:
+
+n=9, x=7
+
+arr[] = { 1, 3, 5, 5, 5, 5, 7, 123, 125 }
+
+Output: 6 6
+
+Explanation: First occurrence of 7 is at index 6 and last occurrence of 7 is also at index 6.
+
+
+
+Constraints:
+
+1 ≤ N ≤ 107
