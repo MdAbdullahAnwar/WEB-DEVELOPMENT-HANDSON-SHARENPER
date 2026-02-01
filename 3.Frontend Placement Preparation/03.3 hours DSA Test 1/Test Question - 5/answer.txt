@@ -1,0 +1,3 @@
+int isDivisible(int num) {
+    return (69- (num%69)) % 69;
+}

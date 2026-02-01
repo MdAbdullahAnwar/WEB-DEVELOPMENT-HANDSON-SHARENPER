@@ -1,0 +1,15 @@
+Write a program to find the missing number that when add to it becomes divisible by 69.
+
+Input: 69
+
+Output: 0
+
+Explanation: If we add69+0 it can become divisible by 69.
+
+
+
+Input:123
+
+Output:15
+
+Explanation: If we subtract 123+15 = 138 which is divisible by 69.
