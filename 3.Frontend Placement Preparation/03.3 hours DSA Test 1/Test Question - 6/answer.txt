@@ -1,0 +1,35 @@
+class Solution {
+public:
+    bool isPrime(int n) {
+        if(n<2) return false;
+
+        for(int i =2; i*i <= n; ++i){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    vector<int> isPrime(vector<int>& nums, int k){
+        vector<int> result;
+
+        for(int num : nums){
+            bool found = false;
+
+            for(int add = 1; add<=k; ++add){
+                int candidate = num + add;
+
+                if(isPrime(candidate)){
+                    result.push_back(candidate);
+                    found = true;
+                    break;
+                }
+            }
+            if(!found){
+                result.push_back(-1);
+            }
+        }
+        return result;
+    }
+};
