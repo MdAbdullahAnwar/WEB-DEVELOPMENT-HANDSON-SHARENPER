@@ -1,0 +1,30 @@
+You are given a array of students id where those who are not single have same id and only one student is single among the array 
+
+where every element appears two times except for one, which appears exactly once.
+
+Find the single element and return it.
+
+
+
+Example 1:
+
+Input: nums = [2,2,3]
+
+Output: 3
+
+Example 2:
+
+
+Input: nums = [0,1,0,1,99]
+
+Output: 99
+
+
+
+Solve it in 0(n) time complexity.
+
+
+Hint:-
+
+Using Maps
+Using XOR
