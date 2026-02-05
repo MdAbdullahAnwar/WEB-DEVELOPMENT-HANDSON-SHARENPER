@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+void print_pattern();
+/*Function to print the pattern */
+
+void print_pattern()
+{            
+    for(int i=1; i<=5; i++){
+        for(int j=1; j<=i; j++){
+            cout<<i;
+        }
+        cout<<endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    print_pattern();
+    return 0;
+}
