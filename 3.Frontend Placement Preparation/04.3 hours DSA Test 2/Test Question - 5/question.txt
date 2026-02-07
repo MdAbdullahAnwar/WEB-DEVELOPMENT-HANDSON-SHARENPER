@@ -1,0 +1,31 @@
+A number is said to be sharpenerian number if the difference between any neighboring digits of number is 1 .
+
+You have given a number X , you have to find all the X sharpenerian numbers.
+
+Note : Take difference as absolute difference and first sharpnerian number is 10.
+
+
+
+Example 123 is also sharpnerian number.
+
+
+
+Example 1:
+
+Input:
+
+X = 2
+
+Output: 10 12
+
+Explanation: Diff between 1 and 0 and Diff between 1 and 2 is one.
+
+
+
+Example 2:
+
+Input:
+
+X = 5
+
+Output: 10 12 21 23 32
