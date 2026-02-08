@@ -1,0 +1,63 @@
+Time Limit: 2s, Memory Limit: 128000
+
+Problem Statement:
+
+In a close-knit town, a group of friends gathered at a café, facing a puzzling challenge. They had an array of n integers and a mission: find four distinct values within it that summed up to a specific number, x.
+
+Emily, the group's math whiz, took the lead. With steaming coffee cups in hand, they meticulously combed through the array. Hours passed as they applied clever strategies and calculations, eliminating possibilities one by one.
+
+As the sun dipped below the horizon, Emily's triumphant cry filled the café. They had cracked the puzzle, and cheers erupted. Their shared victory over the complex problem was a testament to their bond and love for challenges.
+
+With a sense of accomplishment, they left the café, ready to conquer more puzzles together in the future.
+
+
+
+Input:
+
+The first input line has two integers n and x the array size and the target sum.
+
+The second line has n integers a1,a2,…,an the array values.
+
+
+Output:
+
+Return an Array of integers: the positions of the values. If there are several solutions, you may Return valid solution. If there are no solutions, Return [-1].
+
+
+Constraints:
+
+1 ≤ n ≤ 1000
+
+1 ≤ x, ai ≤ 10^9
+
+
+
+Example:
+
+Input:
+
+8 15
+
+3 2 5 8 1 3 2 3
+
+
+Output:
+
+3 5 1 6 
+
+
+
+Input:
+
+12 20
+
+32 44 56 77 22 3 4 5 6 7 8 89
+
+
+Output:
+
+6 8 5 9 
+
+
+
+Explanation: In both cases, the goal is to find four distinct values in the array that sum up to the specified target value x. The provided output indicates the positions of these values. If multiple solutions exist, valid solution can be selected.

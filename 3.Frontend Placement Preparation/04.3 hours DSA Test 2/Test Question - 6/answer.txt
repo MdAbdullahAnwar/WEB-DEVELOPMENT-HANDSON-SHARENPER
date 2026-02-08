@@ -1,0 +1,32 @@
+#include<vector>
+#include<unordered_map>
+
+vector<int> findFourSumIndices(int n, int x, vector<int>& arr) {
+
+//your code here
+    unordered_map<int, vector<pair<int,int>>> sum_pairs;
+    for(int i =0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            int sum = arr[i] + arr[j];
+
+            sum_pairs[sum].push_back({i ,j});
+        }
+    }
+    
+    for(auto it1 = [sum1, pairs1]: sum_pairs){
+        int sum2 = x-sum1;
+
+        if(sum_pairs.find(sum2) != sum_pairs.end()){
+            auto& pairs2 = sum_pairs[sum2];
+        }
+
+        for(auto& [a, b] : pairs1){
+            for(auto& [c,d]: pairs2){
+                if(a!=c && a!=d && b!=c && b!=d){
+                    return{a+1, b+1, c+1, d+1};
+                }
+            }
+        }
+    }
+    return{-1};
+}
