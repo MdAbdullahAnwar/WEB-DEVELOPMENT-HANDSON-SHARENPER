@@ -1,0 +1,15 @@
+Ques1. What is Node.js primarily used for?
+
+Ans: Server-side Development
+
+
+
+Ques2. Which of the following is a core module in Node.js?
+
+Ans: HTTP
+
+
+
+Ques3. How can you check the installed version of Node.js?
+
+Ans: node -v or node --version
