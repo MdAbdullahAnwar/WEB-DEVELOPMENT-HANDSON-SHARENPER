@@ -1,0 +1,28 @@
+/***
+The Object should contain:
+-Attribute: 
+     -count
+ -Method:
+     -increment
+     -reset
+***/
+
+const Counter = {
+    // your implementation here
+    count: 0,
+
+    increment: function () {
+        this.count++;
+        return this.count;
+    },
+
+    reset: function () {
+        return 0;
+    }
+};
+
+
+
+console.log(Counter.increment()); 
+console.log(Counter.increment()); 
+console.log(Counter.reset()); 
