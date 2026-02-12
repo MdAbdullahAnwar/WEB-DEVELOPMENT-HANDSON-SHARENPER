@@ -1,0 +1,49 @@
+Create an object called Counter with the following functionalities:
+
+It should have:
+
+A starting number called count that begins at 0.
+A function called increment that adds 1 to the count and returns the new count right away. This should be a regular function.
+A function called incrementWithDelay that waits for a certain amount of time (in milliseconds) before adding 1 to the count and then prints the new count. This function should use an arrow function so that it knows the right context for this.
+
+
+
+Note:
+
+The code executes:
+
+Calling increment() twice, which returns the new count each time.
+Calling incrementWithDelay(), which prints the new count after some delay.
+
+
+
+Example 1:
+
+Input:
+
+increment();
+increment();
+incrementWithDelay();
+
+
+
+Output:
+
+1
+2
+3
+
+
+
+Example 2:
+
+Input:
+increment();
+incrementWithDelay();
+
+
+
+Output:
+
+1
+2
