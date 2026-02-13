@@ -1,0 +1,3 @@
+function extractValues(people,key) {
+    return people.map(person => person[key])
+}

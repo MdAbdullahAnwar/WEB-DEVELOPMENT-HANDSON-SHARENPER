@@ -1,0 +1,73 @@
+Watch this video for revising maps in JS.
+
+
+After watching the video complete the following task:
+
+
+Write a function extractValues that takes two parameters:
+
+an array of objects and a key (string).
+
+The function should return a new array containing the values associated with the specified key from each object in the array.
+
+
+
+Note : It is mandatory to use map method
+
+
+For example:
+
+Given the following array of objects representing people:
+
+
+const people = [
+
+ { name: 'Alice', age: 25 },
+
+ { name: 'Bob', age: 30 },
+
+ { name: 'Charlie', age: 35 },
+
+];
+
+
+Example 1:
+
+Input :
+
+people: [
+
+ { name: 'Alice', age: 25 },
+
+ { name: 'Bob', age: 30 },
+
+ { name: 'Charlie', age: 35 },
+
+],
+
+key: 'name'
+
+
+
+Output: ['Alice', 'Bob', 'Charlie']
+
+
+
+Example 2:
+
+Input :
+
+people: [
+
+ { name: 'Alice', age: 25 },
+
+ { name: 'Bob', age: 30 },
+
+ { name: 'Charlie', age: 35 },
+
+],
+
+key: 'age'
+
+
+Output: [25,30,35]
