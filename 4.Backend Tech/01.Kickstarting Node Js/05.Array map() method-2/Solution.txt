@@ -1,0 +1,6 @@
+function applyDiscounts(products) {
+    return products.map(product => ({
+        name: product.name,
+        discountedPrice: product.price * (1-product.discount),
+    }))
+}

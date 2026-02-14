@@ -1,0 +1,77 @@
+Given an array of products where each product is represented as an object with name, price, and discount.
+
+Write a function applyDiscounts that returns a new array of objects with the discounted price for each product.
+
+
+Note : It is mandatory to use map method
+
+
+Hint for dicountedPrice calculation: Discounted Price = Original Price × (1 - Discount Rate)
+
+
+
+Example 1:
+
+Input:
+
+products :[{
+
+name: 'Laptop',
+
+price: 1000,
+
+discount: 0.1 },
+
+{ name: 'Phone',
+
+price: 500,
+
+discount: 0.05
+
+}],
+
+
+
+Output:
+
+[{
+
+name: 'Laptop',
+
+discountedPrice: 900
+
+},
+
+{
+
+name: 'Phone',
+
+discountedPrice: 475
+
+}] .
+
+
+
+Example 2:
+
+Input:
+
+products :[{
+
+name: 'Cellphone ',
+
+price: 10000,
+
+discount: 0.20}],
+
+
+
+Output:
+
+[{
+
+name: 'Cellphone',
+
+discountedPrice:8000
+
+}]
