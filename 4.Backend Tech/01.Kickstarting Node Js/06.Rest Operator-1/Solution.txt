@@ -1,0 +1,18 @@
+/***
+Create a function collectArgs that accepts a variable number of arguments using the rest operator.
+ It should return an object with:
+ - count: total number of arguments passed
+ - uniqueArgs: array of unique arguments (no duplicates)
+***/
+
+//Implement your code here
+
+function collectArgs(...num) {
+    let count = 0;
+    let uniqueArgs = [...new Set(num)];
+    for (let i = 0; i < num.length; i++){
+        count++;  
+    }
+
+    return({ count, uniqueArgs });
+}

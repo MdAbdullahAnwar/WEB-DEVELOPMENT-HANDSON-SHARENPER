@@ -1,0 +1,68 @@
+Watch this video for revising rest operator in JS.
+
+After watching the video complete the following task:
+
+
+Create a function collectArgs.
+
+This function should accept a variable number of arguments using the rest operator.
+
+
+The function should return an object with the following properties:
+
+count: The total number of arguments passed to the function.
+
+uniqueArgs: An array containing only the unique arguments (no duplicates).
+
+
+
+Example 1:
+
+Input:
+
+const result = collectArgs(1, 2, 2, 3, 4);
+
+
+Output:
+
+{
+  count: 5,
+  uniqueArgs: [1, 2, 3, 4]
+}
+
+
+
+Example 2:
+
+Input
+
+const result = collectArgs('apple', 'banana', 'apple', 'orange');
+
+
+Output:
+
+{
+  count: 4,
+  uniqueArgs: ['apple', 'banana', 'orange']
+}
+
+
+
+Example 3:
+
+Input:
+
+const result = collectArgs(a, b, c, d, 1, 2, 3, 4, 5, 6);
+
+
+Output:
+
+{
+ count: 10,
+
+ uniqueArgs: [
+  'a', 'b', 'c', 'd',
+  '1', '2', '3', '4',
+  '5', '6'
+ ]
+}
