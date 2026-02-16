@@ -1,0 +1,48 @@
+We have a function called describe that takes three inputs:
+
+name, age, and a list of hobbies.
+
+The age has a default value of 25, which means if you don’t provide an age, it will use 25 instead.
+
+The rest operator (...hobbies) allows the function to accept any number of hobbies.
+
+Using the arguments we have return a string.
+
+
+
+Example 1:
+
+Input
+
+describe('John', 30, 'engineer', 'hiking')
+
+
+Output
+
+"John is 30 and enjoys engineer, hiking"
+
+
+
+Example 2:
+
+Input:
+
+describe('Emma', 28, 'painting', 'cycling')
+
+
+Output:
+
+"Emma is 28 and enjoys painting, cycling."
+
+
+
+Example 3:
+
+Input:
+
+describe('Mike', 22 ,singing)
+
+
+Output:
+
+"Mike is 22 and enjoys singing."

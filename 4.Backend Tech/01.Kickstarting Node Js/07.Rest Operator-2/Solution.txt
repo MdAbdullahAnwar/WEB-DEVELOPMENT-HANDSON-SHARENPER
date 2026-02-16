@@ -1,0 +1,3 @@
+const describe = (name, age = 25, ...hobbies) => {
+    return(`${name} is ${age} and enjoys ${hobbies.join(", ")}.`);
+}
