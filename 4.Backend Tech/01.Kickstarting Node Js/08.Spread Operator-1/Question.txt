@@ -1,0 +1,56 @@
+Please have a look at this video for understanding spread operators in details:
+
+
+Video link: https://www.youtube.com/watch?v=65NfhNWmI6g
+
+
+After watching the video:
+
+Write a function called combineArrays that takes two arrays as arguments and returns a single array that combines the elements of both arrays.
+
+Note:Use the spread operator to accomplish this.
+
+
+
+Example: 1
+
+Input:
+
+const array1 = [1, 2, 3];
+
+const array2 = [4, 5, 6];
+
+
+Output:
+
+[1, 2, 3, 4, 5, 6]
+
+
+
+Example: 2
+
+Input:
+
+const array1= ['apple', 'banana'];
+
+const array2 = ['carrot', 'lettuce'];
+
+
+Output:
+
+['apple', 'banana', 'carrot', 'lettuce']
+
+
+
+Example: 3
+
+Input:
+
+const array1= [10, 'apple', 30];
+
+const array2 = [40];
+
+
+Output:
+
+[10, 'apple', 30, 40] 

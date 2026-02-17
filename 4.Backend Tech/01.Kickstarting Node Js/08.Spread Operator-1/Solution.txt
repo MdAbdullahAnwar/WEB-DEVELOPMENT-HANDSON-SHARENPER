@@ -1,0 +1,5 @@
+const combineArrays  = (array1,array2) => {
+  
+//Implement your code here
+    return [...array1, ...array2];
+}
