@@ -1,0 +1,86 @@
+Merging Simple Objects
+
+Write a function mergeSimpleObjects that takes two objects and merges them into a single object. The function should follow these rules:
+
+
+If both objects have the same key, the value from the second object should overwrite the value from the first object.
+
+
+If a key exists in one object but not in the other, that key and its value should be included in the merged object.
+
+Note: You should use spread operator for this
+
+
+
+Example 1:
+
+Input:
+
+const obj1 = { a: 1, b: 2, };
+
+const obj2 = { b: 3, c: 4, };
+
+const result1 = mergeSimpleObjects(obj1, obj2);
+
+
+
+
+Output:
+
+{ a: 1, b: 3, c: 4 }
+
+
+
+Example 2:
+
+Input:
+
+const obj1 = {
+  name: 'Alice',
+  age: 25,
+};
+
+const obj2 = {
+  age: 30,
+  city: 'Wonderland',
+};
+
+const result2 = mergeSimpleObjects(obj1, obj2);
+
+
+
+Output:
+
+{
+  name: 'Alice',
+  age: 30,
+  city: 'Wonderland'
+}
+
+
+
+Example 3:
+
+Input:
+
+const obj1 = {
+  x: 10,
+  y: 20,
+};
+
+const obj2 = {
+  y: 25,
+  z: 30,
+};
+
+const result3 = mergeSimpleObjects(obj1, obj2);
+
+
+
+Output:
+
+{
+  x: 10,
+  y: 25,
+  z: 30
+}

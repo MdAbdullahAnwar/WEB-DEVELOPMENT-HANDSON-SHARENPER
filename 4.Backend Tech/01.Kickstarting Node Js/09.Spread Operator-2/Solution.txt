@@ -1,0 +1,18 @@
+const mergeSimpleObjects =function(obj1,obj2){
+    //Implement your code here
+    return { ...obj1, ...obj2 };
+}
+
+
+const obj1 = {
+    x: 10,
+    y: 20,
+};
+
+const obj2 = {
+    y: 25,
+    z: 30,
+};
+
+const result = mergeSimpleObjects(obj1, obj2);
+console.log(result);
