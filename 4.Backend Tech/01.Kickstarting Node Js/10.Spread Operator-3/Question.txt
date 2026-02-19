@@ -1,0 +1,242 @@
+Write a function `mergeNestedObjects` that takes two objects, obj1 and obj2, and merges them into a single object. The merging process should follow these rules:
+
+
+
+The function will focus on only two keys: user and settings. 
+
+If both objects have the same key at any level, the value from obj2 should overwrite the value from obj1.
+
+If a key exists in one object but not in the other, the key and its value should be included in the merged object.
+
+Specifically, for the keys user and settings, if they exist in both objects, their properties should be merged. However, if a property exists in both user or settings, the value from obj2 should take precedence.
+
+
+Note: Use spread operator for solving this
+
+
+
+Example 1:
+
+Input:
+
+const obj1 = {
+
+    user: {
+
+        name: 'Alice',
+
+        age: 25
+
+    },
+
+    settings: {
+
+        theme: 'light'
+
+    }
+
+};
+
+
+
+const obj2 = {
+
+    user: {
+
+        age: 30,
+
+        city: 'Wonderland'
+
+    },
+
+    settings: {
+
+        notifications: true
+
+    }
+
+};
+
+const result2 = mergeNestedObjects(obj1, obj2);
+
+
+
+Output:
+
+result : {
+
+    user: {
+
+        name: 'Alice',
+
+        age: 30,
+
+        city: 'Wonderland'
+
+    },
+
+    settings: {
+
+        theme: 'light',
+
+        notifications: true
+
+    }
+
+}
+
+
+
+Example 2:
+
+Input:
+
+const obj1 = {
+
+  user: {
+
+    name: 'Bob',
+
+    age: 22
+
+  },
+
+  settings: {
+
+    theme: 'dark',
+
+    language: 'English'
+
+  }
+
+};
+
+
+
+const obj2 = {
+
+  user: {
+
+    age: 28,
+
+    country: 'USA'
+
+  },
+
+  settings: {
+
+    language: 'Spanish',
+
+    notifications: false
+
+  }
+
+};
+
+const result2 = mergeNestedObjects(obj1, obj2);
+
+
+
+Output:
+
+{
+
+  user: {
+
+    name: 'Bob',
+
+    age: 28,
+
+    country: 'USA'
+
+  },
+
+  settings: {
+
+    theme: 'dark',
+
+    language: 'Spanish',
+
+    notifications: false
+
+  }
+
+}
+
+
+
+Example 3:
+
+Input:
+
+const obj1 = {
+
+  user: {
+
+    name: 'Charlie',
+
+    age: 30
+
+  },
+
+  settings: {
+
+    theme: 'blue',
+
+    notifications: true
+
+  }
+
+};
+
+
+
+const obj2 = {
+
+  user: {
+
+    name: 'Charlie',
+
+    city: 'New York'
+
+  },
+
+  settings: {
+
+    notifications: false,
+
+    layout: 'grid'
+
+  }
+
+};
+
+const result3 = mergeNestedObjects(obj1, obj2);
+
+
+
+Output:
+
+{
+
+  user: {
+
+    name: 'Charlie',
+
+    age: 30,
+
+    city: 'New York'
+
+  },
+
+  settings: {
+
+    theme: 'blue',
+
+    notifications: false,
+
+    layout: 'grid'
+
+  }
+
+}

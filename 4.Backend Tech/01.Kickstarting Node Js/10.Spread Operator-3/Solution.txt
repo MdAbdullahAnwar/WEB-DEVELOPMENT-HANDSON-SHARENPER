@@ -1,0 +1,14 @@
+function mergeNestedObjects(obj1, obj2) {
+    return {
+        ...obj1,
+        ...obj2,
+        user: {
+            ...(obj1.user || {}),
+            ...(obj2.user || {}),
+        },
+        settings: {
+            ...(obj1.settings || {}),
+            ...(obj2.settings || {}),
+        },
+    };
+}
