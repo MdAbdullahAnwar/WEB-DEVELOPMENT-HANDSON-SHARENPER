@@ -1,0 +1,126 @@
+Watch the following videos for understanding destructuring:
+
+Destructuring Part1
+
+Destructuring Part2
+
+
+After watching the videos solve the MCQ for better understanding.
+
+
+
+1. Predict the output :
+
+const profile = ["Yash", "Raj", "www.google.com"];
+
+const [firstName, lastName, website] = profile;
+
+console.log(firstName, lastName, website);
+
+
+
+2.Predict the output :
+
+const [firstName, ...otherInfo] = ["Yash", "Raj", "www.google.com"];
+
+console.log(firstName, otherInfo);
+
+
+
+3.Predict the output :
+
+const [, , website] = ["Yash", "Raj", "www.google.com"];
+
+console.log(website); 
+
+
+
+4.Predict the output: (Default values)
+
+const [firstName = "Tony", website = "sharpener"] = ["Rishab"];
+
+console.log(firstName,website);
+
+
+
+5.Predict the output:
+
+const profile = {
+ firstName: "Julian", 
+ lastName: "Anthony", 
+ website: "Sharpener"
+};
+
+const { firstName: forename, lastName: surname, website: onlineSite } = profile;
+
+console.log(forename,surname,onlineSite)
+
+
+
+6.Predict the output:
+
+const profile = {
+ lastName: { familyName: "Smith" }
+};
+
+const { lastName: { familyName: surname } } = profile;
+
+
+
+console.log(surname);
+
+
+
+Question 1: Predict the output for question 1
+
+Ans: Yash Raj www.google.com
+
+
+
+Question 2: Predict the output for question 2.
+
+Ans: Yash ['Raj','www.google.com']
+
+Answer Explanation
+
+Rest operator (Captures remaining items in an array)
+
+
+
+Question 3: Predict the output for question 3
+
+Ans: www.google.com
+
+Answer Explanation
+
+Index (Accesses the third element directly)
+
+
+
+Question 4: Predict the output (Default values) for question 4
+
+Ans: Rishab sharpener
+
+Answer Explanation
+
+Defaults (Uses provided values and defaults for missing ones)
+
+
+
+Question 5: Predict the output for question 5
+
+Ans: Julian Anthony Sharpener
+
+Answer Explanation
+
+Mapping (Maps object properties to new variable names)
+
+
+
+Question 6: Predict the output for question 6
+
+Ans: Smith
+
+Answer Explanation
+
+Nested (Extracts nested property from an object)
