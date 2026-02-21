@@ -1,0 +1,20 @@
+const tajMahal = {
+  name: 'Taj Mahal',
+  location: 'Agra',
+  built: 1648,
+  architecturalStyle: 'Mughal',
+  dimensions: {
+    area: '17 acres',
+  },
+  UNESCOWorldHeritage: true,
+};
+
+// Destructuring and renaming variables
+//Write your code here
+
+const { name, location, built: yearBuilt, dimensions:{area:totalArea} } = tajMahal;
+
+//Do not change code below this line
+const summary = `Monument: ${name}, Location: ${location}, Year Built: ${yearBuilt}, Area: ${totalArea}`;
+console.log(summary);
+

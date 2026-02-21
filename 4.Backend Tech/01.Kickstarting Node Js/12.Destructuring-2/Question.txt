@@ -1,0 +1,62 @@
+You have the following object representing the Taj Mahal:
+
+
+const tajMahal = {
+
+ name: 'Taj Mahal',
+ location: 'Agra',
+ built: 1648,
+ architecturalStyle: 'Mughal',
+
+ dimensions: {
+  area: '17 acres',
+ },
+ UNESCOWorldHeritage: true,
+};
+
+
+
+Note: Complete this using destructuring
+
+
+
+Your task:
+
+Use destructuring to extract the name, location, and dimensions properties from the tajMahal object.
+
+Rename built to yearBuilt during destructuring.
+
+Extract area from the dimensions object and rename them to totalArea respectively.
+
+
+Create a summary string that includes the monument name, location, year built, building height, building width, and total area in the following format:
+
+
+"Monument: [name], Location: [location], Year Built: [yearBuilt], Area: [totalArea]"
+
+
+
+Example:
+
+Input:
+
+const tajMahal = {
+
+ name: 'Taj Mahal',
+ location: 'Agra',
+ built: 1648,
+ architecturalStyle: 'Mughal',
+
+ dimensions: {
+  area: '17 acres',
+ },
+
+ UNESCOWorldHeritage: true,
+
+};
+
+
+
+Output:
+
+"Monument: Taj Mahal, Location: Agra, Year Built: 1648, Area: 17 acres"
