@@ -1,0 +1,58 @@
+Create two asynchronous functions, createTask and completeTask, and a main function manageTasks().
+
+
+
+Function: createTask(taskName)
+
+
+Waits for 1 second.
+
+Returns a task object with a fixed ID of 1 and the task name. Example: { id: 1, name: "Do homework" }
+
+Prints that the task was created.
+
+
+
+Function: completeTask(task)
+
+Waits for 1 second.
+
+Prints that the task is completed and returns a completion message.
+
+
+
+Main Function: manageTasks(taskName)
+
+Calls createTask with the given task name.
+
+Calls completeTask with the created task.
+
+
+
+Example 1:
+
+Input:
+
+manageTasks("Write report");
+
+
+Output:
+
+Task created: { id: 1, name: "Write report" }
+
+Task completed: "Task 'Write report' completed!"
+
+
+
+Example 2:
+
+Input:
+
+manageTasks("Complete code");
+
+
+Output:
+
+Task created: { id: 1, name: "Complete code" }
+
+Task completed: "Task 'Complete code' completed!"

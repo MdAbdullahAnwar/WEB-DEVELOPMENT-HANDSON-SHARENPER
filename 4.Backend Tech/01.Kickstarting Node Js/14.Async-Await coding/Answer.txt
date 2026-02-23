@@ -1,0 +1,26 @@
+// Function to create a task after a delay
+function createTask(taskName) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`Task created: {"id":1,"name":"${taskName}"}`);
+        },1000)
+    })
+}
+
+// Function to complete the task after a delay
+function completeTask(task) {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve(`Task '${task}' completed!`);
+        },1000)
+    })
+}
+
+// Main function to manage the task
+async function manageTasks(taskName) {
+    const createTaskFunction = await createTask(taskName);
+    console.log(createTaskFunction);
+
+    const completeTaskFunction = await completeTask(taskName);
+    console.log(completeTaskFunction);
+}
