@@ -1,0 +1,141 @@
+Please take a look at the video for understand how request response works: Video Link
+
+
+
+Deliverable
+
+Task 1:
+
+Complete the mcq's after understanding the concepts of request and response.
+
+
+
+Task 2:
+
+As we return the responses to as 'Hello World' for url '/' and 'This is your pizza' for url '/pizza'.
+
+Based on the url the user hits , I want you to return custom responses.
+
+
+
+When url = /home , return response as 'Welcome home'
+
+When url = /about, return response as 'Welcome to About Us'
+
+When url =/node, return response as 'Welcome to my Node Js project'
+
+When url is anything else expect '/home,/about,/node' return 'Page Not Found' .﻿
+
+3.The responses should appear on the webpage as an added html element.
+
+
+
+Try to complete everything yourself.
+
+
+Ques1. In the http module, what does the req object represent in a server callback function?
+
+Ans: The HTTP request received from the client.
+
+
+Answer Explanation
+
+The req object in the HTTP module represents the incoming HTTP request sent by the client. It contains details about the request, including the request method (GET, POST, etc.), URL, headers, and any body data sent with the request.
+
+
+
+Ques2. In the http module, what role does the res object play in the server callback?
+
+Ans: Allow you to send a response back to the client.
+
+
+Answer Explanation
+
+The res object is used to construct and send an HTTP response to the client. It provides methods to set response headers, status codes, and the body content that will be sent back to the client.
+
+
+
+Ques3. Which method allows you to set an individual HTTP header on the res object in the http module?
+
+Ans: res.setHeader()
+
+
+Answer Explanation
+
+The setHeader() method is used to set a specific HTTP header on the response object (res). This allows you to define metadata such as content type, caching policies, etc.
+
+
+
+Ques4. In the http module, which function is called to finish and send the response to the client?
+
+Ans: res.end()
+
+
+Answer Explanation
+
+The end() method is called to indicate that the response is complete and should be sent to the client. This method can also take a string as an argument to send data as part of the response body.
+
+ 
+Ques5. Which of the following correctly describes HTTP headers in a request handled by Node.js’s http module?
+
+Ans: Headers provide metadata about the request, such as content type and user agent.
+
+
+Answer Explanation
+
+HTTP headers are used to provide additional information about the request or response. They convey metadata such as the content type of the data being sent, the user agent making the request, and more.
+
+
+
+Ques6. What is the default HTTP status code if none is explicitly set when sending a response?
+
+Ans: 200
+
+
+Answer Explanation
+
+The default status code for a successful HTTP response is 200 OK. If no specific status code is set in the response, Node.js will assume success and return this status by default.
+
+
+
+Ques7. When using the http module, how can you set multiple headers and a status code in a single command before sending a response?
+
+Ans: res.writeHead(statusCode, headers)
+
+
+Answer Explanation
+
+The writeHead() method allows you to set the status code and an object containing multiple headers at once. This is useful for organizing and managing the response more efficiently.
+
+ 
+
+Ques8. Which of the following is a correct way to listen for the server's listening event in the Node.js http module?
+
+Ans: server.listen(port, callback)
+
+
+Answer Explanation
+
+The listen() method is used to bind the server to a specified port and begin accepting connections. It can also accept a callback function that is called once the server starts listening.
+
+
+
+Ques9. Which method would you use to handle query parameters in a URL in a Node.js HTTP server?
+
+Ans: Parse req.url using the URL module
+
+
+Answer Explanation
+
+To handle query parameters, you typically need to parse the req.url. The URL module in Node.js provides methods for parsing and extracting query parameters from the request URL.
+
+
+
+Ques10. How can you set the Content-Type header to text/html in a Node.js HTTP response using the http module?
+
+Ans: res.setHeader('Content-Type', 'text/html')
+
+
+Answer Explanation
+
+The setHeader() method is used to set the Content-Type header to text/html, indicating that the response body contains HTML content. This informs the client how to interpret the response data.
