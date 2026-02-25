@@ -1,0 +1,156 @@
+Watch the videos for understanding how we can read and write data into a file.
+
+
+Creating a form
+
+Understanding Stream, Buffers and req.on.
+
+Implementing Buffer.
+
+Implementation of Stream, Buffer and event listener for a req.
+
+Writing data into a file.
+
+Reading data from a file.
+
+
+Deliverable:-
+
+Task 1:
+
+Make the similar form like shown in the video which writes to a file and redirects too with 302 response.
+
+
+Complete the MCQ's for Buffer ,streams and req.
+
+
+
+Ques1. Understand the use of having buffers and streams? When would you use it?
+
+Ans:
+Buffer → Temporary storage for binary data (like images, files, raw bytes). Used when you need the whole data in memory.
+
+Stream → Processes data in small chunks as it arrives. Used for large files or continuous data (video, logs, uploads) to save memory.
+
+When to use:
+
+Use Buffers for small/medium data you can fully load.
+Use Streams for large or continuous data to handle it efficiently.
+
+
+
+Ques2. Which of the following best describes a stream in Node.js?
+
+Ans: An interface for handling continuous data flow
+
+Answer Explanation
+
+Streams in Node.js allow processing of data as it is being received, enabling efficient handling of large data sets.
+
+
+
+Ques3. In Node.js, what does the Buffer class primarily handle?
+
+Ans: Binary data
+
+Answer Explanation
+
+The Buffer class is designed for handling raw binary data, which is essential for I/O operations.
+
+
+
+Ques4. Which method in Node.js is used to write data to a file?
+
+Ans: fs.writeFile()
+
+Answer Explanation
+
+The fs.writeFile() method is used to asynchronously write data to a specified file.
+
+
+
+Ques5. When working with streams in Node.js, which of these events is emitted when there is no more data to read?
+
+Ans: end
+
+Answer Explanation
+
+The end event indicates that there is no more data to read from the stream.
+
+
+
+Ques6. Which HTTP status code indicates "OK" in Node.js?
+
+Ans: 200
+
+Answer Explanation
+
+The status code 200 signifies that the request has succeeded.
+
+
+
+Ques7. Which method is used to append data to an existing file in Node.js?
+
+Ans: fs.appendFile()
+
+Answer Explanation
+
+The fs.appendFile() method appends data to a file, creating it if it doesn't exist.
+
+
+
+Ques8. In Node.js, which of the following correctly describes the purpose of using the req.on('data', callback) method in an HTTP server?
+
+Ans: To process incoming data chunks in a stream
+
+Answer Explanation
+
+This method listens for data events and processes incoming data as it arrives.
+
+
+
+Ques9. What does the HTTP status code 404 represent?
+
+Ans: Not found
+
+Answer Explanation
+
+The 404 status code indicates that the requested resource could not be found on the server.
+
+
+
+Ques10. What is the purpose of the Buffer.concat() method in Node.js?
+
+Ans: To merge multiple Buffer instances into a single Buffer
+
+Answer Explanation
+
+Buffer.concat() combines several buffers into one, which is useful for efficiently managing binary data.
+
+
+
+Ques11. Which of the following options correctly describes a buffer in Node.js?
+
+Ans: A structure that holds binary data for efficient I/O operations
+
+Answer Explanation
+
+Buffers provide a way to work with binary data and facilitate efficient input/output operations in Node.js.
+
+
+
+Task 2:
+
+Have a look at this Project Demo link and recreate it.
+
+Project:- DEMO LINK 
+
+
+I want you to read all the messages from the file and show it at the top of the form.
+
+Everytime you add a new message it should show at the top of the form.
+
+Check for hints if you are stuck with the task for more than 1 hour.
+
+
+Note: The name of the file should be message and name for the input should be message.
