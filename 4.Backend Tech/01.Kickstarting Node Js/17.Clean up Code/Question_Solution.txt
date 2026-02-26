@@ -1,0 +1,53 @@
+Watch this video for understand why clean up important and how we can achieve it.
+
+After watching the video complete the following tasks.
+
+
+
+Deliverables:
+
+Task 1:
+
+After watching the video, please answer the MCQs related to cleanup.
+
+
+
+Task 2:
+
+Now clean up the code like the way we did in video.
+
+
+Also try exporting in all the 3 ways and check the output . You would be using this quite frequently
+
+
+Push your code to GitHub and submit your commit id.
+
+
+
+Ques1. Why should we refactor route handling into a separate file?
+
+Ans: To make the code easier to manage as the project grows.
+
+
+
+Ques2. What file do we create to move the routing logic?
+
+Ans: routes.js
+
+
+
+Ques3. Which method is used to export the routing function from routes.js?
+
+Ans: module.exports
+
+
+
+Ques4. What does app.js handle after refactoring the route logic?
+
+Ans: Only starting the server
+
+
+
+Ques5. Which of the following is true about module.exports?
+
+Ans: You can export multiple functions or objects.
