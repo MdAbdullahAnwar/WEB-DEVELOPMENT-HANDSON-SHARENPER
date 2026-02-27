@@ -1,0 +1,118 @@
+Watch the videos on package.json, npm, and dependencies.
+
+-Package.json,nodemon
+
+-Dependencies and DevDependencies
+
+
+
+After watching the videos complete the following tasks:
+
+
+Deliverables:
+
+Take notes on key concepts, then answer the questions about their roles, installation commands, and dependency types.
+
+Summarize your learning and answer the following mcq questions.
+
+Push your code to Github and submit your commit id for review.
+
+
+
+Ques1. What is the purpose of nodemon in a Node.js application?
+
+Ans: To automatically restart the server when file changes are detected.
+
+Answer Explanation
+
+Nodemon is a tool that monitors file changes and automatically restarts the server, making development smoother by eliminating the need to manually restart the server after changes.
+
+
+
+Ques2. Which command is used to install nodemon globally?
+
+Ans: npm install -g nodemon
+
+Answer Explanation
+
+The -g flag installs nodemon globally, allowing it to be used from any project or directory on your machine.
+
+
+
+Ques3. What is the role of the package.json file in a Node.js project?
+
+Ans: It defines project metadata, dependencies, and scripts.
+
+Answer Explanation
+
+package.json is the core configuration file in a Node.js project, containing metadata, dependencies, scripts, and other project details.
+
+
+
+Ques4. Which section of package.json is used to specify the scripts to run commands?
+
+Ans: 'scripts'
+
+Answer Explanation
+
+The "scripts" section in package.json allows defining commands for tasks like running the server, testing, and building the project.
+
+
+
+Ques5. How do you install a package as a regular dependency (normal dependency)?
+
+Ans: npm install <package>
+
+Answer Explanation
+
+Using npm install <package> without flags installs the package as a regular dependency required for the application to run.
+
+
+
+Ques6. What is the difference between "dependencies" and "devDependencies" in package.json?
+
+Ans: "dependencies" are needed for both development and production, while "devDependencies" are needed only in development.
+
+Answer Explanation
+
+"dependencies" are packages needed at runtime, while "devDependencies" are only required during development (e.g., testing tools).
+
+
+
+Ques7. Which of the following is true when you run npm install --production?
+
+Ans: Only packages listed in "dependencies" will be installed.
+
+Answer Explanation
+
+The --production flag installs only the packages under "dependencies" for use in production environments, skipping "devDependencies".
+
+
+
+Ques8. Which command is used to install a package as a dev dependency?
+
+Ans: npm install <package> --save-dev
+
+Answer Explanation
+
+The --save-dev flag adds a package under "devDependencies", which are only required during development.
+
+
+
+Ques9. What command would you use to uninstall a package using npm?
+
+Ans: npm uninstall <package>
+
+Answer Explanation
+
+The npm uninstall command is used to remove a package from the project and package.json.
+
+
+
+Ques10. Which of the following is NOT a default field created in package.json when running npm init?
+
+Ans: 'repository'
+
+Answer Explanation
+
+"repository" is not a default field when running npm init; it must be manually added to indicate the version control repository location.
