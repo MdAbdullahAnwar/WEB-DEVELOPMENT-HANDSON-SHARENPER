@@ -1,0 +1,138 @@
+Debugging is one of the important things you should learn.
+
+
+Trust me, it saves you a hell lot of time to understand why the logical error is coming
+
+
+Watch the following videos:﻿
+
+1. What is debugging?
+
+2.Debugging in VSCode -Part 1
+
+3.Debugging in VSCode -Part 2
+
+
+
+Deliverables:
+
+After watching the videos configure the debugger in the same way explained in the video and complete the following MCQ's.
+
+
+
+Ques1. What does debugging primarily involve?
+
+Ans: Finding and fixing errors in code
+
+Answer Explanation
+
+Debugging is the process of identifying and resolving bugs or errors in software code to ensure that it behaves as intended.
+
+
+
+Ques2. Which of the following is a common type of error that occurs when the code compiles but produces incorrect results?
+
+Ans: Logical error
+
+Answer Explanation
+
+A logical error is a mistake in the logic of the program that causes it to operate incorrectly, even though it compiles successfully.
+
+
+
+Ques3. What is a breakpoint?
+
+Ans: A point in the code where execution will pause.
+
+Answer Explanation
+
+A breakpoint is set by the programmer to pause execution at a specific line, allowing for examination of the current state of the application.
+
+
+
+Ques4. What does a stack trace provide?
+
+Ans: The sequence of function calls that led to an error
+
+Answer Explanation
+
+A stack trace is a report of the active stack frames at a certain point in time during the execution of a program, which helps in tracing back the sequence of function calls that resulted in an error.
+
+
+
+Ques5. What is the primary purpose of using print statements during debugging?
+
+Ans: To display variable values at runtime
+
+Select one answer
+
+Answer Explanation
+
+Print statements are commonly used to output the values of variables and the program's flow at specific points during execution to help diagnose issues.
+
+
+
+Ques6. How can you start debugging in VS Code?
+
+Ans: By clicking the green play button in the Debug panel
+
+Answer Explanation
+
+In Visual Studio Code, the green play button in the Debug panel initiates the debugging session for the currently active file.
+
+
+
+Ques7. What does the Step Over command do during debugging?
+
+Ans: Step to the next line of code, skipping function calls
+
+Answer Explanation
+
+The Step Over command allows the debugger to execute the current line and move to the next line without stepping into any function calls.
+
+
+
+Ques8. What is the purpose of the Watch panel in VS Code during debugging?
+
+Ans: To monitor specific variables or expressions
+
+Answer Explanation
+
+The Watch panel enables users to keep track of specific variables or expressions, allowing them to see how their values change during execution.
+
+
+
+Ques9. Which of the following is NOT a feature of the Debug Console in VS Code?
+
+Ans: Running the entire codebase
+
+Answer Explanation
+
+The Debug Console is primarily used for evaluating expressions, viewing output, and inspecting variables, but it does not run the entire codebase.
+
+
+
+Ques10. When using the Debug Console, how can you evaluate an expression that involves multiple variables?
+
+Ans: By entering the expression directly(e.g.. var1 + var2) into the Debug Console.
+
+Answer Explanation
+
+The Debug Console allows direct evaluation of expressions involving multiple variables, enabling immediate feedback on their values during debugging sessions
+
+
+
+Ques11. Configure the debugger and try using it like the user. Take a screenshot and upload in google drive and put the link here
+
+Ans:
+Open project in VS Code.
+
+Go to Run and Debug (Ctrl+Shift+D) → click create launch.json → choose Node.js.
+
+In .vscode/launch.json, set "program": "${workspaceFolder}/app.js" (replace with your entry file).
+
+Set a breakpoint by clicking left of a line number.
+
+Press F5 (or Run > Start Debugging) → debugger runs, execution pauses at breakpoints.
+
+Use Step Over, Step Into, Watch, Debug Console to inspect variables and flow.
