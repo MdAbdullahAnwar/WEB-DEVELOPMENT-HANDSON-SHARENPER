@@ -1,0 +1,74 @@
+Lets get started with Express.
+
+
+Go through the following videos for understanding Express .
+
+1.What is Express ?
+
+2.Express Installation and creating server in express?
+
+
+Code with the second video and understand how we can create a server using express and it's benefits.
+
+
+After watching the videos complete the following MCQ's.
+
+
+
+Ques1. What is the primary purpose of using Express.js?
+
+Ans: To provide a web framework that simplifies handling HTTP requests and responses.
+
+
+
+Ques2. Express.js is built on top of which platform?
+
+Ans: Node.js
+
+
+
+Ques3. Why do developers prefer using Express.js in Node.js applications?
+
+Ans: It streamlines building scalable and maintainable web applications.
+
+
+
+Ques4. What does res.send() do?
+
+Ans: It ends the request and sends a response to the client.
+
+
+
+Ques5. What is the default Content-Type for res.send({ key: 'value' })?
+
+Ans: application/json
+
+
+
+Ques6. What does next() do in middleware?
+
+Ans: Passes control to the next middleware.
+
+
+
+Ques7. Which command installs Express.js?
+
+Ans: npm install express
+
+
+
+Ques8. What is the purpose of app.listen(3000)?
+
+Ans: Listen for incomminging HTTP requests on port 3000.
+
+
+
+Ques9. What will the Content-Type header be when you send the response res.send('<h1>Hello to Node.js</h1>')?
+
+Ans: text/html
+
+
+
+Ques10. What does app.listen(3000) do in Express.js?
+
+Ans: Creates an HTTP server using Node.js's http createServer() behind the scenes and bind it to port 3000.
