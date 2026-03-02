@@ -71,4 +71,4 @@ Ans: text/html
 
 Ques10. What does app.listen(3000) do in Express.js?
 
-Ans: Creates an HTTP server using Node.js's http createServer() behind the scenes and bind it to port 3000.
+Ans: Creates an HTTP server using Node.js's http createServer() behind the scenes and bind it to port 3000
