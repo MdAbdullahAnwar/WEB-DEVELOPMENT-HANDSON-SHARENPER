@@ -1,0 +1,25 @@
+Finally, we’ve reached the exciting stage of creating our very own server! 🎉
+
+Let’s get started with the basics:
+
+
+
+Deliverables:
+
+Task: Create a Basic Express Server
+
+Set up your server
+
+Create a simple Express server that listens on port 3000.
+
+Ensure the server logs this message to the console when it starts:
+
+"Server is up and running on port 3000! Ready to handle requests."
+
+
+
+GitHub Repo: 
+https://github.com/MdAbdullahAnwar/Backend/commit/eacb279af23c8534ba1a397f9400d47f3c427906
+
+Commit ID:
+eacb279af23c8534ba1a397f9400d47f3c427906
