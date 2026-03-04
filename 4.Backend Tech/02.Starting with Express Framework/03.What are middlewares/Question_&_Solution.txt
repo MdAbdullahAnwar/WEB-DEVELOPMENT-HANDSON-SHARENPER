@@ -1,0 +1,45 @@
+Dive into the World of Middlewares!
+
+
+Middlewares are like superheroes for your server!
+
+They help manage requests, add extra features, and make your applications more powerful.
+
+
+Watch the video to understand how they work and why they are so important!
+
+🎥 - What are Middlewares?
+
+Once you're done, challenge yourself with some fun MCQs and see how much you’ve learned!
+
+Let’s go!
+
+
+
+Ques1. What is the primary purpose of middleware in Express?
+
+Ans: To process incomming requests and responses
+
+
+
+Ques2. What are the three key arguments middleware functions in Express can access?
+
+Ans: request, response, next
+
+
+
+Ques3. What happens if a middleware does not call the next() function?
+
+Ans: The request will be stuck and not proceed further
+
+
+
+Ques4. In the library analogy, what is the role of the librarian at the "Security Check" desk?
+
+Ans: To validate the user's credentials and pass them to the next desk
+
+
+
+Ques5. In the library analogy, what does the "Book Checkout" desk represent in Express middleware?
+
+Ans: A middleware that ends the request-response cycle
