@@ -42,4 +42,4 @@ Ans: To validate the user's credentials and pass them to the next desk
 
 Ques5. In the library analogy, what does the "Book Checkout" desk represent in Express middleware?
 
-Ans: A middleware that ends the request-response cycle
+Ans: A middleware that ends the request-response cycles
