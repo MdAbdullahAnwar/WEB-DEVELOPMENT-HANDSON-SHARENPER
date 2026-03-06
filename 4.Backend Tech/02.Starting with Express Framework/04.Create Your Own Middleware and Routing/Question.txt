@@ -1,0 +1,38 @@
+Watch the video for understanding middlewares.
+
+-Understanding different types of middlewares
+
+-Implementation of middlewares on VSCode
+
+
+
+Now that you’ve watched the video and learned about how middleware works in Express, it’s time to put your knowledge into action!
+
+
+Also learn how we can make use of postman to check different requests-
+
+- Postman and it's usage.
+
+-Running localhost on postman
+
+
+
+Deliverables:
+
+Task 1:
+
+Create a Custom Middleware Function:
+
+Write a middleware function that adds a new property to the req object.
+
+
+For example: Add a req.user property with a value of "Guest".
+
+
+Set Up Routing for the Middleware:
+
+Create a route (/welcome) where this middleware is applied.
+
+In the route handler, respond with a message that includes the req.user value.
+
+The response should be a heading h1. Example : "Welcome, Guest!"
