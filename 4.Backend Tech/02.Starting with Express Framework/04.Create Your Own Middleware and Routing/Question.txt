@@ -30,7 +30,7 @@ For example: Add a req.user property with a value of "Guest".
 
 
 
-Set Up Routing for the Middleware:
+Sets Up Routing for the Middleware:
 
 Create a route (/welcome) where this middleware is applied.
 
