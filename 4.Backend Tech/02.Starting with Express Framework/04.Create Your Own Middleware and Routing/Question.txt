@@ -29,7 +29,6 @@ Write a middleware function that adds a new property to the req object.
 For example: Add a req.user property with a value of "Guest".
 
 
-
 Sets Up Routing for the Middleware:
 
 Create a route (/welcome) where this middleware is applied.
