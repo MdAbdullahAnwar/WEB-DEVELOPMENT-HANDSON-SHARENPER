@@ -14,7 +14,6 @@ POST /users - Respond with "A new user has been added."
 
 
 
-
 Requirements:
 
 Test each endpoint to confirm it works as expected when accessed via a browser (for GET) or a tool like Postman (for POST).
