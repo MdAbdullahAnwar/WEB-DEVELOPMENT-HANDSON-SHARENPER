@@ -1,0 +1,52 @@
+Ready to Build Your Own Express Server?
+
+Imagine you’re working on a real-world e-commerce project, and your job is to set up the backend server to handle products and categories. Sounds exciting, right?
+
+Well, now it's your turn to build a functional Express server that can process unknown requests just like a real application!
+
+
+
+Deliverables:
+
+Build an Express server that listens on port 4000 and handles the following endpoints:
+
+GET /products - Respond with "Here is the list of all products."
+
+POST /products - Respond with "A new product has been added."
+
+GET /categories - Respond with "Here is the list of all categories."
+
+POST /categories - Respond with "A new category has been created."
+
+
+Additional Requirements:
+
+Wildcard Route:
+
+Use a wildcard route (*) to handle all undefined routes and return the following custom error page as HTML:<h1>404 - Page Not Found</h1>
+
+Also add the status as 404.
+
+Test all valid routes (GET and POST).
+
+Access an undefined route, like /random, and verify that the custom error page is displayed.
+
+Test your routes using Postman or the browser to ensure everything works correctly.
+
+
+
+Handling Wildcard Routes in Express
+
+Ques. What is the correct way to handle all undefined routes in an Express application and return a 404 error page?
+
+Ans:  app.use('*', (req, res) => { res.status(404).send('<h1>404 - Page Not Found</h1>'); })
+
+Answer Explanation:
+
+Answer: app.use('*', (req, res) => { res.status(404).send('<h1>404 - Page Not Found</h1>'); })
+
+Explanation:
+
+app.use('*', callback) is the correct way to handle all undefined routes in Express.
+It ensures that any route not explicitly defined returns a 404 error page.
+res.status(404) sets the correct HTTP status code, and send('<h1>404 - Page Not Found</h1>') displays the custom error message.
