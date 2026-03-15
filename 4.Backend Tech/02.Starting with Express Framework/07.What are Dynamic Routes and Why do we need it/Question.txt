@@ -1,0 +1,66 @@
+You’ve successfully created a server and added some basic routes — that’s a big step forward!
+
+But think about this:
+
+What if your application starts to feel repetitive, especially when you need to create separate routes for each user or scenario?
+
+That’s exactly where dynamic routing comes in.
+
+
+
+Watch the video before attempting the task : Understanding Dynamic Routes
+
+In the video, you’ll learn:
+
+What are route parameters and how they reduce repetitive code
+
+How to use query parameters to pass extra information
+
+How to test both using Postman
+
+Everything is explained with examples — make sure to watch it carefully before proceeding!
+
+
+
+Deliverables
+
+Your task is to use both route parameters and query parameters to make your Express app more dynamic.
+
+
+Step-by-step:
+
+Set up a dynamic GET route:
+
+Create a route in your Express app with a route parameter in the URL.
+
+Example: /welcome/:username
+
+This allows the app to extract the username directly from the URL.
+
+
+Use a query parameter for additional info:
+
+Accept a query parameter (like role) in the same request URL.
+
+Example: /welcome/Julian?role=Admin
+
+This allows the app to extract extra data from the query string.
+
+
+Extract values inside your route handler:
+
+Use Express methods to retrieve the route parameter and query parameter.
+
+Use them to customize your response.
+
+
+Send a personalized response:
+
+Send an response with a message that uses both the username and role.
+
+For example: Welcome Julian, your role is Admin
+
+
+Test your route using Postman and push the code to Github:
+
+Try different combinations of route and query parameters in Postman to make sure your app handles them correctly.
