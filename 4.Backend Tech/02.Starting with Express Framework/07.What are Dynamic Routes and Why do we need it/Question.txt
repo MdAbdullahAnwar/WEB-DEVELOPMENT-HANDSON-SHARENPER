@@ -22,7 +22,7 @@ Everything is explained with examples — make sure to watch it carefully before
 
 
 
-Deliverables
+Deliverables:
 
 Your task is to use both route parameters and query parameters to make your Express app more dynamic.
 
