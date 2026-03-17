@@ -27,6 +27,7 @@ Deliverables:
 Your task is to use both route parameters and query parameters to make your Express app more dynamic.
 
 
+
 Step-by-step:
 
 Set up a dynamic GET route:
