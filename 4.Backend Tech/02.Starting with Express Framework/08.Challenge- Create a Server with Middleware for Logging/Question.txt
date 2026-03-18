@@ -1,0 +1,35 @@
+Time to Build Your Own Express Server with Logging!
+
+Welcome to this hands-on challenge!
+
+You’ve already explored how Express servers work—now it's time to put that knowledge into action. In this task, you will build a simple Express server with multiple endpoints and a custom logging middleware to track incoming requests.
+
+
+
+Deliverables:
+
+Build an Express server that listens on port 4000 and handles the following endpoints:
+
+GET /products - Respond with "Here is the list of all products."
+
+POST /products - Respond with "A new product has been added."
+
+GET /categories - Respond with "Here is the list of all categories."
+
+POST /categories - Respond with "A new category has been created."
+
+
+
+Additional Requirements:
+
+Logging Middleware:
+
+Add middleware to log the HTTP method and endpoint accessed. For example, when a GET /products request is made, log:
+
+GET request made to /products
+
+Hint: For getting the method of request make use of req.method and for accessing the endpoint use req.url
+
+
+
+﻿Test your routes using Postman or the browser to ensure everything works correctly.
