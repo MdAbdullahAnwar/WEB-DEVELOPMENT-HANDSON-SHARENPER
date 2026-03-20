@@ -38,7 +38,6 @@ Test your routes using Postman or the browser to ensure everything works correct
 
 
 
-
 💡 Why is this important?
 
 Using Express Router helps in better organization, scalability, and maintainability of your backend applications.
