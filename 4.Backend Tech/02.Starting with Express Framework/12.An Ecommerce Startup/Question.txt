@@ -87,5 +87,4 @@ res.send(`User ID is ${req.params.id}`);
 
 });
 
-
 Ans: 42
