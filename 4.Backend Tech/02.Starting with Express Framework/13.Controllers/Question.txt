@@ -1,0 +1,47 @@
+Enhancing Your E-Commerce API with Controllers!
+
+Now that you've successfully implemented routes, it's time to refactor your code using controllers for better structure and maintainability!
+
+Watch the videos to understand controllers:
+
+-Understanding Controllers
+
+-Controllers implementation
+
+-Controllers as a pattern.
+
+
+
+Task Overview
+
+In this task, you will move the logic from your product routes into a separate controller file. This will help in:
+
+Keeping the code modular and organized.
+
+Improving code reusability and maintainability.
+
+Separating route definitions from business logic.
+
+
+Task:
+
+Watch the video: Follow the instructor to understand the concept of controllers and how to implement them in VSCode.
+
+Refactor Product Logic: In our eCommerce application, move the existing product-related functionality from the route handler to a controller.
+
+
+Deliverables:
+
+Implement controllers to handle product logic.
+
+Update your routes to call the controller functions, improving the structure and maintainability of the product routes.
+
+Testing with Postman
+
+GET /products → Should return "Fetching all products"
+GET /products/1 → Should return "Fetching product with ID: 1"
+POST /products → Should return "Adding a new product"
+
+
+
+Make sure to use Postman to verify that your APIs work correctly!
