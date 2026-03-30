@@ -43,5 +43,4 @@ GET /products/1 → Should return "Fetching product with ID: 1"
 POST /products → Should return "Adding a new product"
 
 
-
 Make sure to use Postman to verify that your APIs work correctly!
