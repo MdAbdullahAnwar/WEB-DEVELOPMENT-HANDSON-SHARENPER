@@ -1,0 +1,129 @@
+Enhancing Your E-Commerce API with Services!
+
+Now that your project is structured with routes and controllers, it’s time to implement the Service Layer pattern to make your application even more modular, scalable, and maintainable.
+
+Watch the videos to understand the concept of services:
+
+🎥 The Problem & Scenario
+
+🎥 Solving It Using Service Implementation
+
+
+
+
+📌 Task Overview
+
+In this task, you'll take the business logic from your Product Controller and move it into a separate Service file.
+
+This helps in:
+
+
+
+
+
+Keeping controllers clean and focused on handling requests/responses.
+
+
+
+Placing business logic in its rightful place — inside services!
+
+
+
+Making your application more testable and reusable.
+
+
+
+
+✅ Task Instructions
+
+Watch the Videos:
+
+Understand why services are important and how they improve project structure.
+
+Create a Service File:
+
+Inside your services directory (create one if it doesn’t exist), create a productService.js file.
+
+Move Business Logic:
+
+Shift all business logic from your productController.js to productService.js. Keep the controller responsible only for calling service functions and sending responses.
+
+Update Your Controller:
+
+Import and use the functions from productService.js in your controller.
+
+
+
+
+📁 Folder Structure (Suggested)
+
+ecommerce-api/
+├── routes/
+│   └── productRoutes.js
+├── controllers/
+│   └── productController.js
+├── services/
+│   └── productService.js
+
+
+
+
+
+📦 Deliverables
+
+
+
+
+
+A productService.js file containing logic for:
+
+
+
+Getting all products
+
+
+
+Getting a single product by ID
+
+
+
+Adding a new product
+
+
+
+Updated productController.js file calling the service functions.
+
+
+
+Verified endpoints using Postman:
+
+
+
+GET /products → "Fetching all products"
+
+
+
+GET /products/1 → "Fetching product with ID: 1"
+
+
+
+POST /products → "Adding a new product"
+
+
+
+💡 Tip for Students
+
+Think of services as the "brains" of your application — they decide what should be done. Controllers are just the "messengers", passing data between requests and services.
+
+
+
+
+Ques. What is the main purpose of using a service layer in a Node.js application?
+
+Ans: To separate business logic from controllers
+
+
+
+Ques. What happens if you keep all logic inside controllers without using services?
+
+Ans: Code may become harder to maintain and test
