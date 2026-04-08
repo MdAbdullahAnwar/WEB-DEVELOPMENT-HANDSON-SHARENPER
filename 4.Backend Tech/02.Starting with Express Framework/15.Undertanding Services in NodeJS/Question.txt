@@ -101,17 +101,13 @@ Verified endpoints using Postman:
 
 GET /products → "Fetching all products"
 
-
-
 GET /products/1 → "Fetching product with ID: 1"
-
-
 
 POST /products → "Adding a new product"
 
 
 
-Tip for Students
+Tip for Student:
 
 Think of services as the "brains" of your application — they decide what should be done. Controllers are just the "messengers", passing data between requests and services.
 
