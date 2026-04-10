@@ -107,7 +107,7 @@ POST /products → "Adding a new product"
 
 
 
-Tip for Student:
+Tip for Students:
 
 Think of services as the "brains" of your application — they decide what should be done. Controllers are just the "messengers", passing data between requests and services.
 
