@@ -10,7 +10,6 @@ Watch the videos to understand the concept of services:
 
 
 
-
 📌 Task Overview
 
 In this task, you'll take the business logic from your Product Controller and move it into a separate Service file.
@@ -67,11 +66,7 @@ ecommerce-api/
 
 
 
-
-
 📦 Deliverables
-
-
 
 
 
@@ -97,8 +92,6 @@ Updated productController.js file calling the service functions.
 
 Verified endpoints using Postman:
 
-
-
 GET /products → "Fetching all products"
 
 GET /products/1 → "Fetching product with ID: 1"
@@ -110,6 +103,7 @@ POST /products → "Adding a new product"
 Tip for Students:
 
 Think of services as the "brains" of your application — they decide what should be done. Controllers are just the "messengers", passing data between requests and services.
+
 
 
 Ques. What is the main purpose of using a service layer in a Node.js application?
