@@ -10,13 +10,11 @@ Watch the videos to understand the concept of services:
 
 
 
-📌 Task Overview
+📌 Task Overview:
 
 In this task, you'll take the business logic from your Product Controller and move it into a separate Service file.
 
 This helps in:
-
-
 
 
 
@@ -29,7 +27,6 @@ Placing business logic in its rightful place — inside services!
 
 
 Making your application more testable and reusable.
-
 
 
 
