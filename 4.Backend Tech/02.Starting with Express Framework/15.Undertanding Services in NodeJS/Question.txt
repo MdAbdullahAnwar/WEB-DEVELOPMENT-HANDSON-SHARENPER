@@ -30,7 +30,7 @@ Making your application more testable and reusable.
 
 
 
-✅ Task Instructions
+Task Instructions:
 
 
 Watch the Videos:
