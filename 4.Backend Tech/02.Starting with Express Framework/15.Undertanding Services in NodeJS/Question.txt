@@ -4,9 +4,9 @@ Now that your project is structured with routes and controllers, it’s time to 
 
 Watch the videos to understand the concept of services:
 
-🎥 The Problem & Scenario
+The Problem & Scenario
 
-🎥 Solving It Using Service Implementation
+Solving It Using Service Implementation
 
 
 
