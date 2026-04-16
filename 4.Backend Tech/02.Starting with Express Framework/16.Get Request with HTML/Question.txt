@@ -1,0 +1,49 @@
+Let's Create a organized, scalable and reusable Setup for Our Node.js Application!
+
+
+
+Watch the video to understand how to integrate HTML with a GET request.
+
+Understanding GET Request with HTML File.
+
+Once you've understood the process, complete the following tasks:
+
+
+
+Deliverables:
+
+Your mission is to build a Node.js application that serves an HTML file in response to a GET request. The goal is to create a simple and organized Node.js folder setup to integrate HTML using res.sendFile().
+
+Set up a server using express.
+
+Add a GET endpoint (e.g., /api/products) to handle GET requests.
+
+Use res.sendFile() to serve an HTML file from your project directory inside folder VIEW.
+
+Return the same statement that is returned by the instructor - "Fetching All Products"
+
+
+
+Keep your project organized and fun to explore!
+
+
+
+By the end, you’ll have a working example of how to integrate HTML with GET requests, making your server come alive with web content! 🌟
+
+
+
+Ques1. What method is used to serve an HTML file in response to a GET request in Express.js?
+
+Ans: res.sendFile()
+
+
+
+Ques2. In a well-structured Node.js application, where should you store HTML files when serving them with res.sendFile()?
+
+Ans: Inside the views/ or public/ folder for better organization.
+
+
+
+Ques3. Which Express.js method is used to handle GET requests for a specific route?
+
+Ans: app.get("/api/products",callback)
