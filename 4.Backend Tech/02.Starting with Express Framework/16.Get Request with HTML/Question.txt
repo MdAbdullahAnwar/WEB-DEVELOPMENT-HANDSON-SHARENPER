@@ -24,13 +24,10 @@ Return the same statement that is returned by the instructor - "Fetching All Pro
 
 
 
-
 Keep your project organized and fun to explore!
 
 
-
 By the end, you’ll have a working example of how to integrate HTML with GET requests, making your server come alive with web content! 🌟
-
 
 
 Ques1. What method is used to serve an HTML file in response to a GET request in Express.js?
