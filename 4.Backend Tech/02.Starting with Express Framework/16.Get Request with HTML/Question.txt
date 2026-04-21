@@ -28,7 +28,7 @@ Keep your project organized and fun to explore!
 
 
 
-By the end, you’ll have a working example of how to integrate HTML with GET requests, making your server come alive with web content! 🌟
+By the end, you’ll have a working example of how to integrate HTML with GET requests, making your server come alive with web content!
 
 
 
