@@ -6,7 +6,7 @@ Watch the video to understand how to integrate HTML with a GET request.
 
 Understanding GET Request with HTML File.
 
-Once you've understood the process, complete the following tasks
+Once you've understood the process, complete the following tasks:
 
 
 
