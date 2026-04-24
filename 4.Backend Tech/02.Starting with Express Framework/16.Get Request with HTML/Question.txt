@@ -24,7 +24,7 @@ Return the same statement that is returned by the instructor - "Fetching All Pro
 
 
 
-Keep your project organized and fun to explore!
+Keep your project organized and fun to explore
 
 
 
