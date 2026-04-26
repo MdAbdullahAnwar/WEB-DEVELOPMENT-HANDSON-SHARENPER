@@ -50,4 +50,4 @@ The form should contain a submit button with the content "Add Product".
 
 
 
-Keep your project organized and fun to explore!
+Keep your project organized and fun to explore
