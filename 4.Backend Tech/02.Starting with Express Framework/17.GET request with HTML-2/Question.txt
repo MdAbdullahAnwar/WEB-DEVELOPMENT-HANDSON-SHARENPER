@@ -29,10 +29,6 @@ Return a form with following attributes:
 
 Form Structure:
 
-
-
-
-
 The form should contain a label with the text "Product Name".
 
 
@@ -50,4 +46,4 @@ The form should contain a submit button with the content "Add Product".
 
 
 
-Keep your project organized and fun to explore
+Keep your project organized and fun to explore.
