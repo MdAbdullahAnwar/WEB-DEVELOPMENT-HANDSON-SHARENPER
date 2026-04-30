@@ -25,9 +25,7 @@ Use res.sendFile() to serve an HTML file from your project directory inside fold
 
 
 
-Return a form with following attributes:
-
-
+Return a form with following attributes
 
 Form Structure:
 
