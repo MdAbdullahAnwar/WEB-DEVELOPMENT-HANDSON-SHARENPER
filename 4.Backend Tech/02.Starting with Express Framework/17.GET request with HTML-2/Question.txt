@@ -7,7 +7,11 @@ Your task is to serve the html file.
 
 Deliverables:
 
+
+
 Your mission is to build a Node.js application that serves an HTML file in response to a GET request.
+
+
 
 Set up a server using express.
 
