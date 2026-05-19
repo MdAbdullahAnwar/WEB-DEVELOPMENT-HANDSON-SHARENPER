@@ -1,0 +1,46 @@
+Ready to Dive into POST Requests?
+
+
+
+
+Now that you’re comfortable working with GET requests, let’s explore how POST requests work and how to handle them effectively.
+
+Follow the link provided to familiarize yourself with the concepts and workflows involved in handling a POST request.
+
+Video link: Understanding Post Request
+
+Once you’re ready, complete the tasks below:
+
+
+
+
+Deliverables:
+
+Follow the instructor and complete the following requirements.
+
+
+
+
+
+Create a server using express.
+
+
+
+Serve a form using a GET request.
+
+
+
+Use Axios to send a POST request from the form, allowing users to add products to the server.
+
+
+
+Return the user-added product as a response and console.log the data on the server.
+
+
+
+Test your application using Postman to ensure everything works as expected.
+
+
+
+
+By the end, you’ll have a fully functional setup for working with POST requests and handling user data dynamically. 
