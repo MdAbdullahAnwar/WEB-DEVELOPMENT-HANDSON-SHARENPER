@@ -16,27 +16,14 @@ Deliverables:
 
 Follow the instructor and complete the following requirements.
 
-
-
 Create a server using express.
-
-
 
 Serve a form using a GET request.
 
-
-
 Use Axios to send a POST request from the form, allowing users to add products to the server.
-
-
 
 Return the user-added product as a response and console.log the data on the server.
 
-
-
 Test your application using Postman to ensure everything works as expected.
 
-
-
-
-By the end, you’ll have a fully functional setup for working with POST requests and handling user data dynamically. 
+By the end, you’ll have a fully functional setup for working with POST requests and handling user data dynamically.
