@@ -6,7 +6,6 @@ Now that you’re comfortable working with GET requests, let’s explore how POS
 
 Follow the link provided to familiarize yourself with the concepts and workflows involved in handling a POST request.
 
-
 Video link: Understanding Post Request
 
 Once you’re ready, complete the tasks below
