@@ -1,0 +1,129 @@
+Complete the following MCQs based on the concepts you have learned while implementing POST requests in your Node.js application.
+
+
+
+These questions will test your understanding of:
+
+How POST requests work in Express.
+
+Using Axios to send data from a form.
+
+Handling request bodies on the server.
+
+Returning responses and debugging with console.log.
+
+Testing APIs with Postman.
+
+
+
+🚀 Let’s see how well you’ve grasped the concepts!
+
+
+
+Ques1. What does res.sendFile() do in an Express application?
+
+Ans: It sends a static file from the server to the client.
+
+Answer Explanation
+
+res.sendFile() is used to send a file as a response to the client in an Express application.
+
+
+
+Ques2. Which folder is commonly used to store static assets (like images, styles, and JavaScript) in an Express app?
+
+Ans: public
+
+Answer Explanation
+
+The public folder is typically used to store static files that the server can serve directly to clients.
+
+
+
+Ques3. In Express, what is the purpose of express.static() middleware?
+
+Ans: To serve static files like HTML, CSS, and JavaScript files.
+
+Answer Explanation
+
+express.static() middleware is used to serve static files (such as images, JavaScript, CSS) from a specified folder.
+
+
+
+Ques4. How do you use express.json() middleware in Express?
+
+Ans: To handle POST request that contains JSON data.
+
+Answer Explanation
+
+express.json() middleware is used to parse JSON data sent in the body of POST requests.
+
+
+
+Ques5. In Express, how can you access data sent in the body of a POST request?
+
+Ans: req.body
+
+Answer Explanation
+
+ Data from a POST request is available in the req.body object when using appropriate middleware like express.json().
+
+
+
+Ques6. What does the onsubmit function do in an HTML form?
+
+Ans: It prevents the form from submitting and handles data submission via JavaScript.
+
+Answer Explanation
+
+ The onsubmit function is used to handle form submission using JavaScript, often to prevent the default form submission behavior and submit data asynchronously.
+
+
+
+Ques7. What is the purpose of the <script> tag in an HTML document?
+
+Ans: To include JavaScript code that runs in the browser.
+
+Answer Explanation
+
+The <script> tag is used to embed or link JavaScript code in an HTML document, enabling client-side behavior.
+
+
+
+Ques8. In the context of making a POST request with Axios, what does the axios.post() method do?
+
+Ans: It sends data to the server in a POST request.
+
+Answer Explanation
+
+axios.post() is used to send data to the server as part of a POST request.
+
+
+
+Ques9. Which of the following is the correct way to use axios.post() in JavaScript to send data?
+
+Ans: axios.post('/url', { 'data' : 'value' });
+
+Answer Explanation
+
+This syntax is correct for sending data using a POST request with Axios, where the data is included in the second argument.
+
+
+
+Ques10. What is JSON parsing?
+
+Ans: Converting JSON data into a JavaScript object so it can be used in the application.
+
+Answer Explanation
+
+ JSON parsing refers to converting a JSON string into a JavaScript object that can be used within the application.
+
+
+
+Ques11. What will happen if a static file is requested from the Express server, but the file is not found in the static folder?
+
+Ans: The server will send a 404 error page.
+
+Answer Explanation
+
+If a requested static file is not found in the designated static folder, Express will return a 404 error, indicating that the file was not found.
