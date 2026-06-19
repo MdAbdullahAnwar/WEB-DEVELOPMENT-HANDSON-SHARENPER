@@ -1,7 +1,6 @@
 Complete the following MCQs based on the concepts you have learned while implementing POST requests in your Node.js application.
 
 
-
 These questions will test your understanding of:
 
 How POST requests work in Express.
