@@ -13,9 +13,7 @@ Returning responses and debugging with console.log.
 Testing APIs with Postman.
 
 
-
 🚀 Let’s see how well you’ve grasped the concepts!
-
 
 
 Ques1. What does res.sendFile() do in an Express application?
