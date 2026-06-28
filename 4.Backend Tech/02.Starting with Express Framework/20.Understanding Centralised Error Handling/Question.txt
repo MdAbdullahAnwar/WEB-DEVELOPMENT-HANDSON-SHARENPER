@@ -1,0 +1,28 @@
+Fix Your E-Commerce API Using Centralized Error Handling!
+
+You’ve already structured your E-Commerce API using controllers — awesome progress! Now it's time to make your application more robust and production-ready by adding centralized error handling. 💡
+
+But before you jump into code...
+
+🎥 First, Watch These Videos
+
+Make yourself comfortable with the concept of centralized error handling in Express by going through the following videos. These will help you understand:
+
+Video 1 (Introduction to problem with error handling in multiple functions)
+
+Video 2: Understanding the scenario using vs code example
+
+Video 3:Fixing it using Centralized controllers
+
+
+Follow this doc for learning more about HTTP Status Codes. 
+
+📌 Your Task
+
+Refactor your previous controller-based E-Commerce API (Users, Products, Cart) to use centralized error handling.
+
+Push the code to Github and share the commit id.
+
+✅ Goal
+
+Your API should now respond with structured error messages, and all error handling should go through one centralized place.
