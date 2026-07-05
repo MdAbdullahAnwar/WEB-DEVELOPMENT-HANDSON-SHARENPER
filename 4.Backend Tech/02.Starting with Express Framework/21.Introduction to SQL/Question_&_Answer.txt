@@ -1,0 +1,55 @@
+Understaning SQL:
+
+This task will help you understand the basics of SQL (Structured Query Language) through a simple introductory video.
+
+SQL is an important tool for working with databases and managing data.
+
+
+
+Deliverables:
+
+Watch the Video -Introduction to SQL
+
+The video explains the basics of SQL and why it’s useful for working with databases.
+
+
+
+Key topics include:
+
+What SQL is and how it works.
+
+Why SQL is important for storing, organizing, and retrieving data easily.
+
+This video is a great starting point to learn about SQL and get ready for more advanced topics.
+
+
+
+
+
+Ques1. What does SQL stand for?
+
+Ans: Structured Query Language
+
+
+
+Ques2. Why is SQL important for managing data?
+
+Ans: It allows storing, organizing, and retrieving data easily.
+
+
+
+Ques3. What is one key benefit of using SQL?
+
+Ans: It centralize data and make it easier to manage.
+
+
+
+Ques4. Which of these describes how data is stored in SQL?
+
+Ans: Data is organized into structured tables with rows and columns.
+
+
+
+Ques5. What types of systems commonly use SQL?
+
+Ans: E-Commerce platform and banking systems.
