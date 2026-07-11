@@ -5,6 +5,7 @@ This task will help you understand the basics of SQL (Structured Query Language)
 SQL is an important tool for working with databases and managing data.
 
 
+
 Deliverables:
 
 Watch the Video -Introduction to SQL
