@@ -1,0 +1,35 @@
+Introduction to the CREATE Statement
+
+The CREATE statement in SQL is essential for defining new database objects, such as tables, views, or indexes. It allows you to specify the structure of the data you want to store, including the data types for each column and any constraints that should be applied.
+
+For getting hands on experrience watch the following video:
+
+Video link: Create Query
+
+In this exercise, you will apply what you've learned about the CREATE statement to create a new table in the database.
+
+
+
+Deliverables:
+
+Task 1:
+
+Complete the following mcq for understanding create query .
+
+
+
+Task 2:
+
+Complete Q3 in mcq's using the following statement:
+
+Create a SQL statement to define a table named Students that includes the following columns:
+
+Name: A string representing the student's full name.
+
+Email: A string representing the student's email address.
+
+DOB: A date representing the student's date of birth.
+
+
+
+Make sure to specify appropriate data types for each column.

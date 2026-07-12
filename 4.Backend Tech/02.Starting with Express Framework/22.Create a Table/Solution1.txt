@@ -1,0 +1,19 @@
+Ques1. Which of the following is NOT a valid data type in SQL?
+
+Ans: String
+
+
+
+Ques2. Which of the following is a correct way to define a VARCHAR column when creating a table?
+
+Ans: NAME VARCHAR(50)
+
+
+
+Ques3. Which of the following SQL statements correctly creates a table named Students with the columns Name, Email, and DOB?
+
+Ans: CREATE TABLE Students (Name VARCHAR(100), Email VARCHAR(100), DOB DATE);
+
+Answer Explanation
+
+C) is the best choice, as it uses VARCHAR(100), which is appropriate for storing names and email addresses with adequate length.
