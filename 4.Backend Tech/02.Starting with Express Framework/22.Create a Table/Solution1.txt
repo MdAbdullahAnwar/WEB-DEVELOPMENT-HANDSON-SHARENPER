@@ -16,4 +16,4 @@ Ans: CREATE TABLE Students (Name VARCHAR(100), Email VARCHAR(100), DOB DATE);
 
 Answer Explanation
 
-C) is the best choice, as it uses VARCHAR(100), which is appropriate for storing names and email addresses with adequate length.
+C. is the best choice, as it uses VARCHAR(100), which is appropriate for storing names and email addresses with adequate length.
