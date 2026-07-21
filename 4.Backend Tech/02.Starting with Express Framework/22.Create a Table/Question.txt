@@ -9,6 +9,7 @@ Video link: Create Query
 In this exercise, you will apply what you've learned about the CREATE statement to create a new table in the database.
 
 
+
 Deliverables:
 
 Task 1:
