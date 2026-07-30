@@ -10,7 +10,6 @@ In this exercise, you will apply what you've learned about the CREATE statement 
 
 
 
-
 Deliverables:
 
 Task 1:
